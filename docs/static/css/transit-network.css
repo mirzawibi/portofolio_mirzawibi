@@ -1,0 +1,110 @@
+/* ==========================================================================
+   URBAN TRANSIT NETWORK ANIMATIONS & STYLING
+   ========================================================================== */
+
+.transit-track {
+  stroke-dasharray: 8 6;
+  animation: trackFlow 40s linear infinite;
+}
+
+.transit-line-main {
+  stroke: #84A950;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.transit-line-secondary {
+  stroke: #D97736;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.transit-line-feeder {
+  stroke: #2F6F9E;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.transit-grid-line {
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 1;
+}
+
+/* Pulsing Station Nodes */
+.transit-station {
+  fill: #14211C;
+  stroke: #FFFFFF;
+  stroke-width: 3;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.transit-station:hover {
+  transform-origin: center;
+  transform: scale(1.4);
+  fill: #84A950;
+}
+
+.transit-station-pulse {
+  animation: stationPulse 2.8s ease-in-out infinite;
+}
+
+.transit-station-label {
+  fill: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.transit-station-sub {
+  fill: #9BB0A3;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+/* Moving Transit Vehicle / Train along tracks */
+.transit-vehicle {
+  fill: #A7C66A;
+  filter: drop-shadow(0 0 6px #A7C66A);
+}
+
+@keyframes trackFlow {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stationPulse {
+  0% {
+    r: 6;
+    stroke-opacity: 1;
+  }
+  50% {
+    r: 9;
+    stroke-opacity: 0.5;
+  }
+  100% {
+    r: 6;
+    stroke-opacity: 1;
+  }
+}
+
+/* Reduced motion disables all infinite animations */
+body.reduced-motion .transit-track,
+body.reduced-motion .transit-station-pulse,
+body.reduced-motion .transit-vehicle,
+@media (prefers-reduced-motion: reduce) {
+  .transit-track,
+  .transit-station-pulse,
+  .transit-vehicle {
+    animation: none !important;
+  }
+}
