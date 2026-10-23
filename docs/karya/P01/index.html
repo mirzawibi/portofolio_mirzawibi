@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemodelan Transportasi dan Integrasi Transit Wonokromo | Studi Kasus Muhammad Mirza Wibisono</title>
+  <meta name="description" content="Portofolio resmi Muhammad Mirza Wibisono, mahasiswa PWK ITS. Berfokus pada pemodelan transportasi 4 tahap, analisis GIS geospasial, dan perencanaan tata ruang wilayah & kota.">
+  <meta name="author" content="Muhammad Mirza Wibisono">
+  <meta name="theme-color" content="#14211C">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Muhammad Mirza Wibisono | Portofolio PWK ITS">
+  <meta property="og:description" content="Saya menerjemahkan data spasial menjadi arah perencanaan yang memperluas akses, menghubungkan aktivitas, dan meningkatkan kualitas ruang hidup.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../../static/assets/mirza/fotodiri_opt.webp">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../static/css/main.css">
+  <link rel="stylesheet" href="../../static/css/transit-network.css">
+  
+</head>
+<body>
+
+  <!-- =========================================================================
+       2. MRT TRAIN PAGE TRANSITION (ANTAR HALAMAN): LEBIH PELAN + FAKTA MIRZA
+       ========================================================================= -->
+  <div id="page-transition-overlay" class="transit-page-overlay" aria-hidden="true">
+    <div class="transit-cinematic-stage">
+      
+      <!-- Destination Board -->
+      <div class="mrt-destination-board">
+        <span class="mrt-dot-indicator"></span>
+        <span class="mrt-dest-name">TRANSIT LINE · MENUJU HALAMAN</span>
+      </div>
+
+      <!-- Slower Aerodynamic Commuter Train Track -->
+      <!-- Atmospheric High-Speed Glow Beam -->
+      <div class="transit-speed-tunnel" aria-hidden="true"></div>
+      <div class="transit-track-line">
+        <div class="transit-rail-ties"></div>
+        <div class="mrt-train-carriage">
+          <!-- High-Detail Multi-Livery Commuter / MRT / LRT Train SVG -->
+          <svg class="mrt-train-svg" width="440" height="115" viewBox="0 -18 440 115" fill="none">
+            <defs>
+              <!-- Model 1: KRL Commuter Emerald & Gold -->
+              <linearGradient id="trainBodyGradKRL" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#14211C" />
+                <stop offset="35%" stop-color="#1B2C25" />
+                <stop offset="75%" stop-color="#315C37" />
+                <stop offset="100%" stop-color="#84A950" />
+              </linearGradient>
+              <!-- Model 2: MRT Metro Navy & Sapphire Blue -->
+              <linearGradient id="trainBodyGradMetro" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#0B132B" />
+                <stop offset="35%" stop-color="#1C2541" />
+                <stop offset="75%" stop-color="#1E3E62" />
+                <stop offset="100%" stop-color="#0284C7" />
+              </linearGradient>
+              <!-- Model 3: LRT Rapid Crimson & Platinum -->
+              <linearGradient id="trainBodyGradLRT" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#3A0808" />
+                <stop offset="35%" stop-color="#7F1D1D" />
+                <stop offset="75%" stop-color="#B91C1C" />
+                <stop offset="100%" stop-color="#EF4444" />
+              </linearGradient>
+              <linearGradient id="headlightBeam" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="rgba(254, 240, 138, 0.95)" />
+                <stop offset="40%" stop-color="rgba(254, 240, 138, 0.45)" />
+                <stop offset="100%" stop-color="rgba(254, 240, 138, 0)" />
+              </linearGradient>
+              <linearGradient id="speedStreak" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="rgba(132, 169, 80, 0)" />
+                <stop offset="100%" stop-color="rgba(132, 169, 80, 0.85)" />
+              </linearGradient>
+            </defs>
+
+            <!-- Light Stream Speed Trails behind Train -->
+            <path d="M0 30 L45 30" stroke="url(#speedStreak)" stroke-width="2.5" stroke-dasharray="5 4" />
+            <path d="M4 44 L55 44" stroke="url(#speedStreak)" stroke-width="3.5" stroke-dasharray="7 3" />
+            <path d="M8 58 L60 58" stroke="url(#speedStreak)" stroke-width="2.5" stroke-dasharray="6 4" />
+
+            <!-- Long Headlight Beam Cone illuminating the track ahead -->
+            <polygon points="362,50 780,5 780,95 362,56" fill="url(#headlightBeam)" />
+
+            <!-- Main Locomotive Body (Sleek Bullet Nose) with dynamic fill class -->
+            <path id="svg-train-body" class="mrt-body-shape" d="M30 58 L42 22 C45 15 52 11 62 11 L310 11 C338 11 358 24 368 44 L372 56 C372 63 368 67 360 67 L42 67 C35 67 30 63 30 58 Z" fill="url(#trainBodyGradKRL)" stroke="#A7C66A" stroke-width="2"/>
+            
+            <!-- Roof Fairing & Detailed High-Voltage Pantograph -->
+            <rect x="90" y="7" width="180" height="4" rx="2" fill="#284036" />
+            <path d="M145 7 L162 1 L182 1 L198 7" stroke="#A7C66A" stroke-width="1.8" fill="none" />
+            <circle cx="172" cy="1" r="2.2" fill="#FEF08A" opacity="0.9" />
+
+            <!-- Dynamic Streamline Brand Accent Stripe -->
+            <path id="svg-train-stripe" d="M48 42 L338 42 C348 42 358 47 362 53 L366 59 L35 59 L48 42 Z" fill="#D97736" opacity="0.95" />
+
+            <!-- Locomotive Fleet Call-Sign Number -->
+            <rect x="74" y="44" width="46" height="11" rx="2" fill="#0B1310" stroke="rgba(255,255,255,0.2)" stroke-width="0.8" />
+            <text x="97" y="52.5" fill="#FEF08A" font-size="7.5" font-family="monospace" font-weight="800" text-anchor="middle" id="mrt-loco-callsign">KA-2026</text>
+
+            <!-- Passenger Cabin Windows with Ambient Lighting -->
+            <rect x="130" y="22" width="48" height="15" rx="3" fill="#0F172A" stroke="#84A950" stroke-width="1.2"/>
+            <rect x="188" y="22" width="48" height="15" rx="3" fill="#0F172A" stroke="#84A950" stroke-width="1.2"/>
+            <rect x="246" y="22" width="48" height="15" rx="3" fill="#0F172A" stroke="#84A950" stroke-width="1.2"/>
+            
+            <!-- Panoramic Aerodynamic Driver Windshield with Wiper -->
+            <path d="M304 22 L342 22 C350 26 357 33 361 40 L304 40 Z" fill="#0B1310" stroke="#A7C66A" stroke-width="1.5"/>
+            <line x1="322" y1="36" x2="336" y2="28" stroke="#FEF08A" stroke-width="1.2" opacity="0.85" />
+
+            <!-- High-Intensity LED Headlights with Optical Corona Flare -->
+            <circle cx="362" cy="50" r="4" fill="#FEF08A"/>
+            <circle cx="362" cy="50" r="9" fill="rgba(254, 240, 138, 0.5)"/>
+            <circle cx="362" cy="50" r="14" fill="rgba(254, 240, 138, 0.2)"/>
+
+            <!-- Heavy Bogies, Suspension Springs & Steel Wheels -->
+            <rect x="68" y="67" width="62" height="6" rx="2" fill="#0E1713" />
+            <circle cx="82" cy="74" r="5.8" fill="#1B2C25" stroke="#9BB0A3" stroke-width="1.6"/>
+            <circle cx="82" cy="74" r="2.2" fill="#D97736" />
+            <circle cx="116" cy="74" r="5.8" fill="#1B2C25" stroke="#9BB0A3" stroke-width="1.6"/>
+            <circle cx="116" cy="74" r="2.2" fill="#D97736" />
+            <rect x="252" y="67" width="62" height="6" rx="2" fill="#0E1713" />
+            <circle cx="266" cy="74" r="5.8" fill="#1B2C25" stroke="#9BB0A3" stroke-width="1.6"/>
+            <circle cx="266" cy="74" r="2.2" fill="#D97736" />
+            <circle cx="300" cy="74" r="5.8" fill="#1B2C25" stroke="#9BB0A3" stroke-width="1.6"/>
+            <circle cx="300" cy="74" r="2.2" fill="#D97736" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dynamic Mini Fact / Fakta Singkat Mirza (Item 11) -->
+      <div class="mrt-fact-card">
+        <span class="mrt-fact-badge">FAKTA SINGKAT MIRZA</span>
+        <p class="mrt-fact-text" id="mrt-fact-text">
+          Tahukah Anda? Mirza dipercaya sebagai Project Officer memimpin koordinasi lintas 8 divisi pada Planopolis 2026.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Top Metro Scroll Progress Tracker with Moving Commuter Tram (0 Clipping) -->
+  <div class="metro-scroll-tracker" aria-hidden="true">
+    <div class="metro-rail-line">
+      <div id="metro-scroll-progress" class="metro-scroll-progress">
+        <div class="metro-transit-vehicle" id="metro-transit-vehicle" title="Posisi Penelusuran Halaman">
+          <svg width="32" height="18" viewBox="0 0 32 18" fill="none">
+            <rect x="1" y="3" width="28" height="11" rx="3" fill="#84A950" stroke="#FFFFFF" stroke-width="1.2"/>
+            <path d="M3 3 L27 3 C28.5 3 29 4 29 5 L1 5 C1 4 1.5 3 3 3 Z" fill="#D97736" />
+            <rect x="4" y="5" width="4.5" height="4.5" rx="0.8" fill="#14211C"/>
+            <rect x="10.5" y="5" width="4.5" height="4.5" rx="0.8" fill="#14211C"/>
+            <rect x="17" y="5" width="4.5" height="4.5" rx="0.8" fill="#14211C"/>
+            <path d="M23.5 5h3.5c1.2 0 2 .8 2.2 1.8L30 9.5v1.5h-6.5V5z" fill="#0E1713"/>
+            <circle cx="29" cy="10" r="1.2" fill="#FEF08A"/>
+            <circle cx="7" cy="14.5" r="2" fill="#14211C" stroke="#A7C66A" stroke-width="1"/>
+            <circle cx="23" cy="14.5" r="2" fill="#14211C" stroke="#A7C66A" stroke-width="1"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       3. SITE NAVIGATION HEADER (ITEM 2: SIMPEL & TANPA FITUR KONTAK)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="../../" class="brand-link" aria-label="Beranda Portofolio Muhammad Mirza Wibisono">
+          <div class="brand-icon brand-icon-transit" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6 2 7"></path>
+              <path d="M10 6h4"></path>
+              <path d="m22 7-2-1"></path>
+              <rect width="16" height="16" x="4" y="3" rx="2"></rect>
+              <path d="M4 11h16"></path>
+              <path d="M8 15h.01"></path>
+              <path d="M16 15h.01"></path>
+              <path d="M6 19v2"></path>
+              <path d="M18 19v2"></path>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Muhammad Mirza Wibisono</span>
+            <span class="brand-sub">PWK ITS · Transportasi & GIS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation: Simple (Tanpa Kontak) -->
+        <nav aria-label="Navigasi Utama">
+          <ul class="nav-links">
+            <li>
+              <a href="../../#tentang" class="nav-link ">
+                <span class="station-node" style="width:10px;height:10px;border-width:2px;"></span>
+                Tentang
+              </a>
+            </li>
+            <li>
+              <a href="../../karya/" class="nav-link active">
+                <span class="station-node" style="width:10px;height:10px;border-width:2px;border-color:var(--color-accent-path);"></span>
+                Karya
+              </a>
+            </li>
+            <li>
+              <a href="../../cv/" class="nav-link ">
+                <span class="station-node" style="width:10px;height:10px;border-width:2px;border-color:var(--color-accent-orange);"></span>
+                CV Interaktif
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Actions -->
+        <div class="nav-actions">
+          <!-- Reduced Motion Button -->
+          <button id="motion-toggle" class="btn btn-secondary btn-sm" aria-pressed="false" title="Kurangi Animasi">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span class="motion-label" style="font-size:0.75rem;">Animasi</span>
+          </button>
+
+          <!-- Direct CV Action -->
+          <a href="../../CV_Muhammad_Mirza_Wibisono.pdf" download class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Unduh CV</span>
+          </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Body -->
+  <main id="main-content">
+    
+<article class="section" style="padding-top:2.5rem;">
+  <div class="container container-narrow">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.75rem;">
+      <ol style="display:flex;align-items:center;gap:0.5rem;list-style:none;font-size:0.85rem;color:var(--color-text-light);">
+        <li><a href="../../" style="color:var(--color-text-muted);">Beranda</a></li>
+        <li><span>/</span></li>
+        <li><a href="../../karya/" style="color:var(--color-text-muted);">Karya</a></li>
+        <li><span>/</span></li>
+        <li style="color:var(--color-primary);font-weight:600;">P01</li>
+      </ol>
+    </nav>
+
+    <!-- Preview banner if draft -->
+    
+
+    <!-- Project Header -->
+    <header style="margin-bottom:2.5rem;">
+      <div style="display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+        <span class="badge badge-light" style="font-family:var(--font-mono);font-weight:700;">P01</span>
+        
+        <span class="badge badge-primary" style="text-transform:capitalize;">transportasi</span>
+        
+        <span class="badge badge-light">Proyek Akademik</span>
+      </div>
+
+      <h1 style="font-size:clamp(2rem, 3.5vw, 2.7rem);font-weight:800;color:var(--color-text-main);line-height:1.2;margin-bottom:1rem;letter-spacing:-0.02em;">
+        Pemodelan Transportasi dan Integrasi Transit Wonokromo
+      </h1>
+
+      <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:0.925rem;color:var(--color-text-muted);margin-bottom:1.5rem;">
+        <div style="display:flex;align-items:center;gap:0.4rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Wonokromo, Surabaya</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.4rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Periode: </span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.4rem;color:var(--color-primary);font-weight:600;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Ketua tim; delineasi 12 TAZ, pemodelan jaringan, dan pembebanan perjalanan di PTV Visum</span>
+        </div>
+      </div>
+
+      <p style="font-size:1.15rem;color:var(--color-text-main);line-height:1.7;background-color:var(--color-surface);border-left:4px solid var(--color-primary);padding:1.25rem 1.5rem;border-radius:0 var(--radius-md) var(--radius-md) 0;box-shadow:var(--shadow-sm);">
+        Memimpin pemodelan transportasi Wonokromo berbasis 12 TAZ dan tiga kondisi jaringan di PTV Visum. Menerjemahkan hasil pembebanan perjalanan menjadi usulan feeder, halte, dan akses pejalan kaki yang terhubung dengan Stasiun Wonokromo serta Terminal Intermoda Joyoboyo.
+      </p>
+    </header>
+
+    <!-- Interactive Scenario / Map Comparison Switcher (FR04 P0 Requirement) -->
+    
+
+    <!-- Detailed Individual Scenario Tabs -->
+    <section class="scenario-switcher-card reveal reveal-delay-1" aria-label="Perbandingan Hasil Peta & Skenario">
+      <div class="scenario-tabs">
+        
+        <button class="scenario-tab-btn active" 
+                data-scenario-target="cover-studi"
+                id="tab-btn-cover-studi">
+          <span class="station-node" style="width:10px;height:10px;border-width:2px;"></span>
+          <span>Judul &amp; Koridor</span>
+        </button>
+        
+        <button class="scenario-tab-btn " 
+                data-scenario-target="gambaran-fourstep"
+                id="tab-btn-gambaran-fourstep">
+          <span class="station-node" style="width:10px;height:10px;border-width:2px;"></span>
+          <span>Four-Step Model</span>
+        </button>
+        
+        <button class="scenario-tab-btn " 
+                data-scenario-target="kontribusi-visum"
+                id="tab-btn-kontribusi-visum">
+          <span class="station-node" style="width:10px;height:10px;border-width:2px;"></span>
+          <span>Pemodelan PTV Visum</span>
+        </button>
+        
+      </div>
+
+      
+      <div class="scenario-panel active" id="panel-cover-studi">
+        <div class="scenario-image-wrapper" data-zoom-img="/static/assets/slides/slide_17_large.webp" title="Klik untuk memperbesar resolusi tinggi">
+          <img src="../../static/assets/slides/slide_17.webp" alt="Perencanaan Transportasi Wilayah Wonokromo" loading="lazy">
+          <div class="zoom-overlay-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            <span>Klik untuk Perbesar Peta</span>
+          </div>
+        </div>
+
+        <div class="scenario-info">
+          <h4 class="scenario-info-title">Perencanaan Transportasi Wilayah Wonokromo</h4>
+          <p class="scenario-info-desc">Kajian rekayasa dan pemodelan transportasi multi-moda kawasan Wonokromo Surabaya berbasis Four-Step Model dan simulasi mikrosimulasi lalu lintas.</p>
+        </div>
+      </div>
+      
+      <div class="scenario-panel " id="panel-gambaran-fourstep">
+        <div class="scenario-image-wrapper" data-zoom-img="/static/assets/slides/slide_18_large.webp" title="Klik untuk memperbesar resolusi tinggi">
+          <img src="../../static/assets/slides/slide_18.webp" alt="Gambaran Kegiatan, Pemodelan 4-Step Model, &amp; Trip Assignment Rencana" loading="lazy">
+          <div class="zoom-overlay-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            <span>Klik untuk Perbesar Peta</span>
+          </div>
+        </div>
+
+        <div class="scenario-info">
+          <h4 class="scenario-info-title">Gambaran Kegiatan, Pemodelan 4-Step Model, &amp; Trip Assignment Rencana</h4>
+          <p class="scenario-info-desc">Aplikasi Four-Step Model (Trip Generation, Trip Distribution, Mode Choice, Trip Assignment) untuk mengidentifikasi 8 ruas jalan kritis dan merancang 5 rute feeder serta 25 halte transit.</p>
+        </div>
+      </div>
+      
+      <div class="scenario-panel " id="panel-kontribusi-visum">
+        <div class="scenario-image-wrapper" data-zoom-img="/static/assets/slides/slide_19_large.webp" title="Klik untuk memperbesar resolusi tinggi">
+          <img src="../../static/assets/slides/slide_19.webp" alt="Kontribusi Saya: Pemodelan TAZ &amp; Simulasi Trip Assignment PTV Visum" loading="lazy">
+          <div class="zoom-overlay-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            <span>Klik untuk Perbesar Peta</span>
+          </div>
+        </div>
+
+        <div class="scenario-info">
+          <h4 class="scenario-info-title">Kontribusi Saya: Pemodelan TAZ &amp; Simulasi Trip Assignment PTV Visum</h4>
+          <p class="scenario-info-desc">Peran ketua tim dalam membangun basemap TAZ, kalibrasi matriks asal-tujuan (OD Matrix), dan simulasi pembebanan jaringan pada 3 skenario (eksisting, proyeksi, rencana) menggunakan PTV Visum dan ArcGIS.</p>
+        </div>
+      </div>
+      
+    </section>
+    
+
+    <!-- Key Metrics Cards -->
+    
+
+    
+    <!-- Featured High-Res Map Poster for Wonokromo -->
+    <div class="reveal" style="background:linear-gradient(135deg, rgba(49,92,55,0.08) 0%, rgba(132,169,80,0.15) 100%);border:1px solid rgba(49,92,55,0.25);border-radius:var(--radius-lg);padding:1.25rem 1.75rem;margin-bottom:2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <div style="display:flex;align-items:center;gap:0.875rem;">
+        <div style="width:40px;height:40px;border-radius:var(--radius-md);background-color:rgba(49,92,55,0.15);display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+            <line x1="9" y1="3" x2="9" y2="18"></line>
+            <line x1="15" y1="6" x2="15" y2="21"></line>
+          </svg>
+        </div>
+        <div>
+          <h4 style="font-size:0.95rem;font-weight:700;color:var(--color-primary);margin-bottom:0.15rem;">Poster Kartografi Resmi Transportasi Wonokromo</h4>
+          <p style="font-size:0.8rem;color:var(--color-text-muted);">Dokumen peta tematik presisi tinggi hasil pemodelan 4 tahap dan trip assignment PTV Visum.</p>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm" data-zoom-img="/static/assets/projects/wonokromo_poster.png">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          <line x1="11" y1="8" x2="11" y2="14"></line>
+          <line x1="8" y1="11" x2="14" y2="11"></line>
+        </svg>
+        <span>Buka Poster Resolusi Penuh</span>
+      </button>
+    </div>
+    
+
+    <!-- Content Narrative Blocks -->
+    <div style="display:flex;flex-direction:column;gap:2.5rem;margin-bottom:3.5rem;">
+      <!-- Latar Belakang & Persoalan -->
+      <section style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-sm);">
+        <h3 style="font-size:1.35rem;font-weight:700;color:var(--color-text-main);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">
+          <span class="station-node" style="width:12px;height:12px;border-width:3px;"></span>
+          Latar Belakang & Pernyataan Masalah
+        </h3>
+        <p style="color:var(--color-text-muted);line-height:1.7;font-size:1rem;">
+          Aktivitas permukiman, perdagangan, dan perjalanan lintas wilayah membebani jaringan Wonokromo. Dominasi kendaraan pribadi serta trotoar yang terputus dan terhalang membatasi akses warga menuju stasiun, terminal, dan layanan angkutan umum.
+        </p>
+      </section>
+
+      <!-- Metodologi & Pendekatan Teknis -->
+      <section style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-sm);">
+        <h3 style="font-size:1.35rem;font-weight:700;color:var(--color-text-main);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">
+          <span class="station-node" style="width:12px;height:12px;border-width:3px;border-color:var(--color-accent-path);"></span>
+          Metodologi & Alur Analisis
+        </h3>
+        <p style="color:var(--color-text-muted);line-height:1.7;font-size:1rem;margin-bottom:1.5rem;">
+          Mengintegrasikan bangkitan–tarikan, distribusi perjalanan, pemilihan moda, dan pembebanan jaringan dalam model empat tahap. Membandingkan kondisi eksisting, proyeksi 2031, dan skenario rencana di PTV Visum. Skenario rencana menggunakan asumsi penurunan volume kendaraan pribadi sebesar 30% sebagai masukan simulasi.
+        </p>
+
+        <!-- Tools Used -->
+        <div>
+          <span style="font-size:0.8rem;font-weight:700;text-transform:uppercase;color:var(--color-text-light);display:block;margin-bottom:0.6rem;">Perangkat & Software yang Digunakan:</span>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            
+            <span class="badge badge-light" style="font-size:0.85rem;padding:0.4rem 0.8rem;font-weight:600;">PTV Visum</span>
+            
+            <span class="badge badge-light" style="font-size:0.85rem;padding:0.4rem 0.8rem;font-weight:600;">QGIS</span>
+            
+            <span class="badge badge-light" style="font-size:0.85rem;padding:0.4rem 0.8rem;font-weight:600;">ArcGIS</span>
+            
+            <span class="badge badge-light" style="font-size:0.85rem;padding:0.4rem 0.8rem;font-weight:600;">Microsoft Excel</span>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Contributions vs Team Deliverables -->
+      <section style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <!-- Left: Kontribusi Pribadi Mirza -->
+        <div style="background-color:var(--color-surface);border:1.5px solid rgba(49,92,55,0.3);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-sm);">
+          <div class="badge badge-primary" style="margin-bottom:0.75rem;">Tanggung Jawab Utama</div>
+          <h3 style="font-size:1.25rem;font-weight:700;color:var(--color-text-main);margin-bottom:1.25rem;">
+            Kontribusi Pribadi Mirza
+          </h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;">
+            
+            <li style="position:relative;padding-left:1.5rem;font-size:0.925rem;color:var(--color-text-muted);line-height:1.55;">
+              <span style="position:absolute;left:0;top:0.25rem;color:var(--color-primary);font-weight:bold;">✓</span>
+              Memimpin studio transportasi dari delineasi wilayah hingga penyusunan skenario: membagi tugas, mengarahkan metode, dan mengoordinasikan hasil analisis tim.
+            </li>
+            
+            <li style="position:relative;padding-left:1.5rem;font-size:0.925rem;color:var(--color-text-muted);line-height:1.55;">
+              <span style="position:absolute;left:0;top:0.25rem;color:var(--color-primary);font-weight:bold;">✓</span>
+              Mendelineasi 12 Traffic Analysis Zone (TAZ) berdasarkan batas fisik, penggunaan lahan, dan pusat kegiatan; menyiapkan jaringan nodes, links, dan turns di PTV Visum.
+            </li>
+            
+            <li style="position:relative;padding-left:1.5rem;font-size:0.925rem;color:var(--color-text-muted);line-height:1.55;">
+              <span style="position:absolute;left:0;top:0.25rem;color:var(--color-primary);font-weight:bold;">✓</span>
+              Menjalankan pembebanan angkutan pribadi dan umum (PrT/PuT Assignment) untuk kondisi eksisting, proyeksi 2031, dan skenario rencana.
+            </li>
+            
+            <li style="position:relative;padding-left:1.5rem;font-size:0.925rem;color:var(--color-text-muted);line-height:1.55;">
+              <span style="position:absolute;left:0;top:0.25rem;color:var(--color-primary);font-weight:bold;">✓</span>
+              Membandingkan volume lalu lintas dan tingkat pelayanan ruas antarskenario untuk mengidentifikasi prioritas penanganan jaringan.
+            </li>
+            
+            <li style="position:relative;padding-left:1.5rem;font-size:0.925rem;color:var(--color-text-muted);line-height:1.55;">
+              <span style="position:absolute;left:0;top:0.25rem;color:var(--color-primary);font-weight:bold;">✓</span>
+              Merumuskan strategi pengelolaan permintaan perjalanan, rute shuttle/feeder, dan lokasi halte untuk memperkuat akses menuju simpul transit.
+            </li>
+            
+          </ul>
+        </div>
+
+        <!-- Right: Hasil & Keluaran Tim -->
+        <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-sm);">
+          <div class="badge badge-light" style="margin-bottom:0.75rem;">Keluaran Kolaboratif</div>
+          <h3 style="font-size:1.25rem;font-weight:700;color:var(--color-text-main);margin-bottom:1.25rem;">
+            Hasil & Keluaran Dokumen Tim
+          </h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;">
+            
+            <li style="position:relative;padding-left:1.5rem;font-size:0.925rem;color:var(--color-text-muted);line-height:1.55;">
+              <span style="position:absolute;left:0;top:0.25rem;color:var(--color-accent-orange);font-weight:bold;">→</span>
+              Model dan peta pembebanan jaringan pada tiga kondisi: eksisting, proyeksi 2031, dan skenario rencana.
+            </li>
+            
+            <li style="position:relative;padding-left:1.5rem;font-size:0.925rem;color:var(--color-text-muted);line-height:1.55;">
+              <span style="position:absolute;left:0;top:0.25rem;color:var(--color-accent-orange);font-weight:bold;">→</span>
+              Usulan jaringan feeder, halte, insentif komuter, dan perbaikan akses pejalan kaki beserta indikasi program 2027–2031.
+            </li>
+            
+          </ul>
+        </div>
+      </section>
+
+      <!-- Rekomendasi & Arahan Kebijakan -->
+      
+      <section style="background-color:#F0F6F2;border:1px solid #D0E4D5;border-radius:var(--radius-xl);padding:2rem;">
+        <h3 style="font-size:1.25rem;font-weight:700;color:var(--color-primary);margin-bottom:0.75rem;">
+          Rekomendasi Perencanaan & Refleksi Teknis
+        </h3>
+        <p style="color:var(--color-text-main);line-height:1.65;font-size:0.975rem;">
+          Mengintegrasikan feeder dengan Stasiun Wonokromo dan Terminal Intermoda Joyoboyo, menempatkan halte dekat pusat aktivitas, serta menyediakan trotoar menerus dan penyeberangan aman. Mendukung peralihan moda melalui insentif komuter dan pelaksanaan program secara bertahap.
+        </p>
+      </section>
+      
+    </div>
+
+    <!-- Related Projects Navigation -->
+    
+    <div style="border-top:1px solid var(--color-border);padding-top:3rem;margin-top:3rem;">
+      <h3 style="font-size:1.35rem;font-weight:700;color:var(--color-text-main);margin-bottom:1.5rem;">
+        Studi Kasus Terkait Lainnya
+      </h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+        
+        <a href="../../karya/aksesibilitas-halte-suroboyo-bus/" class="project-card" style="text-decoration:none;">
+          <div style="padding:1.5rem;">
+            <div class="badge badge-light" style="margin-bottom:0.5rem;">P02</div>
+            <h4 style="font-size:1.1rem;font-weight:700;color:var(--color-text-main);margin-bottom:0.4rem;">Evaluasi Aksesibilitas Halte Suroboyo Bus di Surabaya Timur</h4>
+            <p style="font-size:0.85rem;color:var(--color-text-muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+              Mengevaluasi akses menuju 77 halte Suroboyo Bus dengan mengintegrasikan sebaran penduduk, jangkauan jaringan, dan probabilitas pemilihan halte. Menghasilkan indeks kebutuhan untuk mengarahkan penambahan halte serta peningkatan fasilitas pada wilayah yang kurang terlayani.
+            </p>
+          </div>
+        </a>
+        
+        <a href="../../karya/perencanaan-kota-kebomas/" class="project-card" style="text-decoration:none;">
+          <div style="padding:1.5rem;">
+            <div class="badge badge-light" style="margin-bottom:0.5rem;">P03</div>
+            <h4 style="font-size:1.1rem;font-weight:700;color:var(--color-text-main);margin-bottom:0.4rem;">Kajian Tata Ruang dan Kebencanaan Kebomas</h4>
+            <p style="font-size:0.85rem;color:var(--color-text-muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+              Memimpin tim 10 orang menyusun kajian pendahuluan tata ruang untuk 21 desa/kelurahan di Kebomas. Mengintegrasikan kondisi fisik, pertanahan, dan kebencanaan dengan arahan tata ruang untuk menyeimbangkan kebutuhan permukiman, aktivitas industri, dan perlindungan lingkungan.
+            </p>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+
+    <!-- Bottom Actions Toolbar -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--color-border);flex-wrap:wrap;gap:1rem;">
+      <a href="../../karya/" class="btn btn-white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Kembali ke Katalog Karya</span>
+      </a>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="../../cv/" class="btn btn-secondary" style="background-color:var(--color-surface-alt);color:var(--color-text-main);border-color:var(--color-border);">
+          <span>Buka CV</span>
+        </a>
+        <a href="../../#kontak" class="btn btn-primary">
+          <span>Hubungi Mirza</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+  </main>
+
+  <!-- =========================================================================
+       4. SITE FOOTER (FILOSOFI "URIP IKU URUP" ARTISTIK & LILIN FISIKA MENDALAM)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Grand Philosophy Showcase Banner (Urip iku Urup Lebih Besar & Prominen) -->
+      <div class="grand-philosophy-showcase" id="grand-philosophy-box">
+        
+        <!-- Left Side: Grand Typography Quote -->
+        <div class="philosophy-content-side">
+          <div class="philosophy-kicker">
+            <span class="kicker-spark">✨</span>
+            <span>FILOSOFI HIDUP & NILAI DASAR</span>
+          </div>
+
+          <h2 class="grand-philosophy-title">“Urip iku Urup”</h2>
+
+          <p class="grand-philosophy-narrative">
+            Bagi Mirza, filosofi Jawa adiluhung ini bermakna bahwa keberadaan kita bernilai sejati ketika mampu menyalakan lentera: saling menerangi, berbagi ilmu, dan memberi manfaat nyata bagi sesama manusia serta perbaikan ruang hidup perkotaan.
+          </p>
+
+          <div class="philosophy-signature-strip">
+            <span class="sig-name">Muhammad Mirza Wibisono</span>
+            <span class="sig-dot">·</span>
+            <span class="sig-inst">PWK ITS Surabaya</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Exquisite Realistic 3D Candle Showcase Stage -->
+        <div class="grand-candle-interactive-zone" id="candle-interactive-zone" tabindex="0" role="button" aria-label="Interaksi Lilin Filosofi: Gerakkan kursor atau klik untuk menyalakan lentera">
+          
+          <!-- Dynamic Atmospheric Halo (Soft candlelight aura radiating across the room) -->
+          <div class="deep-candle-ambient-halo" id="candle-ambient-halo" aria-hidden="true"></div>
+
+          <!-- Realistic Masterpiece Candle Artwork (3D Shaded Cylinder + Melted Pool + 3D Drips + Living Flame) -->
+          <div class="master-candle-artwork" id="master-candle-box">
+            
+            <!-- Heat Embers & Micro Sparks floating upward into dark air -->
+            <div class="candle-spark-chamber" aria-hidden="true">
+              <span class="spark-dot sp1"></span>
+              <span class="spark-dot sp2"></span>
+              <span class="spark-dot sp3"></span>
+              <span class="spark-dot sp4"></span>
+              <span class="spark-dot sp5"></span>
+            </div>
+
+            <!-- Translucent Wax Pillar with Concave Melt Pool, Wick & Flame anchored together -->
+            <div class="sculpted-candle-pillar" aria-hidden="true">
+              <!-- Living Organic Multi-Layer Flame (Directly anchored to the wick on top of wax) -->
+              <div class="living-candle-flame" id="realistic-candle-flame">
+                <div class="flame-corona-glow"></div>
+                <div class="flame-layer-outer-amber"></div>
+                <div class="flame-layer-mid-gold"></div>
+                <div class="flame-layer-white-core"></div>
+                <div class="flame-layer-oxygen-blue"></div>
+              </div>
+
+              <!-- Hand-Crafted Braided Cotton Wick with Glowing Incandescent Ember Root -->
+              <div class="candle-natural-wick">
+                <div class="wick-glowing-ember"></div>
+                <div class="wick-charred-thread"></div>
+              </div>
+
+              <!-- Molten Wax Cup (Top Dip with golden flame reflection) -->
+              <div class="molten-wax-cup">
+                <div class="molten-liquid-pool"></div>
+              </div>
+              
+            </div>
+
+            <!-- Minimalist Elegant Saucer Plate -->
+            <div class="minimal-saucer-dish" aria-hidden="true"></div>
+
+          </div>
+
+          <!-- Deep Golden Revelation Message Badge (Muncul saat mouse di-hover) -->
+          <div class="candle-revelation-message" id="candle-revelation-message">
+            <span class="rev-spark">✦</span>
+            <span class="rev-text">“Kita hidup karena kita bermanfaat.”</span>
+            <span class="rev-spark">✦</span>
+          </div>
+          <div class="candle-hover-hint" id="candle-hover-hint" aria-hidden="true">
+            <span class="hint-pulse"></span> Dekatkan kursor untuk menyalakan lentera
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Minimal Dark Footer Credits (Bar putih telah dihilangkan sesuai permintaan user) -->
+      <div class="footer-dark-credits">
+        © 2026 Muhammad Mirza Wibisono · Perencanaan Wilayah & Kota (PWK) · Institut Teknologi Sepuluh Nopember (ITS) Surabaya.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../static/js/main.js"></script>
+  
+</body>
+</html>

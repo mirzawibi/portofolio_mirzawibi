@@ -81,8 +81,8 @@ function initPageTransitions() {
     // Filter clicks must do card-to-card transitions, NOT full MRT train transitions
     if (link.classList.contains('catalog-tab-btn') || 
         link.closest('.catalog-category-tabs') ||
-        (window.location.pathname === '/karya' && href.startsWith('/karya?')) ||
-        (window.location.pathname === '/karya' && href === '/karya')) {
+        (href && (href.includes('?kategori=') || href.includes('?filter='))) ||
+        (window.location.pathname.includes('karya') && (href.includes('karya?') || href.startsWith('?') || href.startsWith('./?')))) {
       return;
     }
 
@@ -99,11 +99,19 @@ function initPageTransitions() {
 
       // Determine destination label
       let destText = 'Perjalanan Berikutnya';
-      if (href === '/') destText = 'Stasiun Beranda';
-      else if (href.startsWith('/karya/')) destText = 'Stasiun Studi Kasus';
-      else if (href.startsWith('/karya')) destText = 'Stasiun Katalog Karya';
-      else if (href.startsWith('/cv')) destText = 'Stasiun CV Interaktif';
-      else if (href.startsWith('/admin')) destText = 'Stasiun Panel Admin';
+      if (href === '/' || href === './' || href === '../' || href === '../../' || href === '') {
+        destText = 'Stasiun Beranda';
+      } else if (href.includes('cv')) {
+        destText = 'Stasiun CV Interaktif';
+      } else if (href.includes('karya')) {
+        if (href.endsWith('karya') || href.endsWith('karya/') || href.endsWith('karya/?') || href.includes('?kategori=')) {
+          destText = 'Stasiun Katalog Karya';
+        } else {
+          destText = 'Stasiun Studi Kasus';
+        }
+      } else if (href.includes('admin')) {
+        destText = 'Stasiun Panel Admin';
+      }
 
       const board = overlay.querySelector('.mrt-dest-name');
       if (board) board.textContent = destText;
@@ -614,7 +622,7 @@ function initCatalogFilters() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const href = btn.getAttribute('href');
-      const targetUrl = new URL(href, window.location.origin);
+      const targetUrl = new URL(href, window.location.href);
       const cat = targetUrl.searchParams.get('kategori') || 'semua';
 
       tabBtns.forEach(b => {
