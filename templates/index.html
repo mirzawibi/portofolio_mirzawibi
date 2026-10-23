@@ -1,0 +1,808 @@
+{% extends "base.html" %}
+
+{% block title %}{{ profile.name }} | Portofolio Perencanaan Transportasi & Analisis Spasial PWK ITS{% endblock %}
+
+{% block extra_head %}
+<!-- Halte Menuju Dunia Saya — Animasi Pembuka Portofolio Mirza (Landing Page Only) -->
+<link rel="stylesheet" href="/static/halte-intro/halte-intro.css">
+<script src="/static/halte-intro/halte-intro.js" data-auto></script>
+{% endblock %}
+
+{% block content %}
+<!-- =========================================================================
+     1. HERO SECTION: PROFIL PRIBADI & 4 HIGHLIGHT UNGGULAN OBJEKTIF
+     ========================================================================= -->
+<section class="section-hero hero-section" id="tentang">
+  <div class="container">
+    <div class="hero-grid">
+      
+      <!-- Left Column: Personal Introduction & 4 Highlight Cards (Item 4) -->
+      <div class="hero-content">
+        <div class="hero-status-pill reveal">
+          <div class="badge badge-status">
+            <span style="width:8px;height:8px;border-radius:50%;background-color:#92E3A9;display:inline-block;animation:stationPulse 1.5s infinite;"></span>
+            {{ profile.internship_status }}
+          </div>
+          <div class="badge badge-transit" style="display:inline-flex;align-items:center;gap:0.4rem;">
+            <span>PWK ITS · Angkatan 2024</span>
+          </div>
+          <button type="button" onclick="if(window.HalteIntro) window.HalteIntro.replay()" class="badge badge-transit" style="cursor:pointer;border:1px solid rgba(254,240,138,0.3);color:#FEF08A;background:rgba(254,240,138,0.08);display:inline-flex;align-items:center;gap:0.35rem;" title="Putar ulang animasi halte transit">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>Putar Ulang Intro</span>
+          </button>
+        </div>
+
+        <h1 class="hero-title reveal reveal-delay-1" style="margin-bottom:0.75rem;color:#FFFFFF;">{{ profile.name }}</h1>
+        
+        <!-- CV-Aligned Authentic Description (Item 3) -->
+        <p class="hero-description reveal reveal-delay-1" style="margin-bottom:1.75rem;font-size:1.05rem;line-height:1.65;color:#D1DCD5;">
+          Mahasiswa Perencanaan Wilayah dan Kota (PWK) di Institut Teknologi Sepuluh Nopember (ITS). Memiliki rekam jejak nyata dalam analisis geospasial GIS, pemodelan transportasi makro, riset pasar & kelayakan kawasan, serta kepemimpinan tim lintas fungsi berbasis data lapangan riil.
+        </p>
+
+        <!-- 4 Objective Highlight Cards (Item 4: Spasial, Transportasi, Market Research, Kepemimpinan) -->
+        <div class="mirza-highlights-grid reveal reveal-delay-2" style="margin-bottom:2rem;">
+          
+          <!-- Highlight 1: Keahlian Spasial (GIS & Remote Sensing) -->
+          <div class="mirza-highlight-card" data-highlight="gis">
+            <div class="highlight-header">
+              <div class="highlight-icon-wrap" style="color:#2F6F9E;background:rgba(47,111,158,0.18);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                  <line x1="9" y1="3" x2="9" y2="18"></line>
+                  <line x1="15" y1="6" x2="15" y2="21"></line>
+                </svg>
+              </div>
+              <span class="highlight-badge">ArcGIS Pro · QGIS · GEE</span>
+            </div>
+            <h4 class="highlight-title">Keahlian Spasial & Satelit</h4>
+            <p class="highlight-desc">
+              Pengolahan raster & vektor: klasifikasi citra Landsat multitemporal, ekstraksi suhu permukaan (LST), tutupan lahan NDVI, kerentanan pesisir, dan WebGIS interaktif.
+            </p>
+            <div class="highlight-micro-effect">
+              <span class="coord-tag">Analisis Geospasial Komprehensif</span>
+            </div>
+          </div>
+
+          <!-- Highlight 2: Transportasi & Pemodelan Software -->
+          <div class="mirza-highlight-card" data-highlight="transport">
+            <div class="highlight-header">
+              <div class="highlight-icon-wrap" style="color:#84A950;background:rgba(132,169,80,0.18);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="3" width="16" height="16" rx="2"></rect>
+                  <path d="M4 11h16"></path>
+                  <circle cx="8" cy="15" r="1.5" fill="currentColor"></circle>
+                  <circle cx="16" cy="15" r="1.5" fill="currentColor"></circle>
+                </svg>
+              </div>
+              <span class="highlight-badge">PTV Visum · 4 Tahap</span>
+            </div>
+            <h4 class="highlight-title">Transportasi & Pemodelan</h4>
+            <p class="highlight-desc">
+              Simulasi makro 4 tahap (bangkitan, distribusi gravitasi, pemilihan moda logit, pembebanan ruas User Equilibrium pada PTV Visum), evaluasi halte angkutan, dan survei VCR.
+            </p>
+            <div class="highlight-micro-effect">
+              <span class="pulse-beacon"></span>
+              <span class="micro-text">Trip Assignment & Jaringan Jalan</span>
+            </div>
+          </div>
+
+          <!-- Highlight 3: Market Research & Analisis Kawasan -->
+          <div class="mirza-highlight-card" data-highlight="market">
+            <div class="highlight-header">
+              <div class="highlight-icon-wrap" style="color:#D97736;background:rgba(217,119,54,0.18);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 20V10"></path>
+                  <path d="M18 20V4"></path>
+                  <path d="M6 20v-4"></path>
+                </svg>
+              </div>
+              <span class="highlight-badge">Riset Pasar & Kelayakan</span>
+            </div>
+            <h4 class="highlight-title">Market Research & Real Estate</h4>
+            <p class="highlight-desc">
+              Studi kelayakan pengembangan kawasan terpadu, penataan isu MECE, issue tree, perbandingan berpasangan AHP & TOPSIS penentuan lokasi prioritas fasilitas wilayah.
+            </p>
+            <div class="highlight-micro-effect">
+              <span class="blueprint-tag">Studi Kelayakan Kawasan</span>
+            </div>
+          </div>
+
+          <!-- Highlight 4: Kepemimpinan & Manajemen Organisasi -->
+          <div class="mirza-highlight-card" data-highlight="leadership">
+            <div class="highlight-header">
+              <div class="highlight-icon-wrap" style="color:#A7C66A;background:rgba(167,198,106,0.18);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                </svg>
+              </div>
+              <span class="highlight-badge">Project Officer · Asisten Dosen</span>
+            </div>
+            <h4 class="highlight-title">Kepemimpinan & Kolaborasi</h4>
+            <p class="highlight-desc">
+              Terbukti konsisten memimpin: Project Officer Planopolis 2026 (koordinasi 8 divisi & 10 subdivisi), Asdos Lab PWK ITS membimbing 45 mahasiswa, dan memimpin 110 karya visual tim.
+            </p>
+            <div class="highlight-micro-effect">
+              <span class="leadership-tag">Manajemen WBS & Lintas Fungsi</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#karya-unggulan" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span>Lihat Karya Unggulan</span>
+          </a>
+          <a href="/cv" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>Buka CV Lengkap</span>
+          </a>
+          <a href="mailto:{{ contact.email }}" class="btn btn-secondary" style="background:transparent;border-color:rgba(255,255,255,0.25);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Hubungi Mirza</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Mirza Photo with Safe Non-Overlapping Speech Bubble, Orbiting Satellites & 3D Ground Pedestal (Request 1) -->
+      <div class="hero-portrait-stage reveal reveal-delay-2">
+        
+        <!-- Ambient Orbit Halo Track BEHIND photo -->
+        <div class="hero-transit-orbit" aria-hidden="true">
+          <div class="orbit-station-dot orbit-station-top"></div>
+          <div class="orbit-station-dot orbit-station-right"></div>
+          <div class="orbit-station-dot orbit-station-bottom"></div>
+        </div>
+
+        <!-- 3 Orbiting Satellites around Mirza along the Orbit Track (Request 1) -->
+        <div class="mirza-orbit-satellites" aria-hidden="true">
+          <!-- Satellite 1: Top-Right (Spatial & GIS) -->
+          <div class="orbit-satellite sat-gis" title="Keahlian: Spatial & GIS">
+            <span class="satellite-beacon" style="background:#2F6F9E;box-shadow:0 0 10px #2F6F9E;"></span>
+            <span class="satellite-label">Spatial & GIS</span>
+          </div>
+
+          <!-- Satellite 2: Mid-Right (Transport & Mobilitas) -->
+          <div class="orbit-satellite sat-transport" title="Keahlian: Transport & Mobilitas">
+            <span class="satellite-beacon" style="background:#84A950;box-shadow:0 0 10px #84A950;"></span>
+            <span class="satellite-label">Transport & Mobilitas</span>
+          </div>
+
+          <!-- Satellite 3: Lower-Left (Real Estate & Kawasan) -->
+          <div class="orbit-satellite sat-estate" title="Keahlian: Real Estate & Kawasan">
+            <span class="satellite-beacon" style="background:#D97736;box-shadow:0 0 10px #D97736;"></span>
+            <span class="satellite-label">Real Estate & Kawasan</span>
+          </div>
+        </div>
+
+        <div class="hero-portrait-frame" id="mirza-portrait-interactive">
+          <!-- Ambient Backlight behind shoulders -->
+          <div class="portrait-ambient-glow" aria-hidden="true"></div>
+
+          <!-- Interactive Speech Bubble (Safe Position: Top-Left outside face, pointing to Mirza) -->
+          <div class="mirza-speech-bubble" id="mirza-bubble" aria-hidden="true">
+            <div class="bubble-greeting">
+              <span>👋</span> <strong>Hai, aku Mirza!</strong>
+            </div>
+            <p class="bubble-tagline">
+              Mahasiswa PWK ITS yang berfokus pada <em>analisis spasial GIS</em>, <em>pemodelan transportasi makro</em>, dan <em>perancangan kawasan</em>.
+            </p>
+            <div class="bubble-status">
+              <span class="bubble-pulse-dot"></span>
+              <span>Terbuka untuk kolaborasi riset & magang 2026</span>
+            </div>
+            <div class="bubble-tail"></div>
+          </div>
+
+          <!-- Cutout Portrait of Mirza -->
+          <img src="/static/assets/mirza/fotodiri_opt.webp" 
+               alt="Foto Profil Muhammad Mirza Wibisono" 
+               class="hero-mirza-cutout"
+               loading="eager" />
+
+          <!-- Grand 3D Architectural Transit Pedestal (Grounding Platform - Tidak Terlihat Mengapung) -->
+          <div class="portrait-architectural-pedestal" aria-hidden="true">
+            <!-- Platform Top Stage Deck -->
+            <div class="pedestal-top-deck">
+              <div class="pedestal-runway-light"></div>
+            </div>
+            <!-- Platform Beveled Structure -->
+            <div class="pedestal-bevel-body">
+              <div class="pedestal-metallic-rim"></div>
+              <div class="pedestal-accent-stripe"></div>
+            </div>
+            <!-- Platform Ground Shadow -->
+            <div class="pedestal-base-shadow"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     2. NILAI TAMBAH & REKAM JEJAK: PEMIMPIN, SOFTWARE MULTI-DISIPLIN, & 3 ACTIVE ROLES (REQUEST 2: INTERAKTIF & FUN)
+     ========================================================================= -->
+<section style="background-color:var(--color-surface);border-bottom:1px solid var(--color-border);padding:3.5rem 0;">
+  <div class="container">
+    <div style="text-align:center;max-width:820px;margin:0 auto 2.75rem;" class="reveal">
+      <span class="section-tag" style="justify-content:center;">Nilai Tambah & Rekam Jejak Unggulan</span>
+      <h2 style="font-size:1.85rem;font-weight:800;color:var(--color-text-main);margin-bottom:0.65rem;">
+        Karakter Kepemimpinan & Penguasaan Perangkat Lunak
+      </h2>
+      <p style="font-size:0.975rem;color:var(--color-text-muted);line-height:1.65;">
+        Kekuatan komprehensif yang memadukan rekam jejak kepemimpinan organisasi, penguasaan multi-software analisis, serta 3 tanggung jawab strategis yang sedang aktif dijalankan:
+      </p>
+    </div>
+
+    <!-- 3 Core Strengths Cards (Leadership, Multi-software, Active Roles) -->
+    <div class="usp-enhanced-grid reveal">
+      
+      <!-- Card 1: Kepemimpinan & Pengambilan Keputusan -->
+      <div class="usp-feature-card" id="card-usp-leadership">
+        <div class="usp-card-top">
+          <div class="usp-icon-badge" style="background:rgba(49,92,55,0.15);color:#315C37;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <span class="usp-card-pill">Leadership & Soft Skills</span>
+        </div>
+        <h3 class="usp-feature-title">Konsisten Dipercaya Memimpin Proyek Nyata</h3>
+        <p class="usp-feature-desc">
+          Terbukti berulang kali dipercaya sebagai Project Officer tingkat nasional, Ketua Subdivisi, Koordinator Tim Studio, dan Founder inisiatif konsultasi. Mahir merumuskan Work Breakdown Structure (WBS), menyelaraskan dinamika tim multi-divisi, serta mengambil keputusan strategis di bawah tenggat waktu ketat.
+        </p>
+
+        <!-- Leadership Impact Counters (100+ Staf & Proyek Nyata) -->
+        <div class="leadership-impact-bar" title="Rekam Jejak Kepemimpinan Mirza">
+          <div class="impact-stat-item">
+            <span class="impact-stat-num">100+</span>
+            <span class="impact-stat-lbl">Staf & Panitia Dipimpin</span>
+          </div>
+          <div class="impact-stat-divider"></div>
+          <div class="impact-stat-item">
+            <span class="impact-stat-num">4+</span>
+            <span class="impact-stat-lbl">Proyek Strategis Dipimpin</span>
+          </div>
+          <div class="impact-stat-divider"></div>
+          <div class="impact-stat-item">
+            <span class="impact-stat-num">110+</span>
+            <span class="impact-stat-lbl">Karya Tim Terealisasi</span>
+          </div>
+        </div>
+
+        <!-- Highlight Proyek Kepemimpinan Nyata (Warna Kontras Jelas & Rapi) -->
+        <div class="leadership-projects-strip" style="margin:1rem 0;display:flex;flex-direction:column;gap:0.55rem;">
+          <div class="lead-project-pill" style="font-size:0.85rem;background:#F4F7F4;border:1px solid rgba(49,92,55,0.22);border-radius:var(--radius-md);padding:0.55rem 0.85rem;display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;">
+            <span style="color:#D97736;font-size:1rem;line-height:1.2;flex-shrink:0;">⚡</span>
+            <span style="color:#14211C;"><strong style="color:#315C37;">Project Officer Planopolis 2026:</strong> Pimpinan tertinggi perhelatan akbar PWK ITS (100+ panitia lintas 8 divisi)</span>
+          </div>
+          <div class="lead-project-pill" style="font-size:0.85rem;background:#F4F7F4;border:1px solid rgba(49,92,55,0.22);border-radius:var(--radius-md);padding:0.55rem 0.85rem;display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;">
+            <span style="color:#D97736;font-size:1rem;line-height:1.2;flex-shrink:0;">⚡</span>
+            <span style="color:#14211C;"><strong style="color:#315C37;">Ketua Subdivisi Media Production:</strong> Memimpin tim kreatif menghasilkan 110 karya visual</span>
+          </div>
+          <div class="lead-project-pill" style="font-size:0.85rem;background:#F4F7F4;border:1px solid rgba(49,92,55,0.22);border-radius:var(--radius-md);padding:0.55rem 0.85rem;display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;">
+            <span style="color:#2F6F9E;font-size:1rem;line-height:1.2;flex-shrink:0;">⚡</span>
+            <span style="color:#14211C;"><strong style="color:#315C37;">Vice Project Leader LokaSolution:</strong> Memimpin konsultasi perencanaan dan analisis tata ruang</span>
+          </div>
+        </div>
+
+        <div class="usp-feature-tags" style="margin-top:auto;padding-top:0.4rem;">
+          <span class="usp-subtag">WBS & Action Plan</span>
+          <span class="usp-subtag">Strategic Delegation</span>
+          <span class="usp-subtag">Cross-functional Team</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Penguasaan Multi-Software Komprehensif (Interactive Software Playpen) -->
+      <div class="usp-feature-card usp-card-interactive" id="card-usp-software">
+        <div class="usp-card-top">
+          <div class="usp-icon-badge" style="background:rgba(47,111,158,0.15);color:#2F6F9E;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <span class="usp-card-pill">Teknis & Hard Skills</span>
+        </div>
+        <h3 class="usp-feature-title">Penguasaan Beragam Perangkat Lunak</h3>
+        <p class="usp-feature-desc" style="margin-bottom:0.75rem;">
+          Klik atau arahkan kursor pada software untuk melihat hasil riset dan analisis nyata yang telah dikerjakan Mirza:
+        </p>
+
+        <!-- Interactive Software Chips Cluster -->
+        <div class="software-chips-cluster" id="software-chips-playpen">
+          <button type="button" class="soft-chip chip-visum active" data-tool="visum" data-title="PTV Visum" data-output="Wonokromo: Pemodelan 4-Tahap, Matriks Asal-Tujuan OD, & Trip Assignment 8 Koridor Kritis">
+            PTV Visum
+          </button>
+          <button type="button" class="soft-chip chip-gis" data-tool="gis" data-title="QGIS & ArcGIS Pro" data-output="Surabaya Timur: Analisis Aksesibilitas Halte UNA & Dasymetric Mapping 77 Halte">
+            QGIS & ArcGIS Pro
+          </button>
+          <button type="button" class="soft-chip chip-gee" data-tool="gee" data-title="Google Earth Engine" data-output="Surabaya: Analisis Urban Heat Island (UHI) & Ekstraksi LST Citra Satelit Landsat 8/9">
+            Google Earth Engine
+          </button>
+          <button type="button" class="soft-chip chip-stat" data-tool="stat" data-title="SPSS & Excel Advanced" data-output="Kabupaten Temanggung: Analisis Lokasi Fasilitas SMA menggunakan Metode AHP & TOPSIS">
+            SPSS & Excel Advanced
+          </button>
+          <button type="button" class="soft-chip chip-office" data-tool="office" data-title="Google Workspace" data-output="Planopolis: Grand Design Operasional, WBS Tracker, & Koordinasi Lintas 8 Divisi">
+            Google Workspace
+          </button>
+          <button type="button" class="soft-chip chip-adobe" data-tool="adobe" data-title="Adobe Premiere & After Effects" data-output="INI LHO ITS 2026: Saat menjadi Ketua Subdivisi Media Production, berhasil memimpin produksi 110 karya visual tim (84 motion graphics, 18 video visual editing, 8 siaran utama).">
+            Adobe Creative
+          </button>
+          <button type="button" class="soft-chip chip-design" data-tool="design" data-title="Canva & Figma" data-output="Kebomas: Perancangan Tata Ruang 21 Desa, Album Peta Tematik, & UI/UX Portofolio">
+            Canva & Figma
+          </button>
+        </div>
+
+        <!-- Fun Interactive Live Output Inspector Console -->
+        <div class="software-live-inspector" id="software-inspector">
+          <div class="inspector-badge">
+            <span class="inspector-pulse"></span>
+            <span class="inspector-label" id="inspector-tool-label">PTV VISUM · OUTPUT NYATA:</span>
+          </div>
+          <p class="inspector-text" id="inspector-output-text">
+            Wonokromo: Pemodelan 4-Tahap, Matriks Asal-Tujuan OD, & Trip Assignment 8 Koridor Kritis
+          </p>
+          <div class="inspector-hint">✨ Klik software lain untuk eksplorasi hasil analisis</div>
+        </div>
+
+      </div>
+
+      <!-- Card 3: 3 Peran Strategis Running Saat Ini -->
+      <div class="usp-feature-card usp-card-active" id="card-usp-active-roles">
+        <div class="usp-card-top">
+          <div class="usp-icon-badge" style="background:rgba(217,119,54,0.18);color:#D97736;">
+            <span class="active-pulse-beacon"></span>
+          </div>
+          <span class="usp-card-pill pill-active">Aktif & Berjalan Saat Ini</span>
+        </div>
+        <h3 class="usp-feature-title">3 Tanggung Jawab Strategis Berjalan</h3>
+        <div class="active-roles-list">
+          <!-- Role 1 -->
+          <div class="active-role-item active-hoverable">
+            <span class="role-bullet">1</span>
+            <div>
+              <strong>Project Officer Planopolis 2026</strong>
+              <p>Pimpinan tertinggi perhelatan akbar nasional PWK ITS (memimpin 100+ panitia & staf lintas 8 divisi).</p>
+              <span class="role-micro-badge">🏛️ Event Nasional · Grand Design</span>
+            </div>
+          </div>
+          <!-- Role 2 -->
+          <div class="active-role-item active-hoverable">
+            <span class="role-bullet">2</span>
+            <div>
+              <strong>Asisten Dosen Metode Analisis Perencanaan (MAP)</strong>
+              <p>Mendampingi 43 mahasiswa dalam 15 modul analisis kuantitatif di lab PWK ITS.</p>
+              <span class="role-micro-badge">🔬 Asistensi Lab · QGIS & SPSS</span>
+            </div>
+          </div>
+          <!-- Role 3 -->
+          <div class="active-role-item active-hoverable">
+            <span class="role-bullet">3</span>
+            <div>
+              <strong>Vice Project Leader PT Mitra Pengembang Kawasan x LokaSolution</strong>
+              <p>Kajian spasial, riset pasar, dan studi kelayakan proyek pengembangan kawasan.</p>
+              <span class="role-micro-badge">🏢 Real Estate · Feasibility Study</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     3. KARYA UNGGULAN: KARTUN KEMACETAN MOBIL PERKOTAAN BERJALAN PERLAHAN (REQUEST 3)
+     ========================================================================= -->
+<section id="karya-unggulan" class="section">
+  <div class="container">
+    
+    <!-- Cartoon Urban Traffic Jam Avenue (Request 3: Mobil Kemacetan Berjalan Perlahan) -->
+    <div class="urban-traffic-gateway-avenue" aria-hidden="true">
+      <!-- Road Gantry Information Sign -->
+      <div class="traffic-gantry-sign">
+        <span class="gantry-signal-dot"></span>
+        <span class="gantry-title">🚦 KORIDOR STUDI KASUS & RISET SPASIAL</span>
+        <span class="gantry-sub">KEPADATAN LALU LINTAS PERKOTAAN TERPANTAU · ARAH KORIDOR STUDI KASUS</span>
+      </div>
+
+      <!-- Asphalt Roadway Strip with Moving Queued Cars -->
+      <div class="avenue-road-strip">
+        <div class="avenue-asphalt-surface">
+          <!-- Road Centerline Dash -->
+          <div class="avenue-divider-lines"></div>
+          <!-- Road Crosswalk Markings -->
+          <div class="avenue-pedestrian-crosswalk"></div>
+
+          <!-- Queued Line of Cartoon Vehicles Slowly Creeping across the Road (Stop-and-Go Crawl) -->
+          <div class="avenue-traffic-crawler">
+            
+            <!-- Car 1: Orange Feeder Angkot -->
+            <div class="avenue-vehicle veh-angkot">
+              <svg width="86" height="42" viewBox="0 0 86 42" fill="none">
+                <rect x="3" y="12" width="80" height="22" rx="4" fill="#EA580C"/>
+                <path d="M16 12 L28 4 L72 4 L78 12 Z" fill="#C2410C"/>
+                <rect x="30" y="6" width="14" height="8" rx="1.5" fill="#FEF08A" opacity="0.85"/>
+                <rect x="48" y="6" width="16" height="8" rx="1.5" fill="#FEF08A" opacity="0.85"/>
+                <circle cx="22" cy="34" r="6" fill="#0F172A" stroke="#E2E8F0" stroke-width="1.5"/>
+                <circle cx="64" cy="34" r="6" fill="#0F172A" stroke="#E2E8F0" stroke-width="1.5"/>
+                <circle cx="5" cy="24" r="2.5" fill="#EF4444"/>
+                <circle cx="81" cy="24" r="2.5" fill="#FEF08A" filter="drop-shadow(0 0 6px #FEF08A)"/>
+              </svg>
+            </div>
+
+            <!-- Car 2: Yellow City Taxi -->
+            <div class="avenue-vehicle veh-taxi">
+              <svg width="88" height="44" viewBox="0 0 88 44" fill="none">
+                <rect x="38" y="2" width="14" height="5" rx="1.5" fill="#0F172A" stroke="#FBBF24" stroke-width="1"/>
+                <rect x="4" y="18" width="80" height="17" rx="4" fill="#F59E0B"/>
+                <path d="M20 18 L30 7 L62 7 L72 18 Z" fill="#D97736"/>
+                <rect x="32" y="9" width="13" height="9" rx="1.5" fill="#1E293B"/>
+                <rect x="47" y="9" width="14" height="9" rx="1.5" fill="#1E293B"/>
+                <circle cx="24" cy="35" r="7" fill="#0F172A" stroke="#CBD5E1" stroke-width="1.5"/>
+                <circle cx="68" cy="35" r="7" fill="#0F172A" stroke="#CBD5E1" stroke-width="1.5"/>
+                <circle cx="6" cy="26" r="3" fill="#EF4444"/>
+                <circle cx="82" cy="26" r="3" fill="#FEF08A" filter="drop-shadow(0 0 6px #FEF08A)"/>
+              </svg>
+            </div>
+
+            <!-- Car 3: Red Commuter Sedan -->
+            <div class="avenue-vehicle veh-red">
+              <svg width="84" height="40" viewBox="0 0 84 40" fill="none">
+                <rect x="4" y="16" width="76" height="16" rx="4" fill="#E11D48"/>
+                <path d="M18 16 L28 6 L58 6 L68 16 Z" fill="#BE123C"/>
+                <rect x="30" y="8" width="12" height="8" rx="1.5" fill="#FEF08A" opacity="0.85"/>
+                <rect x="44" y="8" width="14" height="8" rx="1.5" fill="#FEF08A" opacity="0.85"/>
+                <circle cx="22" cy="32" r="6.5" fill="#0F172A" stroke="#E2E8F0" stroke-width="1.5"/>
+                <circle cx="64" cy="32" r="6.5" fill="#0F172A" stroke="#E2E8F0" stroke-width="1.5"/>
+                <circle cx="6" cy="24" r="2.8" fill="#EF4444"/>
+                <circle cx="78" cy="24" r="2.8" fill="#FEF08A" filter="drop-shadow(0 0 6px #FEF08A)"/>
+              </svg>
+            </div>
+
+            <!-- Car 4: Green Delivery Van -->
+            <div class="avenue-vehicle veh-van">
+              <svg width="98" height="48" viewBox="0 0 98 48" fill="none">
+                <rect x="4" y="8" width="62" height="30" rx="4" fill="#047857"/>
+                <path d="M66 14 L80 14 L92 28 L92 38 L66 38 Z" fill="#059669"/>
+                <path d="M70 17 L78 17 L86 26 L70 26 Z" fill="#1E293B"/>
+                <circle cx="28" cy="38" r="7.5" fill="#0F172A" stroke="#E2E8F0" stroke-width="1.5"/>
+                <circle cx="78" cy="38" r="7.5" fill="#0F172A" stroke="#E2E8F0" stroke-width="1.5"/>
+                <circle cx="6" cy="26" r="3" fill="#EF4444"/>
+                <circle cx="92" cy="32" r="3" fill="#FEF08A" filter="drop-shadow(0 0 6px #FEF08A)"/>
+              </svg>
+            </div>
+
+            <!-- Car 5: Blue City Hatchback -->
+            <div class="avenue-vehicle veh-blue">
+              <svg width="78" height="38" viewBox="0 0 78 38" fill="none">
+                <rect x="4" y="16" width="70" height="14" rx="3.5" fill="#0284C7"/>
+                <path d="M16 16 L24 6 L52 6 L60 16 Z" fill="#0369A1"/>
+                <rect x="26" y="8" width="11" height="7" rx="1.5" fill="#E0F2FE"/>
+                <rect x="39" y="8" width="11" height="7" rx="1.5" fill="#E0F2FE"/>
+                <circle cx="20" cy="30" r="6" fill="#0F172A" stroke="#E2E8F0" stroke-width="1.5"/>
+                <circle cx="58" cy="30" r="6" fill="#0F172A" stroke="#E2E8F0" stroke-width="1.5"/>
+                <circle cx="6" cy="22" r="2.5" fill="#EF4444"/>
+                <circle cx="72" cy="22" r="2.5" fill="#FEF08A" filter="drop-shadow(0 0 6px #FEF08A)"/>
+              </svg>
+            </div>
+
+            <!-- Car 6: Modern Suroboyo Transit Bus -->
+            <div class="avenue-vehicle veh-bus">
+              <svg width="150" height="52" viewBox="0 0 150 52" fill="none">
+                <rect x="4" y="6" width="138" height="35" rx="6" fill="#1B2C25" stroke="#A7C66A" stroke-width="1.5"/>
+                <rect x="4" y="24" width="138" height="6" fill="#D97736"/>
+                <rect x="12" y="10" width="18" height="12" rx="1.5" fill="#FEF08A" opacity="0.85"/>
+                <rect x="34" y="10" width="18" height="12" rx="1.5" fill="#FEF08A" opacity="0.85"/>
+                <rect x="56" y="10" width="18" height="12" rx="1.5" fill="#FEF08A" opacity="0.85"/>
+                <rect x="78" y="10" width="18" height="12" rx="1.5" fill="#FEF08A" opacity="0.85"/>
+                <path d="M100 10 L134 10 C138 12 140 16 140 22 L100 22 Z" fill="#0B1310"/>
+                <circle cx="30" cy="41" r="7" fill="#0F172A" stroke="#A7C66A" stroke-width="1.5"/>
+                <circle cx="112" cy="41" r="7" fill="#0F172A" stroke="#A7C66A" stroke-width="1.5"/>
+                <circle cx="140" cy="28" r="3" fill="#FEF08A" filter="drop-shadow(0 0 6px #FEF08A)"/>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Header -->
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:3rem;">
+      <div class="reveal">
+        <div class="section-tag">Studi Kasus Nyata</div>
+        <h2 class="section-title">Karya & Pemodelan Unggulan</h2>
+        <p class="section-desc">
+          Proyek representatif yang memperlihatkan integrasi antara pemodelan transportasi makro, evaluasi halte, dan penyusunan materi teknis kota.
+        </p>
+      </div>
+      <div class="reveal">
+        <a href="/karya" class="btn btn-outline">
+          <span>Lihat Seluruh 7 Karya</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Project Cards -->
+    <div class="projects-grid">
+      {% for p in featured_projects %}
+      <article class="project-card reveal reveal-delay-{{ loop.index }}">
+        <div class="project-card-media">
+          <img src="{{ p.cover_image }}" alt="{{ p.title }}" class="project-card-img" loading="lazy">
+          <span class="project-card-id-pill">{{ p.id }}</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-meta">
+            {% for cat in p.categories %}
+            <span class="badge badge-light" style="text-transform:capitalize;">{{ cat }}</span>
+            {% endfor %}
+            <span class="badge badge-primary">{{ p.project_type }}</span>
+          </div>
+
+          <h3 class="project-card-title">
+            <a href="/karya/{{ p.slug }}">{{ p.title }}</a>
+          </h3>
+
+          <div class="project-card-role">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>{{ p.role_summary }}</span>
+          </div>
+
+          <p class="project-card-desc">{{ p.summary }}</p>
+
+          <div class="project-card-footer">
+            <div class="project-tools">
+              {% for tool in p.tools[:3] %}
+              <span class="tool-chip">{{ tool }}</span>
+              {% endfor %}
+            </div>
+            <a href="/karya/{{ p.slug }}" class="btn btn-primary btn-sm" aria-label="Buka Studi Kasus {{ p.title }}">
+              <span>Pelajari</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     4. PENGALAMAN SELAMA BERKULIAH (ITEM 9: NARASI MATANG & TONGGAK MENONJOL)
+     (Bagian Konsol Spesialisasi lama dihapus sesuai Item 8)
+     ========================================================================= -->
+<section class="section" style="background-color:var(--color-bg);border-top:1px solid var(--color-border);">
+  <div class="container container-narrow">
+    <div class="section-header reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <div class="section-tag" style="justify-content:center;">Jejak Langkah & Rekam Jejak Lapangan</div>
+      <h2 class="section-title">Pengalaman Selama Berkuliah</h2>
+      <p class="section-desc" style="margin-left:auto;margin-right:auto;max-width:760px;line-height:1.75;">
+        Mirza merupakan pribadi yang memiliki integritas dan semangat tinggi untuk terus mencoba, mengeksplorasi, serta mengusahakan yang terbaik di setiap kesempatan. Tidak hanya berfokus unggul pada capaian akademis di kelas, Mirza aktif menempa diri secara seimbang melalui kepemimpinan organisasi skala nasional, asistensi laboratorium kampus, survei perhubungan riil di lapangan, hingga konsultasi pengembangan wilayah.
+      </p>
+    </div>
+
+    <!-- Authentic Metro Line Progress Track & Sliding Beacon (Simple, Modern & Elegant) -->
+    <div class="transit-metro-timeline reveal" id="metro-timeline-container">
+
+      <!-- Simple & High-Clarity Sliding Progress Rail System (Rombak Bersih & Jelas) -->
+      <div class="metro-timeline-rail-system" aria-hidden="true">
+        <div class="metro-rail-track-line">
+          <div class="metro-rail-fill-bar" id="metro-progress-fill"></div>
+          <div class="metro-sliding-capsule" id="metro-sliding-capsule" title="Indikator Kemajuan Scroll">
+            <span class="capsule-core"></span>
+            <span class="capsule-beacon"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stasiun 1: INI LHO ITS 2026 (Sep 2025 - Mar 2026) -->
+      <div class="metro-timeline-item" data-station="st-01" id="exp-station-1">
+        <div class="metro-station-badge-node">
+          <div class="metro-badge-core badge-media badge-metro-media">
+            <span class="station-code-pill">ST-01</span>
+          </div>
+        </div>
+        <div class="timeline-content exp-thematic-card" data-theme="media">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.35rem;">
+            <h3 style="font-size:1.15rem;font-weight:700;color:var(--color-text-main);margin:0;">INI LHO ITS 2026!</h3>
+            <span style="font-family:var(--font-mono);font-size:0.8rem;font-weight:600;color:var(--color-text-light);">Sep 2025 &ndash; Mar 2026</span>
+          </div>
+          <div style="font-size:0.95rem;font-weight:600;color:var(--color-primary);margin-bottom:0.5rem;">
+            Ketua Subdivisi Media Production
+          </div>
+          <p style="font-size:0.925rem;color:var(--color-text-muted);line-height:1.6;margin:0;">
+            Saat menjadi Ketua Subdivisi Media Production, berhasil memimpin tim dalam memproduksi 84 motion graphics, 18 visual editing, dan 8 proyek video siaran (total 110 karya visual tim) untuk menjangkau puluhan ribu calon mahasiswa baru ITS.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stasiun 2: Dinas Perhubungan Kabupaten Sidoarjo (Nov 2025 - Des 2025) -->
+      <div class="metro-timeline-item" data-station="st-02" id="exp-station-2">
+        <div class="metro-station-badge-node">
+          <div class="metro-badge-core badge-transit badge-metro-transit">
+            <span class="station-code-pill">ST-02</span>
+          </div>
+        </div>
+        <div class="timeline-content exp-thematic-card" data-theme="transit">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.35rem;">
+            <h3 style="font-size:1.15rem;font-weight:700;color:var(--color-text-main);margin:0;">Dinas Perhubungan Kabupaten Sidoarjo</h3>
+            <span style="font-family:var(--font-mono);font-size:0.8rem;font-weight:600;color:var(--color-text-light);">Nov 2025 &ndash; Des 2025</span>
+          </div>
+          <div style="font-size:0.95rem;font-weight:600;color:var(--color-primary);margin-bottom:0.5rem;">
+            Surveyor Operasional Angkutan Pedesaan & Transjatim
+          </div>
+          <p style="font-size:0.925rem;color:var(--color-text-muted);line-height:1.6;margin:0;">
+            Melakukan survei lapangan kondisi armada angkutan pedesaan, evaluasi cakupan trayek, serta wawancara langsung kepada penumpang angkot dan Transjatim untuk penyusunan laporan mobilitas wilayah Dishub Sidoarjo.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stasiun 3: Laboratorium PWK ITS (Mar 2026 - Sekarang) -->
+      <div class="metro-timeline-item" data-station="st-03" id="exp-station-3">
+        <div class="metro-station-badge-node">
+          <div class="metro-badge-core badge-spatial badge-metro-spatial">
+            <span class="station-code-pill">ST-03</span>
+          </div>
+        </div>
+        <div class="timeline-content exp-thematic-card" data-theme="spatial">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.35rem;">
+            <h3 style="font-size:1.15rem;font-weight:700;color:var(--color-text-main);margin:0;">Laboratorium PWK ITS</h3>
+            <span style="font-family:var(--font-mono);font-size:0.8rem;font-weight:600;color:var(--color-text-light);">Mar 2026 &ndash; Sekarang</span>
+          </div>
+          <div style="font-size:0.95rem;font-weight:600;color:var(--color-primary);margin-bottom:0.5rem;">
+            Asisten Dosen Sistem Informasi Perencanaan & Metode Analisis (MAP)
+          </div>
+          <p style="font-size:0.925rem;color:var(--color-text-muted);line-height:1.6;margin:0;">
+            Membimbing langsung 45 mahasiswa dalam 15 modul praktikum laboratorium: pengolahan raster & vektor GIS, WebGIS interaktif, serta metode kuantitatif analisis wilayah menggunakan Excel dan SPSS.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stasiun 4: Planopolis 2026 (Mei 2026 - Sekarang) -->
+      <div class="metro-timeline-item" data-station="st-04" id="exp-station-4">
+        <div class="metro-station-badge-node">
+          <div class="metro-badge-core badge-leadership badge-metro-leadership">
+            <span class="station-code-pill">ST-04</span>
+          </div>
+        </div>
+        <div class="timeline-content exp-thematic-card" data-theme="leadership">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.35rem;">
+            <h3 style="font-size:1.15rem;font-weight:700;color:var(--color-text-main);margin:0;">Planopolis 2026</h3>
+            <span style="font-family:var(--font-mono);font-size:0.8rem;font-weight:600;color:var(--color-text-light);">Mei 2026 &ndash; Sekarang</span>
+          </div>
+          <div style="font-size:0.95rem;font-weight:600;color:var(--color-primary);margin-bottom:0.5rem;">
+            Project Officer (Pimpinan Tertinggi)
+          </div>
+          <p style="font-size:0.925rem;color:var(--color-text-muted);line-height:1.6;margin:0;">
+            Pimpinan tertinggi perhelatan akbar PWK ITS berskala nasional: mengarahkan visi dan memimpin langsung koordinasi strategis 100+ staf panitia yang tersebar di 8 divisi operasional.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stasiun 5: PT Mitra Pengembang Kawasan x LokaSolution (Jun 2026 - Sekarang) -->
+      <div class="metro-timeline-item" data-station="st-05" id="exp-station-5">
+        <div class="metro-station-badge-node">
+          <div class="metro-badge-core badge-consulting badge-metro-consulting">
+            <span class="station-code-pill">ST-05</span>
+          </div>
+        </div>
+        <div class="timeline-content exp-thematic-card" data-theme="consulting">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.35rem;">
+            <h3 style="font-size:1.15rem;font-weight:700;color:var(--color-text-main);margin:0;">PT Mitra Pengembang Kawasan x LokaSolution</h3>
+            <span style="font-family:var(--font-mono);font-size:0.8rem;font-weight:600;color:var(--color-text-light);">Jun 2026 &ndash; Sekarang</span>
+          </div>
+          <div style="font-size:0.95rem;font-weight:600;color:var(--color-primary);margin-bottom:0.5rem;">
+            Vice Project Leader & Konsultan Tata Ruang
+          </div>
+          <p style="font-size:0.925rem;color:var(--color-text-muted);line-height:1.6;margin:0;">
+            Memimpin perumusan kajian spasial, riset potensi pasar kawasan, analisis benchmarking kompetitor, serta penyusunan rekomendasi kelayakan bisnis untuk mitra pengembang real estate.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <a href="/cv" class="btn btn-outline">
+        <span>Buka Seluruh Pengalaman pada CV Interaktif</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     5. KONTAK SECTION
+     ========================================================================= -->
+<section id="kontak" class="section">
+  <div class="container">
+    <div class="contact-card reveal">
+      <div class="contact-inner">
+        <div>
+          <div class="badge badge-transit" style="margin-bottom:1rem;color:#A7C66A;border-color:rgba(167, 198, 106, 0.4);">
+            Terbuka untuk Diskusi & Kolaborasi
+          </div>
+          <h2 style="font-size:clamp(1.8rem, 3vw, 2.3rem);font-weight:800;color:#FFFFFF;line-height:1.2;margin-bottom:1rem;">
+            Mari Berdiskusi & Terhubung
+          </h2>
+          <p style="color:var(--color-hero-muted);line-height:1.65;font-size:1.05rem;">
+            Saya selalu antusias menyambut peluang magang industri, kolaborasi riset transportasi makro, pemodelan spasial GIS, maupun proyek perencanaan tata ruang kota.
+          </p>
+        </div>
+
+        <div class="contact-action-box">
+          <div class="copy-email-bar">
+            <span class="copy-email-text" id="target-email">{{ contact.email }}</span>
+            <button class="btn btn-primary btn-sm" data-copy-email="{{ contact.email }}" aria-label="Salin alamat email">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Salin</span>
+            </button>
+            <a href="mailto:{{ contact.email }}" class="btn btn-secondary btn-sm" aria-label="Kirim email langsung">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Kirim Email</span>
+            </a>
+          </div>
+
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="{{ contact.linkedin }}" target="_blank" rel="noopener" class="btn btn-secondary" style="flex:1;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>LinkedIn Mirza</span>
+            </a>
+            <a href="/cv" class="btn btn-secondary" style="flex:1;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+              <span>Buka CV Lengkap</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Halaman Tidak Ditemukan (404) | {{ profile.name }}{% endblock %}
+
+{% block content %}
+<section class="section" style="min-height:65vh;display:flex;align-items:center;">
+  <div class="container container-narrow" style="text-align:center;">
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:4rem 2rem;box-shadow:var(--shadow-sm);max-width:540px;margin:0 auto;">
+      <div class="badge badge-light" style="font-family:var(--font-mono);font-size:1.1rem;padding:0.4rem 0.8rem;margin-bottom:1.5rem;">
+        Kode Status: {{ status_code or 404 }}
+      </div>
+
+      <h1 style="font-size:2rem;font-weight:800;color:var(--color-text-main);margin-bottom:0.75rem;">
+        Rute Jalur Tidak Ditemukan
+      </h1>
+
+      <p style="color:var(--color-text-muted);line-height:1.65;font-size:1rem;margin-bottom:2rem;">
+        {{ detail or 'Halaman atau dokumen studi kasus yang Anda tuju mungkin telah dipindahkan, diubah jalurnya, atau belum diterbitkan.' }}
+      </p>
+
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a href="/" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Kembali ke Beranda</span>
+        </a>
+
+        <a href="/karya" class="btn btn-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Eksplorasi Katalog Karya</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

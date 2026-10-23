@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}Katalog Studi Kasus & Proyek Spasial | {{ profile.name }}{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top:3.5rem;">
+  <div class="container">
+    <!-- Header -->
+    <div class="section-header" style="margin-bottom:2.5rem;">
+      <div class="section-tag">
+        <span class="station-node" style="width:12px;height:12px;border-width:3px;border-color:var(--color-accent-path);"></span>
+        Katalog Komprehensif
+      </div>
+      <h1 class="section-title">Seluruh Karya & Studi Kasus Spasial</h1>
+      <p class="section-desc">
+        Inventaris 7 studi kasus mencakup pemodelan transportasi 4 tahap, analisis jaringan halte angkutan umum, perancangan rencana tata ruang, dan evaluasi iklim mikro perkotaan.
+      </p>
+    </div>
+
+    <!-- Filter & Search Toolbar -->
+    <div class="reveal" style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:1.5rem;box-shadow:var(--shadow-sm);margin-bottom:2.5rem;">
+      <form id="catalog-filter-form" method="GET" action="/karya" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem;">
+        <!-- Category Filter Pills (Glitch-Free Smooth Buttons) -->
+        <div class="catalog-category-tabs" role="tablist" aria-label="Kategori Karya">
+          {% for cat in categories %}
+          <a href="/karya?kategori={{ cat.id }}{% if search_query %}&q={{ search_query }}{% endif %}" 
+             class="catalog-tab-btn {% if selected_category == cat.id %}active{% endif %}"
+             role="tab"
+             aria-selected="{% if selected_category == cat.id %}true{% else %}false{% endif %}">
+            <span>{{ cat.label }}</span>
+          </a>
+          {% endfor %}
+        </div>
+
+        <!-- Search Input with live sync -->
+        <div style="position:relative;min-width:260px;flex-grow:1;max-width:400px;">
+          <input type="hidden" name="kategori" value="{{ selected_category }}">
+          <input type="text" 
+                 id="catalog-search" 
+                 name="q" 
+                 value="{{ search_query }}" 
+                 placeholder="Cari judul, perangkat, atau lokasi..." 
+                 class="search-input"
+                 style="width:100%;padding:0.6rem 1rem 0.6rem 2.4rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;outline:none;" />
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;left:0.85rem;top:50%;transform:translateY(-50%);color:var(--color-text-light);">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </form>
+    </div>
+
+    <!-- Results Status Strip -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;font-size:0.875rem;color:var(--color-text-muted);">
+      <div id="catalog-status-text">
+        Menampilkan <strong id="catalog-count-num">{{ total_results }}</strong> dari {{ total_all }} studi kasus
+        {% if selected_category != 'semua' %} pada kategori <em>"{{ selected_category }}"</em>{% endif %}
+        {% if search_query %} dengan kata kunci <em>"{{ search_query }}"</em>{% endif %}
+      </div>
+      {% if selected_category != 'semua' or search_query %}
+      <a href="/karya" class="btn btn-white btn-sm" style="font-size:0.775rem;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+        <span>Reset Filter</span>
+      </a>
+      {% endif %}
+    </div>
+
+    <!-- Projects Grid or Empty State -->
+    {% if projects %}
+    <div class="projects-grid" id="catalog-projects-grid">
+      {% for p in projects %}
+      <article class="project-card reveal reveal-delay-{{ loop.index % 4 }}"
+               data-title="{{ p.title | lower }}"
+               data-categories="{{ p.categories | join(' ') | lower }}"
+               data-tools="{{ p.tools | join(' ') | lower }}"
+               data-summary="{{ p.summary | lower }}"
+               data-location="{{ p.location | lower }}">
+        <div class="project-card-media">
+          <img src="{{ p.cover_image }}" alt="{{ p.title }}" class="project-card-img" loading="lazy">
+          <span class="project-card-id-pill">{{ p.id }}</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-meta">
+            {% for cat in p.categories %}
+            <span class="badge badge-light" style="text-transform:capitalize;">{{ cat }}</span>
+            {% endfor %}
+            <span class="badge badge-primary">{{ p.project_type }}</span>
+          </div>
+
+          <h3 class="project-card-title">
+            <a href="/karya/{{ p.slug }}">{{ p.title }}</a>
+          </h3>
+
+          <div class="project-card-role">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>{{ p.role_summary }}</span>
+          </div>
+
+          <p class="project-card-desc">{{ p.summary }}</p>
+
+          <div class="project-card-footer">
+            <div class="project-tools">
+              {% for tool in p.tools[:3] %}
+              <span class="tool-chip">{{ tool }}</span>
+              {% endfor %}
+            </div>
+            <a href="/karya/{{ p.slug }}" class="btn btn-primary btn-sm" aria-label="Buka studi kasus {{ p.title }}">
+              <span>Detail</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+
+      <!-- Client-side No Results State (Instant Feedback) -->
+      <div id="catalog-client-empty" style="display:none;background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:3.5rem 2rem;text-align:center;grid-column:1/-1;">
+        <div style="width:56px;height:56px;border-radius:50%;background-color:var(--color-surface-alt);color:var(--color-text-light);display:inline-flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+        <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.4rem;color:var(--color-text-main);">Tidak ada studi kasus yang cocok</h3>
+        <p style="color:var(--color-text-muted);max-width:420px;margin:0 auto 1.25rem auto;font-size:0.9rem;">
+          Silakan coba kata kunci lain atau bersihkan kotak pencarian untuk melihat seluruh karya.
+        </p>
+        <button type="button" id="btn-clear-search" class="btn btn-primary btn-sm">
+          <span>Reset Pencarian</span>
+        </button>
+      </div>
+
+    </div>
+    {% else %}
+    <!-- Empty State -->
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:4rem 2rem;text-align:center;">
+      <div style="width:64px;height:64px;border-radius:50%;background-color:var(--color-surface-alt);color:var(--color-text-light);display:inline-flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.5rem;color:var(--color-text-main);">Belum ada karya pada pilihan ini</h3>
+      <p style="color:var(--color-text-muted);max-width:440px;margin:0 auto 1.5rem auto;">
+        Coba gunakan kata kunci lain atau bersihkan filter kategori untuk melihat seluruh studi kasus yang tersedia.
+      </p>
+      <a href="/karya" class="btn btn-primary">
+        <span>Tampilkan Seluruh Karya</span>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

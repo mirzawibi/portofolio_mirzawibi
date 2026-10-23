@@ -1,0 +1,444 @@
+{% extends "base.html" %}
+
+{% block title %}Panel Pengelolaan Pemilik | {{ profile.name }}{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top:2.5rem;">
+  <div class="container">
+
+    <!-- Top Admin Bar -->
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--color-border);">
+      <div>
+        <div class="badge badge-primary" style="margin-bottom:0.4rem;">Panel Admin Tanpa Coding</div>
+        <h1 style="font-size:1.85rem;font-weight:800;color:var(--color-text-main);line-height:1.2;">
+          Pengelolaan Portofolio Mirza
+        </h1>
+        <p style="font-size:0.875rem;color:var(--color-text-muted);">
+          Perbarui karya, profil, CV, dan urutan tampilan secara instan.
+        </p>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="/" target="_blank" class="btn btn-white btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          <span>Lihat Situs Publik</span>
+        </a>
+        <a href="/admin/logout" class="btn btn-secondary btn-sm" style="background-color:#E24D4D;color:#FFF;border-color:#C73838;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Keluar</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Flash message -->
+    {% if success_msg %}
+    <div style="background-color:#DEF7EC;border:1px solid #BCF0DA;color:#03543F;padding:1rem 1.25rem;border-radius:var(--radius-md);margin-bottom:2rem;display:flex;align-items:center;gap:0.75rem;font-size:0.925rem;font-weight:600;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <span>{{ success_msg }}</span>
+    </div>
+    {% endif %}
+
+    <!-- Tabs Header -->
+    <div style="display:flex;gap:0.5rem;overflow-x:auto;padding-bottom:0.5rem;margin-bottom:2rem;border-bottom:1px solid var(--color-border);">
+      <a href="/admin?tab=overview" class="btn btn-sm {% if active_tab == 'overview' %}btn-primary{% else %}btn-white{% endif %}">
+        Ringkasan Dasbor
+      </a>
+      <a href="/admin?tab=projects" class="btn btn-sm {% if active_tab == 'projects' %}btn-primary{% else %}btn-white{% endif %}">
+        Manajemen Proyek ({{ projects|length }})
+      </a>
+      <a href="/admin?tab=profile" class="btn btn-sm {% if active_tab == 'profile' %}btn-primary{% else %}btn-white{% endif %}">
+        Profil & Kontak
+      </a>
+      <a href="/admin?tab=experiences" class="btn btn-sm {% if active_tab == 'experiences' %}btn-primary{% else %}btn-white{% endif %}">
+        Pengalaman ({{ experiences|length }})
+      </a>
+      <a href="/admin?tab=cv" class="btn btn-sm {% if active_tab == 'cv' %}btn-primary{% else %}btn-white{% endif %}">
+        CV PDF & Sinkronisasi
+      </a>
+      <a href="/admin?tab=backups" class="btn btn-sm {% if active_tab == 'backups' %}btn-primary{% else %}btn-white{% endif %}">
+        Cadangan & Pemulihan Versi ({{ backups|length }})
+      </a>
+    </div>
+
+    <!-- TAB 1: OVERVIEW -->
+    {% if active_tab == 'overview' %}
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1.5rem;margin-bottom:2.5rem;">
+      <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm);">
+        <span style="font-size:0.8rem;color:var(--color-text-light);font-weight:700;text-transform:uppercase;">Total Studi Kasus</span>
+        <div style="font-size:2.2rem;font-weight:800;color:var(--color-primary);margin:0.25rem 0;">{{ projects|length }}</div>
+        <span style="font-size:0.85rem;color:var(--color-text-muted);">Tersedia dalam katalog</span>
+      </div>
+
+      <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm);">
+        <span style="font-size:0.8rem;color:var(--color-text-light);font-weight:700;text-transform:uppercase;">Status Magang</span>
+        <div style="font-size:1.15rem;font-weight:800;color:#233B2B;margin:0.6rem 0;">{{ profile.internship_status }}</div>
+        <span style="font-size:0.85rem;color:var(--color-text-muted);">Aktif di hero dan footer</span>
+      </div>
+
+      <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm);">
+        <span style="font-size:0.8rem;color:var(--color-text-light);font-weight:700;text-transform:uppercase;">Berkas CV PDF</span>
+        <div style="font-size:1.15rem;font-weight:800;color:var(--color-text-main);margin:0.6rem 0;">{{ resume_asset.filesize_str }}</div>
+        <span style="font-size:0.85rem;color:var(--color-text-muted);">Sinkron: {{ resume_asset.updated_at }}</span>
+      </div>
+
+      <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm);">
+        <span style="font-size:0.8rem;color:var(--color-text-light);font-weight:700;text-transform:uppercase;">Snapshot Cadangan</span>
+        <div style="font-size:2.2rem;font-weight:800;color:var(--color-accent-blue);margin:0.25rem 0;">{{ backups|length }}</div>
+        <span style="font-size:0.85rem;color:var(--color-text-muted);">Dapat dipulihkan kapan saja</span>
+      </div>
+    </div>
+
+    <!-- Quick action links -->
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-sm);">
+      <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:1rem;color:var(--color-text-main);">Tindakan Cepat</h3>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="/admin/projects/new" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          <span>Tambah Studi Kasus Baru</span>
+        </a>
+        <a href="/admin?tab=profile" class="btn btn-white">
+          <span>Ubah Profil & Ketersediaan Magang</span>
+        </a>
+        <a href="/admin?tab=cv" class="btn btn-white">
+          <span>Unggah Versi CV PDF Baru</span>
+        </a>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- TAB 2: PROJECTS MANAGEMENT -->
+    {% if active_tab == 'projects' %}
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-sm);">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+        <div>
+          <h2 style="font-size:1.25rem;font-weight:700;color:var(--color-text-main);">Daftar Studi Kasus</h2>
+          <p style="font-size:0.85rem;color:var(--color-text-muted);">Atur urutan tampilan, status publikasi, dan ubah isi dokumen.</p>
+        </div>
+        <a href="/admin/projects/new" class="btn btn-primary btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          <span>Tambah Proyek Baru</span>
+        </a>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;text-align:left;font-size:0.875rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--color-border);color:var(--color-text-light);font-size:0.775rem;text-transform:uppercase;">
+              <th style="padding:0.75rem 0.5rem;width:80px;">Urutan</th>
+              <th style="padding:0.75rem 0.5rem;width:90px;">Sampul</th>
+              <th style="padding:0.75rem 0.5rem;">Judul & Identitas</th>
+              <th style="padding:0.75rem 0.5rem;">Kategori</th>
+              <th style="padding:0.75rem 0.5rem;">Status</th>
+              <th style="padding:0.75rem 0.5rem;text-align:right;">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in projects %}
+            <tr style="border-bottom:1px solid var(--color-border);">
+              <!-- Reorder Buttons -->
+              <td style="padding:1rem 0.5rem;white-space:nowrap;">
+                <div style="display:flex;gap:0.25rem;">
+                  <form method="POST" action="/admin/projects/{{ p.id }}/move" style="display:inline;">
+                    <input type="hidden" name="direction" value="up">
+                    <button type="submit" class="btn btn-white btn-sm" style="padding:0.2rem 0.4rem;font-size:0.75rem;" title="Pindahkan Ke Atas" {% if loop.first %}disabled style="opacity:0.4;"{% endif %}>▲</button>
+                  </form>
+                  <form method="POST" action="/admin/projects/{{ p.id }}/move" style="display:inline;">
+                    <input type="hidden" name="direction" value="down">
+                    <button type="submit" class="btn btn-white btn-sm" style="padding:0.2rem 0.4rem;font-size:0.75rem;" title="Pindahkan Ke Bawah" {% if loop.last %}disabled style="opacity:0.4;"{% endif %}>▼</button>
+                  </form>
+                </div>
+              </td>
+
+              <!-- Cover thumbnail -->
+              <td style="padding:1rem 0.5rem;">
+                <img src="{{ p.cover_image }}" alt="{{ p.title }}" style="width:70px;aspect-ratio:16/9;object-fit:cover;border-radius:4px;border:1px solid var(--color-border);">
+              </td>
+
+              <!-- Title & Meta -->
+              <td style="padding:1rem 0.5rem;">
+                <span class="badge badge-light" style="font-family:var(--font-mono);font-size:0.7rem;margin-bottom:0.2rem;">{{ p.id }}</span>
+                <div style="font-weight:700;color:var(--color-text-main);font-size:0.95rem;">{{ p.title }}</div>
+                <div style="font-size:0.775rem;color:var(--color-text-muted);">{{ p.role_summary }} · {{ p.location }}</div>
+              </td>
+
+              <!-- Categories -->
+              <td style="padding:1rem 0.5rem;">
+                <div style="display:flex;gap:0.3rem;flex-wrap:wrap;">
+                  {% for cat in p.categories %}
+                  <span class="badge badge-light" style="font-size:0.7rem;">{{ cat }}</span>
+                  {% endfor %}
+                </div>
+              </td>
+
+              <!-- Status -->
+              <td style="padding:1rem 0.5rem;white-space:nowrap;">
+                <form method="POST" action="/admin/projects/{{ p.id }}/toggle-status" style="display:inline;">
+                  {% if p.status == 'published' %}
+                  <button type="submit" class="badge badge-status" style="border:none;cursor:pointer;" title="Klik untuk jadikan Draf">
+                    ✓ Terbit
+                  </button>
+                  {% else %}
+                  <button type="submit" class="badge badge-light" style="border:none;cursor:pointer;background-color:#FDE8E8;color:#9B1C1C;" title="Klik untuk Terbitkan">
+                    Draf
+                  </button>
+                  {% endif %}
+                </form>
+
+                <form method="POST" action="/admin/projects/{{ p.id }}/toggle-featured" style="display:inline;margin-left:0.3rem;">
+                  {% if p.featured %}
+                  <button type="submit" class="badge badge-transit" style="border:none;cursor:pointer;" title="Status Unggulan Aktif">
+                    ★ Unggulan
+                  </button>
+                  {% else %}
+                  <button type="submit" class="badge badge-light" style="border:none;cursor:pointer;" title="Klik untuk jadikan Unggulan">
+                    ☆ Biasa
+                  </button>
+                  {% endif %}
+                </form>
+              </td>
+
+              <!-- Action buttons -->
+              <td style="padding:1rem 0.5rem;text-align:right;white-space:nowrap;">
+                <a href="/karya/{{ p.slug }}?preview=1" target="_blank" class="btn btn-white btn-sm" style="font-size:0.75rem;padding:0.3rem 0.6rem;">
+                  Pratinjau
+                </a>
+                <a href="/admin/projects/{{ p.id }}/edit" class="btn btn-primary btn-sm" style="font-size:0.75rem;padding:0.3rem 0.6rem;">
+                  Edit
+                </a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- TAB 3: PROFILE & CONTACT -->
+    {% if active_tab == 'profile' %}
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:var(--shadow-sm);max-width:850px;">
+      <h2 style="font-size:1.35rem;font-weight:700;color:var(--color-text-main);margin-bottom:0.4rem;">
+        Edit Profil & Informasi Kontak
+      </h2>
+      <p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:2rem;">
+        Perubahan akan langsung tercermin pada halaman utama, CV, dan metadata situs.
+      </p>
+
+      <form method="POST" action="/admin/profile/update">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Nama Lengkap</label>
+            <input type="text" name="name" value="{{ profile.name }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Nama Panggilan</label>
+            <input type="text" name="short_name" value="{{ profile.short_name }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Gelar Akademik / Status</label>
+            <input type="text" name="title" value="{{ profile.title }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Bidang Keahlian Utama</label>
+            <input type="text" name="field" value="{{ profile.field }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Teks Sorotan Hero (Headline)</label>
+          <textarea name="hero_headline" rows="2" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;">{{ profile.hero_headline }}</textarea>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Biografi Profil</label>
+          <textarea name="bio" rows="4" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;">{{ profile.bio }}</textarea>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Status Ketersediaan Magang</label>
+            <input type="text" name="internship_status" value="{{ profile.internship_status }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Periode Magang</label>
+            <input type="text" name="internship_period" value="{{ profile.internship_period }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;">
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Email Utama</label>
+            <input type="email" name="email" value="{{ contact.email }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Nomor Telepon</label>
+            <input type="text" name="phone" value="{{ contact.phone }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;">
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Tautan LinkedIn</label>
+            <input type="url" name="linkedin" value="{{ contact.linkedin }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Domisili / Lokasi</label>
+            <input type="text" name="location" value="{{ contact.location }}" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg>
+          <span>Simpan Perubahan Profil</span>
+        </button>
+      </form>
+    </div>
+    {% endif %}
+
+    <!-- TAB 4: EXPERIENCES -->
+    {% if active_tab == 'experiences' %}
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-sm);">
+      <h2 style="font-size:1.25rem;font-weight:700;color:var(--color-text-main);margin-bottom:1.5rem;">
+        Daftar Pengalaman CV
+      </h2>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        {% for exp in experiences %}
+        <div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+            <h3 style="font-size:1.1rem;font-weight:700;">{{ exp.org }} — <span style="color:var(--color-primary);">{{ exp.role }}</span></h3>
+            <span class="badge badge-light">{{ exp.period }}</span>
+          </div>
+          <p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:0.75rem;">{{ exp.summary }}</p>
+          <div style="display:flex;gap:0.35rem;">
+            {% for t in exp.tags %}
+            <span class="badge badge-light" style="font-size:0.7rem;">{{ t }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- TAB 5: CV ASSET -->
+    {% if active_tab == 'cv' %}
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:var(--shadow-sm);max-width:700px;">
+      <h2 style="font-size:1.35rem;font-weight:700;color:var(--color-text-main);margin-bottom:0.5rem;">
+        Pengelolaan Berkas CV PDF
+      </h2>
+      <p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:2rem;">
+        Hanya satu berkas CV aktif yang disajikan untuk tombol unduh publik. Nama publik otomatis diseragamkan menjadi <code>CV_Muhammad_Mirza_Wibisono.pdf</code>.
+      </p>
+
+      <div style="background-color:var(--color-surface-alt);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:2rem;">
+        <div style="font-weight:700;font-size:1rem;color:var(--color-text-main);margin-bottom:0.35rem;">Berkas CV Aktif Saat Ini</div>
+        <div style="font-size:0.85rem;color:var(--color-text-muted);line-height:1.6;">
+          Ukuran: <strong>{{ resume_asset.filesize_str }}</strong><br>
+          Tanggal Pembaruan: <strong>{{ resume_asset.updated_at }}</strong><br>
+          Status: <span class="badge badge-status">Aktif & Terverifikasi</span>
+        </div>
+        <div style="margin-top:1rem;">
+          <a href="/CV_Muhammad_Mirza_Wibisono.pdf" target="_blank" class="btn btn-outline btn-sm">
+            <span>Buka Berkas PDF Saat Ini</span>
+          </a>
+        </div>
+      </div>
+
+      <form method="POST" action="/admin/cv/upload" enctype="multipart/form-data">
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:0.5rem;">Pilih Berkas PDF Baru</label>
+          <input type="file" name="cv_file" accept=".pdf" required style="display:block;width:100%;font-size:0.9rem;" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span>Unggah & Perbarui CV PDF</span>
+        </button>
+      </form>
+    </div>
+    {% endif %}
+
+    <!-- TAB 6: BACKUPS -->
+    {% if active_tab == 'backups' %}
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-sm);">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+        <div>
+          <h2 style="font-size:1.25rem;font-weight:700;color:var(--color-text-main);">Riwayat Snapshot Cadangan</h2>
+          <p style="font-size:0.85rem;color:var(--color-text-muted);">Setiap kali konten disimpan, snapshot cadangan otomatis dibuat untuk pemulihan aman.</p>
+        </div>
+
+        <form method="POST" action="/admin/backups/create">
+          <input type="hidden" name="note" value="Snapshot Manual Pemilik">
+          <button type="submit" class="btn btn-primary btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            </svg>
+            <span>Buat Cadangan Baru Sekarang</span>
+          </button>
+        </form>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--color-border);color:var(--color-text-light);font-size:0.775rem;text-transform:uppercase;">
+              <th style="padding:0.75rem 0.5rem;text-align:left;">Nama Berkas Snapshot</th>
+              <th style="padding:0.75rem 0.5rem;text-align:left;">Waktu Dibuat</th>
+              <th style="padding:0.75rem 0.5rem;text-align:left;">Ukuran</th>
+              <th style="padding:0.75rem 0.5rem;text-align:right;">Tindakan</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for b in backups %}
+            <tr style="border-bottom:1px solid var(--color-border);">
+              <td style="padding:1rem 0.5rem;font-family:var(--font-mono);font-size:0.825rem;">{{ b.filename }}</td>
+              <td style="padding:1rem 0.5rem;">{{ b.created_at }}</td>
+              <td style="padding:1rem 0.5rem;">{{ b.size_kb }} KB</td>
+              <td style="padding:1rem 0.5rem;text-align:right;">
+                <form method="POST" action="/admin/backups/restore" onsubmit="return confirm('Apakah Anda yakin ingin memulihkan versi data ini? Data saat ini akan digantikan.');" style="display:inline;">
+                  <input type="hidden" name="filename" value="{{ b.filename }}">
+                  <button type="submit" class="btn btn-outline btn-sm" style="font-size:0.75rem;">
+                    Pulihkan Versi Ini
+                  </button>
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+{% endblock %}

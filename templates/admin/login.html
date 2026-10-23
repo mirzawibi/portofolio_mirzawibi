@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Masuk Panel Pemilik | {{ profile.name }}{% endblock %}
+
+{% block content %}
+<section class="section" style="min-height:70vh;display:flex;align-items:center;">
+  <div class="container container-narrow" style="max-width:440px;">
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:var(--shadow-md);">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <div class="brand-icon" style="margin:0 auto 1rem auto;width:48px;height:48px;font-size:1.35rem;">M</div>
+        <h1 style="font-size:1.5rem;font-weight:800;color:var(--color-text-main);margin-bottom:0.35rem;">Panel Pemilik Portofolio</h1>
+        <p style="font-size:0.875rem;color:var(--color-text-muted);">Masukkan kata sandi untuk mengelola konten dan studi kasus tanpa coding.</p>
+      </div>
+
+      {% if error %}
+      <div style="background-color:#FDE8E8;border:1px solid #F8B4B4;color:#9B1C1C;padding:0.75rem 1rem;border-radius:var(--radius-md);margin-bottom:1.5rem;font-size:0.85rem;">
+        {{ error }}
+      </div>
+      {% endif %}
+
+      <form method="POST" action="/admin/login">
+        <div style="margin-bottom:1.5rem;">
+          <label for="password" style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;color:var(--color-text-main);">Kata Sandi Pemilik</label>
+          <input type="password" id="password" name="password" required autofocus
+                 style="width:100%;padding:0.75rem 1rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.95rem;outline:none;"
+                 placeholder="••••••••••••" />
+          <span style="font-size:0.75rem;color:var(--color-text-light);margin-top:0.4rem;display:block;">Kata sandi default: <code>mirzawibi2026</code></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          <span>Masuk ke Panel Pengelolaan</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

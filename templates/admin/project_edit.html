@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block title %}{% if is_new %}Tambah Studi Kasus Baru{% else %}Edit {{ project.title }}{% endif %} | Panel Pemilik{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top:2.5rem;">
+  <div class="container container-narrow" style="max-width:900px;">
+
+    <!-- Breadcrumb -->
+    <nav style="margin-bottom:1.5rem;">
+      <a href="/admin?tab=projects" style="color:var(--color-text-muted);font-size:0.875rem;display:inline-flex;align-items:center;gap:0.4rem;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Kembali ke Manajemen Proyek</span>
+      </a>
+    </nav>
+
+    <div style="background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:var(--shadow-sm);">
+      <h1 style="font-size:1.6rem;font-weight:800;color:var(--color-text-main);margin-bottom:0.5rem;">
+        {% if is_new %}Tambah Studi Kasus Baru{% else %}Edit Studi Kasus: {{ project.title }}{% endif %}
+      </h1>
+      <p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:2rem;">
+        Lengkapi informasi karya spasial di bawah ini. Status draf memungkinkan penyimpanan tanpa langsung tayang ke publik.
+      </p>
+
+      <form method="POST" action="/admin/projects/save">
+        <input type="hidden" name="is_new" value="{{ is_new }}">
+
+        <!-- Row 1: ID, Slug, Status -->
+        <div style="display:grid;grid-template-columns:120px 1fr 180px;gap:1.25rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">ID Proyek</label>
+            <input type="text" name="id" value="{{ project.id }}" required style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-family:var(--font-mono);font-weight:700;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Slug URL</label>
+            <input type="text" name="slug" value="{{ project.slug }}" required placeholder="contoh: perencanaan-transportasi-wonokromo" style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-family:var(--font-mono);font-size:0.875rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Status Publikasi</label>
+            <select name="status" style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;">
+              <option value="published" {% if project.status == 'published' %}selected{% endif %}>Terbitkan (Publik)</option>
+              <option value="draft" {% if project.status == 'draft' %}selected{% endif %}>Draf (Privat)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 2: Title & Role -->
+        <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:1.25rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Judul Studi Kasus</label>
+            <input type="text" name="title" value="{{ project.title }}" required style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.95rem;font-weight:600;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Peran Mirza pada Proyek</label>
+            <input type="text" name="role_summary" value="{{ project.role_summary }}" required placeholder="Contoh: Ketua Tim & Analis Transportasi" style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;" />
+          </div>
+        </div>
+
+        <!-- Row 3: Categories, Project Type, Location, Year -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 120px;gap:1.25rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Kategori (Pisah koma)</label>
+            <input type="text" name="categories" value="{{ project.categories|join(', ') }}" required placeholder="transportasi, gis" style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Jenis Proyek</label>
+            <input type="text" name="project_type" value="{{ project.project_type }}" required placeholder="Proyek Akademik" style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Lokasi Studi</label>
+            <input type="text" name="location" value="{{ project.location }}" required placeholder="Surabaya, Jawa Timur" style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Tahun</label>
+            <input type="text" name="year" value="{{ project.year }}" required placeholder="2025–2026" style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;" />
+          </div>
+        </div>
+
+        <!-- Row 4: Featured & Sort Order & Cover Image -->
+        <div style="display:grid;grid-template-columns:140px 100px 1fr;gap:1.25rem;margin-bottom:1.5rem;align-items:center;">
+          <div style="display:flex;align-items:center;gap:0.5rem;padding-top:1.2rem;">
+            <input type="checkbox" id="featured" name="featured" value="true" {% if project.featured %}checked{% endif %} style="width:18px;height:18px;" />
+            <label for="featured" style="font-size:0.85rem;font-weight:600;cursor:pointer;">Unggulan Beranda</label>
+          </div>
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Urutan</label>
+            <input type="number" name="sort_order" value="{{ project.sort_order }}" required style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Path Gambar Sampul</label>
+            <input type="text" name="cover_image" value="{{ project.cover_image }}" required style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-family:var(--font-mono);font-size:0.825rem;" />
+          </div>
+        </div>
+
+        <!-- Ringkasan Eksekutif -->
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Ringkasan Eksekutif (Card & Header)</label>
+          <textarea name="summary" rows="3" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;">{{ project.summary }}</textarea>
+        </div>
+
+        <!-- Latar Belakang Masalah -->
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Pernyataan Masalah (Problem Statement)</label>
+          <textarea name="problem_statement" rows="3" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;">{{ project.problem_statement }}</textarea>
+        </div>
+
+        <!-- Metodologi -->
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Metodologi & Alur Teknis</label>
+          <textarea name="methodology" rows="3" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;">{{ project.methodology }}</textarea>
+        </div>
+
+        <!-- Tools -->
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Perangkat & Software Digunakan (Pisah koma)</label>
+          <input type="text" name="tools_text" value="{{ project.tools|join(', ') }}" required placeholder="PTV Visum, QGIS, ArcGIS Pro, Excel" style="width:100%;padding:0.6rem 0.8rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;" />
+        </div>
+
+        <!-- Kontribusi Pribadi (Textarea per baris) -->
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Kontribusi Pribadi Mirza (Satu poin per baris)</label>
+          <textarea name="my_contributions_text" rows="5" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;line-height:1.5;">{{ project.my_contributions|join('\n') }}</textarea>
+        </div>
+
+        <!-- Keluaran Tim (Textarea per baris) -->
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Keluaran Dokumen Tim (Satu poin per baris)</label>
+          <textarea name="team_deliverables_text" rows="4" required style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.875rem;line-height:1.5;">{{ project.team_deliverables|join('\n') }}</textarea>
+        </div>
+
+        <!-- Rekomendasi -->
+        <div style="margin-bottom:2rem;">
+          <label style="display:block;font-size:0.825rem;font-weight:600;margin-bottom:0.4rem;">Rekomendasi Perencanaan & Refleksi Teknis</label>
+          <textarea name="recommendations" rows="3" style="width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background-color:var(--color-surface-alt);font-size:0.9rem;">{{ project.recommendations }}</textarea>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:1.5rem;border-top:1px solid var(--color-border);">
+          <a href="/admin?tab=projects" class="btn btn-white">
+            <span>Batal</span>
+          </a>
+
+          <button type="submit" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            <span>Simpan Studi Kasus</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

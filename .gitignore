@@ -1,0 +1,34 @@
+# Python compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Large archives & backups
+*.zip
+_backup*/
+data/backups/
+content_baru.json
+
+# Temporary scripts & caches
+scripts/temp_render.png
+scripts/test_edge*.png
+scripts/test_edge*.webp
+scripts/extracted_sample/
+*.tmp
+.pytest_cache/
+
+# Agent skills & local assistant files
+.agents/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

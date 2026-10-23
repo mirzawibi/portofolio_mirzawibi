@@ -1,0 +1,45 @@
+/* Halte Menuju Dunia Saya — gaya layar sambutan & kontrol.
+   Memakai token desain PRD bila tersedia (fallback disediakan). */
+:root{
+  --hi-bg:var(--color-hero-bg,#14211C);
+  --hi-surface:var(--color-hero-surface,#1B2C25);
+  --hi-border:var(--color-hero-border,#284036);
+  --hi-text:var(--color-hero-text,#F0F4F1);
+  --hi-muted:var(--color-hero-muted,#9BB0A3);
+  --hi-gold:#FEF08A;
+  --hi-primary:var(--color-primary,#315C37);
+  --hi-primary-hover:var(--color-primary-hover,#264A2B);
+  --hi-accent:var(--color-accent-path,#84A950);
+  --hi-accent-light:var(--color-accent-path-light,#A7C66A);
+}
+html.hi-lock,html.hi-lock body{overflow:hidden}
+/* sembunyikan halaman di balik intro agar tidak berkedip (hanya jika intro akan tampil) */
+html.hi-pending body>*:not(.hi-root){visibility:hidden}
+.hi-root{position:fixed;inset:0;z-index:2147483000;background:var(--hi-bg);color:var(--hi-text);font-family:inherit;transition:opacity .5s ease}
+.hi-root.hi-out{opacity:0;pointer-events:none}
+.hi-stage{position:absolute;inset:0}
+.hi-canvas{width:100%;height:100%;object-fit:cover;display:block}
+.hi-gate{position:absolute;inset:0;z-index:2;background:var(--hi-bg);display:flex;align-items:center;justify-content:center;padding:24px;transition:opacity .6s ease}
+.hi-gate.hi-gone{opacity:0;pointer-events:none}
+.hi-gw{max-width:560px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.hi-tag{margin:0;letter-spacing:.22em;font-weight:800;font-size:13px;color:var(--hi-muted);display:flex;align-items:center;gap:10px}
+.hi-tag i{width:9px;height:9px;border-radius:50%;background:var(--hi-accent-light);box-shadow:0 0 0 0 var(--hi-accent-light);animation:hi-p 1.8s infinite}
+@keyframes hi-p{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hi-hi{margin:0;font-size:clamp(24px,4vw,40px);font-weight:800;color:var(--hi-gold);line-height:1.1}
+.hi-gd{margin:0;color:var(--hi-muted);font-size:clamp(15px,2vw,18px);line-height:1.5}
+.hi-rail{display:flex;align-items:center;width:min(420px,80%);margin-top:6px}
+.hi-rail i{width:14px;height:14px;border-radius:50%;border:3px solid #C2CDC7;background:var(--hi-bg);transition:background .3s,border-color .3s}
+.hi-rail b{flex:1;height:3px;background:var(--hi-border);transition:background .3s}
+.hi-rail .hi-on{background:var(--hi-accent-light);border-color:var(--hi-accent-light)}
+.hi-gs{margin:0;font-size:13px;color:var(--hi-muted);letter-spacing:.08em}
+.hi-gb{display:flex;gap:10px;flex-wrap:wrap;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease;pointer-events:none}
+.hi-gb.hi-on{opacity:1;transform:none;pointer-events:auto}
+.hi-btn{font:inherit;font-weight:800;cursor:pointer;background:var(--hi-primary);color:var(--hi-text);border:1.5px solid var(--hi-accent);border-radius:999px;padding:14px 28px}
+.hi-btn:hover{background:var(--hi-primary-hover)}
+.hi-b2{font:inherit;font-weight:700;cursor:pointer;background:transparent;color:var(--hi-text);border:1.5px solid var(--hi-border);border-radius:999px;padding:14px 22px}
+.hi-b2:hover{background:var(--hi-surface)}
+.hi-gl{color:var(--hi-muted);font-size:13px}
+.hi-btn:focus-visible,.hi-b2:focus-visible,.hi-b:focus-visible,.hi-gl:focus-visible{outline:3px solid var(--hi-gold);outline-offset:3px}
+.hi-ctl{position:absolute;z-index:3;top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;display:flex;gap:8px}
+.hi-b{font:inherit;font-weight:700;font-size:14px;border:1.5px solid #2A2540;background:#FFF8EC;color:#2A2540;border-radius:999px;padding:8px 14px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.hi-root,.hi-gate,.hi-gb{transition:none}.hi-tag i{animation:none}}

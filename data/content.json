@@ -1,0 +1,1416 @@
+{
+  "profile": {
+    "name": "Muhammad Mirza Wibisono",
+    "short_name": "Mirza",
+    "title": "Mahasiswa Perencanaan Wilayah dan Kota (PWK)",
+    "institution": "Institut Teknologi Sepuluh Nopember (ITS)",
+    "status": "Mahasiswa semester 5",
+    "location": "Surabaya, Indonesia",
+    "field": "Analisis Spasial, Mobilitas, dan Perencanaan Kota",
+    "hero_headline": "Saya menerjemahkan data spasial menjadi arah perencanaan yang memperluas akses, menghubungkan aktivitas, dan meningkatkan kualitas ruang hidup.",
+    "bio": "Mahasiswa PWK ITS semester 5 dengan fokus pada analisis spasial, pemodelan transportasi, dan perencanaan kota berorientasi pada kebutuhan warga. Memimpin lima studi akademik serta mendampingi praktikum pada dua mata kuliah. Menghubungkan data, pemetaan, dan kerja tim untuk merumuskan rekomendasi mobilitas, layanan publik, dan pemanfaatan ruang.",
+    "internship_status": "Terbuka untuk magang di bidang perencanaan dan analisis spasial",
+    "internship_period": "Fleksibel",
+    "avatar_url": "/static/assets/mirza/fotodiri_opt.webp",
+    "hero_cover_url": "/static/assets/slides/slide_1_large.webp",
+    "updated_at": "2026-10-23",
+    "highlights": [
+      {
+        "value": "5",
+        "label": "studi akademik dipimpin",
+        "detail": "Transportasi Wonokromo, akses halte Suroboyo Bus, tata ruang Kebomas, UHI Surabaya, dan lokasi SMA Temanggung"
+      },
+      {
+        "value": "110",
+        "label": "karya media diproduksi bersama tim",
+        "detail": "INI LHO ITS 2026: 84 motion graphics, 18 karya penyuntingan visual, dan 8 materi siaran"
+      },
+      {
+        "value": "30",
+        "label": "anggota dalam kepemimpinan IMAGITS",
+        "detail": "Ketua IMAGITS, Jan 2025 – Feb 2026"
+      },
+      {
+        "value": "2",
+        "label": "mata kuliah praktikum didampingi",
+        "detail": "Sistem Informasi Perencanaan: 45 mahasiswa; Metode Analisis Perencanaan: 43 mahasiswa"
+      }
+    ],
+    "phone": "0895367056584",
+    "email": "mirzawibi@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mirzawibi"
+  },
+  "contact": {
+    "email": "mirzawibi@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mirzawibi",
+    "phone": "0895367056584",
+    "whatsapp_enabled": false,
+    "location": "Surabaya, Indonesia"
+  },
+  "resume_asset": {
+    "file_path": "/static/assets/resume/CV_Muhammad_Mirza_Wibisono.pdf",
+    "filename": "CV_Muhammad_Mirza_Wibisono.pdf",
+    "filesize_str": "85 KB",
+    "updated_at": "Oktober 2026",
+    "version": "2026.10",
+    "is_synced": true
+  },
+  "categories": [
+    {
+      "id": "semua",
+      "label": "Semua Karya",
+      "count": 7
+    },
+    {
+      "id": "transportasi",
+      "label": "Transportasi & Mobilitas",
+      "count": 2
+    },
+    {
+      "id": "gis-lingkungan",
+      "label": "GIS & Lingkungan",
+      "count": 1
+    },
+    {
+      "id": "perencanaan-kota",
+      "label": "Perencanaan Kota & Wilayah",
+      "count": 3
+    },
+    {
+      "id": "konsultasi",
+      "label": "Konsultasi & Analisis",
+      "count": 1
+    }
+  ],
+  "cv_filters": [
+    {
+      "id": "semua",
+      "label": "Semua",
+      "tags": []
+    },
+    {
+      "id": "transportasi-gis",
+      "label": "Transportasi & GIS",
+      "tags": [
+        "transportasi",
+        "gis"
+      ]
+    },
+    {
+      "id": "analisis-konsultasi",
+      "label": "Analisis & Konsultasi",
+      "tags": [
+        "analisis",
+        "konsultasi"
+      ]
+    },
+    {
+      "id": "kepemimpinan",
+      "label": "Kepemimpinan",
+      "tags": [
+        "kepemimpinan"
+      ]
+    },
+    {
+      "id": "media",
+      "label": "Media",
+      "tags": [
+        "media"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "P01",
+      "slug": "perencanaan-transportasi-wonokromo",
+      "title": "Pemodelan Transportasi dan Integrasi Transit Wonokromo",
+      "categories": [
+        "transportasi"
+      ],
+      "tags": [
+        "gis",
+        "pemodelan-transportasi"
+      ],
+      "project_type": "Proyek Akademik",
+      "location": "Wonokromo, Surabaya",
+      "year": "",
+      "featured": true,
+      "sort_order": 1,
+      "status": "published",
+      "cover_image": "/static/assets/slides/slide_17_thumb.webp",
+      "source_pages": [
+        17,
+        18,
+        19
+      ],
+      "role_summary": "Ketua tim; delineasi 12 TAZ, pemodelan jaringan, dan pembebanan perjalanan di PTV Visum",
+      "role_short": "Ketua tim",
+      "output_status": "Hasil simulasi dan usulan pengembangan",
+      "my_contributions": [
+        "Memimpin studio transportasi dari delineasi wilayah hingga penyusunan skenario: membagi tugas, mengarahkan metode, dan mengoordinasikan hasil analisis tim.",
+        "Mendelineasi 12 Traffic Analysis Zone (TAZ) berdasarkan batas fisik, penggunaan lahan, dan pusat kegiatan; menyiapkan jaringan nodes, links, dan turns di PTV Visum.",
+        "Menjalankan pembebanan angkutan pribadi dan umum (PrT/PuT Assignment) untuk kondisi eksisting, proyeksi 2031, dan skenario rencana.",
+        "Membandingkan volume lalu lintas dan tingkat pelayanan ruas antarskenario untuk mengidentifikasi prioritas penanganan jaringan.",
+        "Merumuskan strategi pengelolaan permintaan perjalanan, rute shuttle/feeder, dan lokasi halte untuk memperkuat akses menuju simpul transit."
+      ],
+      "team_deliverables": [
+        "Model dan peta pembebanan jaringan pada tiga kondisi: eksisting, proyeksi 2031, dan skenario rencana.",
+        "Usulan jaringan feeder, halte, insentif komuter, dan perbaikan akses pejalan kaki beserta indikasi program 2027–2031."
+      ],
+      "tools": [
+        "PTV Visum",
+        "QGIS",
+        "ArcGIS",
+        "Microsoft Excel"
+      ],
+      "summary": "Memimpin pemodelan transportasi Wonokromo berbasis 12 TAZ dan tiga kondisi jaringan di PTV Visum. Menerjemahkan hasil pembebanan perjalanan menjadi usulan feeder, halte, dan akses pejalan kaki yang terhubung dengan Stasiun Wonokromo serta Terminal Intermoda Joyoboyo.",
+      "problem_statement": "Aktivitas permukiman, perdagangan, dan perjalanan lintas wilayah membebani jaringan Wonokromo. Dominasi kendaraan pribadi serta trotoar yang terputus dan terhalang membatasi akses warga menuju stasiun, terminal, dan layanan angkutan umum.",
+      "methodology": "Mengintegrasikan bangkitan–tarikan, distribusi perjalanan, pemilihan moda, dan pembebanan jaringan dalam model empat tahap. Membandingkan kondisi eksisting, proyeksi 2031, dan skenario rencana di PTV Visum. Skenario rencana menggunakan asumsi penurunan volume kendaraan pribadi sebesar 30% sebagai masukan simulasi.",
+      "scenarios": [
+        {
+          "id": "cover-studi",
+          "label": "Judul & Koridor",
+          "title": "Perencanaan Transportasi Wilayah Wonokromo",
+          "image": "/static/assets/slides/slide_17.webp",
+          "large_image": "/static/assets/slides/slide_17_large.webp",
+          "description": "Kajian rekayasa dan pemodelan transportasi multi-moda kawasan Wonokromo Surabaya berbasis Four-Step Model dan simulasi mikrosimulasi lalu lintas."
+        },
+        {
+          "id": "gambaran-fourstep",
+          "label": "Four-Step Model",
+          "title": "Gambaran Kegiatan, Pemodelan 4-Step Model, & Trip Assignment Rencana",
+          "image": "/static/assets/slides/slide_18.webp",
+          "large_image": "/static/assets/slides/slide_18_large.webp",
+          "description": "Aplikasi Four-Step Model (Trip Generation, Trip Distribution, Mode Choice, Trip Assignment) untuk mengidentifikasi 8 ruas jalan kritis dan merancang 5 rute feeder serta 25 halte transit."
+        },
+        {
+          "id": "kontribusi-visum",
+          "label": "Pemodelan PTV Visum",
+          "title": "Kontribusi Saya: Pemodelan TAZ & Simulasi Trip Assignment PTV Visum",
+          "image": "/static/assets/slides/slide_19.webp",
+          "large_image": "/static/assets/slides/slide_19_large.webp",
+          "description": "Peran ketua tim dalam membangun basemap TAZ, kalibrasi matriks asal-tujuan (OD Matrix), dan simulasi pembebanan jaringan pada 3 skenario (eksisting, proyeksi, rencana) menggunakan PTV Visum dan ArcGIS."
+        }
+      ],
+      "metrics": [],
+      "metrics_hold": {
+        "note": "Disimpan, tidak ditampilkan. Tunggu peninjauan ulang pemilik atas dasar perhitungan (slide 18). Tampilkan hanya dengan label 'hasil skenario pemodelan'.",
+        "items": [
+          {
+            "label": "Ruas Jalan Kritis",
+            "value": "8 Koridor",
+            "context": "Hasil pemodelan"
+          },
+          {
+            "label": "Rute Feeder Usulan",
+            "value": "5 Trayek",
+            "context": "Konektivitas antarmoda"
+          },
+          {
+            "label": "Halte Direkomendasikan",
+            "value": "25 Titik",
+            "context": "Hasil skenario pemodelan"
+          }
+        ]
+      },
+      "recommendations": "Mengintegrasikan feeder dengan Stasiun Wonokromo dan Terminal Intermoda Joyoboyo, menempatkan halte dekat pusat aktivitas, serta menyediakan trotoar menerus dan penyeberangan aman. Mendukung peralihan moda melalui insentif komuter dan pelaksanaan program secara bertahap.",
+      "related_project_ids": [
+        "P02",
+        "P03"
+      ]
+    },
+    {
+      "id": "P02",
+      "slug": "aksesibilitas-halte-suroboyo-bus",
+      "title": "Evaluasi Aksesibilitas Halte Suroboyo Bus di Surabaya Timur",
+      "categories": [
+        "transportasi"
+      ],
+      "tags": [
+        "gis",
+        "aksesibilitas"
+      ],
+      "project_type": "Proyek Riset Spasial",
+      "location": "Surabaya Timur, Jawa Timur",
+      "year": "",
+      "featured": true,
+      "sort_order": 2,
+      "status": "published",
+      "cover_image": "/static/assets/slides/slide_10_thumb.webp",
+      "source_pages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "role_summary": "Ketua tim; integrasi pemetaan dasimetrik, UNA Reach, OD Cost Matrix, dan Model Huff",
+      "role_short": "Ketua tim",
+      "output_status": "Hasil analisis spasial",
+      "my_contributions": [
+        "Memimpin integrasi data penduduk, jaringan jalan, dan karakteristik halte dalam kerangka evaluasi aksesibilitas Surabaya Timur.",
+        "Mendistribusikan data penduduk berdasarkan tutupan lahan melalui dasymetric mapping untuk merepresentasikan sebaran potensi pengguna.",
+        "Menganalisis jangkauan jaringan dan jarak menuju 77 halte eksisting melalui UNA Reach dan OD Cost Matrix.",
+        "Menggabungkan indikator akses, jarak, dan probabilitas pemilihan halte dari Model Huff menjadi indeks kebutuhan melalui normalisasi dan overlay berbobot.",
+        "Memetakan zona prioritas penambahan halte dan peningkatan fasilitas berdasarkan kesenjangan akses layanan."
+      ],
+      "team_deliverables": [
+        "Peta indeks aksesibilitas yang memperlihatkan variasi jangkauan layanan halte di Surabaya Timur.",
+        "Peta indeks kebutuhan untuk mengarahkan prioritas penambahan dan peningkatan fasilitas halte.",
+        "Rekomendasi penataan halte berbasis sebaran penduduk, jarak jaringan, dan daya tarik fasilitas."
+      ],
+      "tools": [
+        "ArcGIS Pro",
+        "Urban Network Analysis (UNA)",
+        "QGIS",
+        "Model Huff",
+        "Excel"
+      ],
+      "summary": "Mengevaluasi akses menuju 77 halte Suroboyo Bus dengan mengintegrasikan sebaran penduduk, jangkauan jaringan, dan probabilitas pemilihan halte. Menghasilkan indeks kebutuhan untuk mengarahkan penambahan halte serta peningkatan fasilitas pada wilayah yang kurang terlayani.",
+      "problem_statement": "Sebaran halte belum sepenuhnya mengikuti kebutuhan penduduk dan keterhubungan jaringan jalan. Wilayah timur dan pinggiran studi menghadapi hambatan jarak serta keterbatasan akses menuju layanan bus, termasuk pada sejumlah permukiman padat.",
+      "methodology": "Mengalokasikan penduduk melalui dasymetric mapping, mengukur jangkauan jaringan dengan UNA Reach, dan menghitung jarak asal–halte melalui OD Cost Matrix. Mengestimasi probabilitas pemilihan halte menggunakan Model Huff, lalu menormalisasi dan menggabungkan indikator menjadi indeks aksesibilitas serta kebutuhan halte.",
+      "scenarios": [
+        {
+          "id": "cover-studi",
+          "label": "Judul & Koridor",
+          "title": "Analisis Aksesibilitas Evaluasi & Optimalisasi Penempatan Halte Suroboyo Bus",
+          "image": "/static/assets/slides/slide_10.webp",
+          "large_image": "/static/assets/slides/slide_10_large.webp",
+          "description": "Studi evaluasi komprehensif keterjangkauan halte Suroboyo Bus di Surabaya Timur untuk mendorong integrasi antarmoda dan peningkatan keterpilihan angkutan massal."
+        },
+        {
+          "id": "gambaran-umum",
+          "label": "Sebaran 77 Halte",
+          "title": "Gambaran Umum & Evaluasi Jangkauan 77 Halte Eksisting Surabaya Timur",
+          "image": "/static/assets/slides/slide_11.webp",
+          "large_image": "/static/assets/slides/slide_11_large.webp",
+          "description": "Pemetaan sebaran 77 titik halte eksisting rute R1 dan SBT di koridor arteri Jl. Pucang Anom serta identifikasi ketimpangan aksesibilitas fisik bagi permukiman di kawasan pinggiran timur."
+        },
+        {
+          "id": "kontribusi-spasial",
+          "label": "Metode UNA & TOD",
+          "title": "Kontribusi Saya: Integrasi Dasymetric, UNA, Huff Model, dan OD Cost Matrix",
+          "image": "/static/assets/slides/slide_12.webp",
+          "large_image": "/static/assets/slides/slide_12_large.webp",
+          "description": "Kepemimpinan tim dalam membangun model keterjangkauan nyata melalui Urban Network Analysis (UNA), pemodelan gravitasi Huff, matriks biaya asal-tujuan (OD Cost Matrix), serta integrasi prinsip TOD."
+        },
+        {
+          "id": "luaran-rekomendasi",
+          "label": "Peta Rekomendasi Halte",
+          "title": "Luaran Kegiatan: Peta Indeks Aksesibilitas & Indeks Kebutuhan Halte",
+          "image": "/static/assets/slides/slide_13.webp",
+          "large_image": "/static/assets/slides/slide_13_large.webp",
+          "description": "Diagram alir tahapan analisis spasial dan perumusan zona prioritas penambahan halte baru pada kawasan berkepadatan tinggi namun beraksesibilitas rendah di Surabaya Timur."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Halte dalam Evaluasi",
+          "value": "77 Halte",
+          "context": "Cakupan analisis di Surabaya Timur"
+        },
+        {
+          "label": "Integrasi Metode",
+          "value": "UNA + Huff + Dasymetric",
+          "context": "Distribusi penduduk, jaringan, dan pemilihan halte"
+        }
+      ],
+      "recommendations": "Memprioritaskan penambahan halte pada zona kebutuhan tinggi di bagian timur dan pinggiran wilayah studi. Meningkatkan fasilitas halte dengan probabilitas pemilihan rendah serta menghubungkan halte dengan jalur pejalan kaki dan pusat aktivitas.",
+      "related_project_ids": [
+        "P01",
+        "P04"
+      ]
+    },
+    {
+      "id": "P03",
+      "slug": "perencanaan-kota-kebomas",
+      "title": "Kajian Tata Ruang dan Kebencanaan Kebomas",
+      "categories": [
+        "perencanaan-kota"
+      ],
+      "tags": [
+        "gis",
+        "kebencanaan",
+        "tata-ruang"
+      ],
+      "project_type": "Proyek Studio Perencanaan",
+      "location": "Kecamatan Kebomas, Kabupaten Gresik",
+      "year": "",
+      "featured": true,
+      "sort_order": 3,
+      "status": "published",
+      "cover_image": "/static/assets/slides/slide_20_thumb.webp",
+      "source_pages": [
+        20,
+        21,
+        22
+      ],
+      "role_summary": "Ketua tim 10 orang; koordinasi 8 peran, kajian pertanahan dan kebencanaan, serta rencana kerja 16 minggu",
+      "role_short": "Ketua tim",
+      "output_status": "Kajian pendahuluan dan arahan perencanaan akademik",
+      "my_contributions": [
+        "Mengoordinasikan tim 10 orang dengan 8 peran untuk menyelaraskan kebutuhan data, metode, dan substansi kajian tata ruang.",
+        "Mengkaji kondisi fisik, penggunaan lahan, dan kerawanan bencana sebagai dasar penilaian potensi serta batasan pengembangan kawasan.",
+        "Menyelaraskan kajian sektoral dengan arahan RTRW Kabupaten Gresik dan RDTR Gresik Perkotaan untuk menjaga konsistensi usulan ruang.",
+        "Mengkaji hierarki pusat pelayanan dan arahan peruntukan ruang pada cakupan 21 desa/kelurahan.",
+        "Menyusun rencana kerja 16 minggu yang menghubungkan persiapan survei, kompilasi data, analisis, dan perumusan rancangan tata ruang."
+      ],
+      "team_deliverables": [
+        "Laporan pendahuluan perencanaan tata ruang Kebomas yang mencakup 21 desa/kelurahan.",
+        "Peta kondisi fisik, penggunaan lahan, dan kerawanan bencana sebagai dasar penyusunan arahan ruang.",
+        "Kerangka metode, pembagian peran, desain survei, dan rencana kerja studio selama 16 minggu."
+      ],
+      "tools": [
+        "ArcGIS Pro",
+        "Google Earth Engine",
+        "QGIS"
+      ],
+      "summary": "Memimpin tim 10 orang menyusun kajian pendahuluan tata ruang untuk 21 desa/kelurahan di Kebomas. Mengintegrasikan kondisi fisik, pertanahan, dan kebencanaan dengan arahan tata ruang untuk menyeimbangkan kebutuhan permukiman, aktivitas industri, dan perlindungan lingkungan.",
+      "problem_statement": "Perkembangan permukiman dan industri menekan ruang terbuka, kawasan resapan, serta sempadan Kebomas. Kedekatan kawasan industri dengan hunian menuntut pengaturan transisi ruang, perlindungan lingkungan, dan akses evakuasi yang mempertimbangkan keselamatan warga.",
+      "methodology": "Menggabungkan inventarisasi kondisi wilayah, pemetaan GIS, serta kajian kesesuaian dengan RTRW dan RDTR. Menyusun kerangka analisis daya dukung lahan, kerawanan bencana, pusat pelayanan, dan kebutuhan sarana–prasarana sebagai landasan perumusan struktur serta pola ruang.",
+      "scenarios": [
+        {
+          "id": "cover-studi",
+          "label": "Judul & Skyline",
+          "title": "Perencanaan Kota Wilayah Kebomas",
+          "image": "/static/assets/slides/slide_20.webp",
+          "large_image": "/static/assets/slides/slide_20_large.webp",
+          "description": "Penyusunan Rencana Detail Tata Ruang (RDTR) Kecamatan Kebomas Gresik sebagai simpul pertumbuhan industri, hunian, dan warisan budaya yang terintegrasi."
+        },
+        {
+          "id": "gambaran-rdtr",
+          "label": "Struktur & Pola Ruang",
+          "title": "Gambaran Kegiatan: Rencana Struktur Ruang, Pola Ruang, & Kawasan Prioritas",
+          "image": "/static/assets/slides/slide_21.webp",
+          "large_image": "/static/assets/slides/slide_21_large.webp",
+          "description": "Formulasi arahan hierarki pusat pelayanan (SWP A sebagai PPK), jaringan prasarana transportasi, alokasi pola ruang zona lindung dan budidaya, serta visi-misi pembangunan terpadu."
+        },
+        {
+          "id": "kontribusi-webgis",
+          "label": "Fisik Dasar & WebGIS",
+          "title": "Kontribusi Saya: Analisis Fisik Dasar, Mitigasi Multibencana, & WebGIS",
+          "image": "/static/assets/slides/slide_22.webp",
+          "large_image": "/static/assets/slides/slide_22_large.webp",
+          "description": "Kepemimpinan 10 anggota lintas 8 bidang keahlian, analisis daya dukung lahan dan zonasi rawan bencana di 21 desa/kelurahan, perhitungan KDB/KLB/KDH/GSB, serta perancangan WebGIS interaktif."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Cakupan Studi",
+          "value": "21 Desa/Kelurahan",
+          "context": "Cakupan perencanaan Kecamatan Kebomas"
+        },
+        {
+          "label": "Rencana Kerja Studio",
+          "value": "16 Minggu",
+          "context": "Tim 10 orang dengan 8 peran"
+        }
+      ],
+      "recommendations": "Memperkuat perlindungan sempadan dan ruang terbuka hijau, mengatur zona transisi industri–permukiman, serta mengintegrasikan jalur evakuasi dengan jaringan pelayanan. Merinci arahan ruang dengan mempertimbangkan daya dukung lahan dan ketentuan tata ruang yang menjadi acuan studi.",
+      "related_project_ids": [
+        "P01",
+        "P04"
+      ]
+    },
+    {
+      "id": "P04",
+      "slug": "analisis-urban-heat-island-surabaya",
+      "title": "Pemetaan Multitemporal Urban Heat Island Surabaya",
+      "categories": [
+        "gis-lingkungan"
+      ],
+      "tags": [
+        "gis",
+        "lingkungan",
+        "penginderaan-jauh"
+      ],
+      "project_type": "Riset Penginderaan Jauh Lingkungan",
+      "location": "Kota Surabaya, Jawa Timur",
+      "year": "",
+      "featured": false,
+      "sort_order": 4,
+      "status": "published",
+      "cover_image": "/static/assets/slides/slide_6_thumb.webp",
+      "source_pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "role_summary": "Ketua tim; pengolahan Landsat 8 di ArcGIS, analisis NDVI–LST–UHI, dan visualisasi WebGIS",
+      "role_short": "Ketua tim",
+      "output_status": "Hasil analisis penginderaan jauh",
+      "my_contributions": [
+        "Mengolah citra Landsat 8 OLI/TIRS periode September pada empat tahun pengamatan: 2015, 2018, 2021, dan 2024.",
+        "Menghitung NDVI dari band merah dan inframerah dekat melalui Raster Calculator di ArcGIS untuk memetakan kerapatan vegetasi.",
+        "Mengekstraksi LST dari band termal melalui konversi radiansi, suhu kecerahan, dan koreksi emisivitas permukaan.",
+        "Mengklasifikasikan UHI berdasarkan penyimpangan LST terhadap rata-rata dan simpangan baku, lalu membandingkannya dengan pola vegetasi.",
+        "Menyajikan hasil pemetaan lintas tahun melalui WebGIS agar pola vegetasi dan suhu permukaan mudah ditelusuri."
+      ],
+      "team_deliverables": [
+        "Seri peta NDVI, LST, dan UHI untuk empat tahun pengamatan: 2015, 2018, 2021, dan 2024.",
+        "Visualisasi WebGIS untuk membandingkan pola vegetasi dan panas permukaan antartahun."
+      ],
+      "tools": [
+        "ArcGIS (Raster Calculator)",
+        "Landsat 8 OLI/TIRS",
+        "USGS EarthExplorer",
+        "WebGIS"
+      ],
+      "summary": "Menghasilkan pemetaan NDVI, LST, dan UHI Surabaya pada empat tahun pengamatan selama 2015–2024. Mengolah citra Landsat 8 di ArcGIS dan menyajikannya melalui WebGIS untuk mendukung identifikasi kawasan prioritas penguatan ruang hijau.",
+      "problem_statement": "Perubahan tutupan lahan menuntut pemahaman tentang sebaran panas dan vegetasi di Surabaya. Perencanaan ruang hijau memerlukan informasi spasial yang menunjukkan kawasan dengan vegetasi terbatas dan suhu permukaan tinggi.",
+      "methodology": "Mengolah citra Landsat 8 periode September 2015, 2018, 2021, dan 2024 di ArcGIS. Menghitung NDVI, menurunkan LST dari band termal, lalu mengklasifikasikan UHI berdasarkan statistik suhu wilayah. Membandingkan pola spasial antartahun secara deskriptif dan menyajikannya melalui WebGIS.",
+      "scenarios": [
+        {
+          "id": "cover-studi",
+          "label": "Judul & Kerangka",
+          "title": "Analisis Pola UHI Berdasarkan LST dan NDVI Citra Landsat 8 di Kota Surabaya",
+          "image": "/static/assets/slides/slide_6.webp",
+          "large_image": "/static/assets/slides/slide_6_large.webp",
+          "description": "Kajian spasio-temporal dinamika pulau panas perkotaan (Urban Heat Island) Kota Surabaya dengan memanfaatkan data penginderaan jauh satelit Landsat 8."
+        },
+        {
+          "id": "gambaran-temporal",
+          "label": "Data Landsat Temporal",
+          "title": "Gambaran Kegiatan & Data Landsat 8 Temporal Multi-Tahun (2015-2024)",
+          "image": "/static/assets/slides/slide_7.webp",
+          "large_image": "/static/assets/slides/slide_7_large.webp",
+          "description": "Kompilasi dan pemotongan citra Landsat 8 OLI/TIRS USGS periode September 2015, 2018, 2021, dan 2024 untuk memetakan alih fungsi lahan dan kenaikan suhu mikro kawasan perkotaan."
+        },
+        {
+          "id": "kontribusi-pengolahan",
+          "label": "Pengolahan Spektral",
+          "title": "Kontribusi Saya: Pemrosesan Citra Landsat (NDVI, LST, dan UHI) di ArcGIS",
+          "image": "/static/assets/slides/slide_8.webp",
+          "large_image": "/static/assets/slides/slide_8_large.webp",
+          "description": "Peran ketua tim dalam kalkulasi indeks vegetasi (NDVI) Band 4 & 5, konversi radiometrik Band 10 menjadi Land Surface Temperature (LST), serta pemodelan anomali UHI berbasis standar deviasi."
+        },
+        {
+          "id": "luaran-storymaps",
+          "label": "Luaran & StoryMaps",
+          "title": "Tahapan Kegiatan & Luaran Penelitian: WebGIS ArcGIS StoryMaps",
+          "image": "/static/assets/slides/slide_9.webp",
+          "large_image": "/static/assets/slides/slide_9_large.webp",
+          "description": "Alur kalkulasi spektral TOA hingga penyajian perbandingan spasial UHI 2015 vs 2024 yang diintegrasikan ke dalam media interaktif ArcGIS StoryMaps untuk edukasi publik dan rekomendasi RTH."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Cakupan Temporal",
+          "value": "4 Tahun Pengamatan",
+          "context": "2015, 2018, 2021, dan 2024"
+        },
+        {
+          "label": "Platform Analisis",
+          "value": "ArcGIS",
+          "context": "Pengolahan raster NDVI, LST, dan UHI"
+        }
+      ],
+      "recommendations": "Menggunakan peta vegetasi dan suhu permukaan untuk menyaring kawasan prioritas penambahan ruang hijau, terutama area bersuhu tinggi dengan vegetasi terbatas, serta mempertahankan vegetasi pada kawasan yang relatif sejuk.",
+      "related_project_ids": [
+        "P02",
+        "P03"
+      ]
+    },
+    {
+      "id": "P05",
+      "slug": "analisis-lokasi-sma-temanggung",
+      "title": "Prioritas Lokasi SMA Berbasis Multikriteria di Temanggung",
+      "categories": [
+        "perencanaan-kota"
+      ],
+      "tags": [
+        "perencanaan-wilayah",
+        "gis",
+        "analisis"
+      ],
+      "project_type": "Proyek Analisis Kebijakan Spasial",
+      "location": "Kabupaten Temanggung, Jawa Tengah",
+      "year": "",
+      "featured": false,
+      "sort_order": 5,
+      "status": "published",
+      "cover_image": "/static/assets/slides/slide_14_thumb.webp",
+      "source_pages": [
+        14,
+        15,
+        16
+      ],
+      "role_summary": "Ketua tim; integrasi Delphi, AHP, dan TOPSIS untuk menilai 8 alternatif dengan 11 kriteria",
+      "role_short": "Ketua tim",
+      "output_status": "Rekomendasi lokasi berdasarkan model akademik",
+      "my_contributions": [
+        "Mengarahkan alur evaluasi lokasi SMA, dari penyaringan kriteria hingga penyusunan peringkat alternatif.",
+        "Merumuskan 11 kriteria dari 14 kandidat melalui pendekatan Delphi dengan penilaian 8 anggota kelompok, mencakup kebutuhan pendidikan, akses, kondisi lahan, dan kebencanaan.",
+        "Menghitung bobot AHP melalui perbandingan berpasangan atas 11 kriteria sebagai dasar evaluasi multikriteria.",
+        "Memeringkat 8 alternatif lokasi dengan TOPSIS untuk membandingkan kedekatan masing-masing terhadap solusi ideal.",
+        "Menyajikan alternatif Ngadirejo sebagai prioritas pertama dengan nilai preferensi TOPSIS 0,6766."
+      ],
+      "team_deliverables": [
+        "Peta aksesibilitas, ketersediaan sekolah, dan kebutuhan pendidikan sebagai dasar evaluasi pemerataan layanan.",
+        "Peta kriteria spasial dan identifikasi lahan pada alternatif lokasi SMA.",
+        "Pembobotan 11 kriteria dengan AHP dan tabel pemeringkatan TOPSIS untuk 8 alternatif lokasi."
+      ],
+      "tools": [
+        "ArcGIS Pro",
+        "Super Decisions (AHP)",
+        "Microsoft Excel",
+        "QGIS"
+      ],
+      "summary": "Memimpin evaluasi 8 alternatif lokasi SMA di Temanggung menggunakan 11 kriteria melalui Delphi, AHP, dan TOPSIS. Menempatkan alternatif Ngadirejo pada prioritas pertama dengan nilai preferensi 0,6766 sebagai masukan pemerataan akses pendidikan.",
+      "problem_statement": "Laporan mengidentifikasi 7 kecamatan di Temanggung yang belum memiliki SMA. Keterbatasan kapasitas dan jauhnya akses sekolah menuntut pemilihan lokasi baru yang mempertimbangkan kebutuhan penduduk, keterjangkauan, dan kelayakan lahan.",
+      "methodology": "Menyaring 14 kandidat menjadi 11 kriteria melalui pendekatan Delphi yang melibatkan 8 anggota kelompok. Menetapkan bobot dengan AHP, memadukan kriteria spasial melalui weighted overlay, dan memeringkat 8 alternatif lokasi menggunakan TOPSIS.",
+      "scenarios": [
+        {
+          "id": "cover-studi",
+          "label": "Judul & Peta Tematik",
+          "title": "Analisis Lokasi Fasilitas Pendidikan SMA di Kabupaten Temanggung",
+          "image": "/static/assets/slides/slide_14.webp",
+          "large_image": "/static/assets/slides/slide_14_large.webp",
+          "description": "Studi penentuan prioritas lokasi pembangunan SMA baru di Kabupaten Temanggung guna menjawab disparitas aksesibilitas pendidikan menengah atas antarwilayah kecamatan."
+        },
+        {
+          "id": "gambaran-topsis",
+          "label": "Metodologi & TOPSIS",
+          "title": "Gambaran Kegiatan, Alur Delphi-AHP-TOPSIS, & Hasil Pemeringkatan 8 Alternatif",
+          "image": "/static/assets/slides/slide_15.webp",
+          "large_image": "/static/assets/slides/slide_15_large.webp",
+          "description": "Alur metodologi Delphi, AHP 11 kriteria, dan evaluasi TOPSIS yang menetapkan Kecamatan Ngadirejo sebagai lokasi prioritas terbaik (ranking 1 dengan skor 0.6766) disusul Kedu dan Parakan."
+        },
+        {
+          "id": "kontribusi-pembobotan",
+          "label": "Pembobotan & 9 Peta",
+          "title": "Kontribusi Saya: Pembobotan Delphi/AHP 11 Variabel & Analisis 9 Peta Tematik",
+          "image": "/static/assets/slides/slide_16.webp",
+          "large_image": "/static/assets/slides/slide_16_large.webp",
+          "description": "Peran ketua tim dalam merumuskan bobot 11 kriteria Delphi/AHP, mengarahkan quality control tim, dan mengeksekusi sembilan peta tematik spasial (lereng, kerawanan bencana, kemiskinan, demografi, pola ruang) menggunakan Kernel Density dan SNA."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Prioritas Hasil Model",
+          "value": "Kecamatan Ngadirejo",
+          "context": "Peringkat 1 dari 8 alternatif; TOPSIS 0,6766"
+        },
+        {
+          "label": "Metode Terpadu",
+          "value": "Delphi + AHP + TOPSIS",
+          "context": "11 kriteria untuk evaluasi lokasi sekolah"
+        }
+      ],
+      "recommendations": "Mengusulkan alternatif Ngadirejo sebagai prioritas kajian tapak lanjutan berdasarkan nilai TOPSIS tertinggi. Memeriksa ketersediaan lahan, akses siswa, kerawanan bencana, serta kesesuaian tata ruang sebelum penetapan lokasi.",
+      "related_project_ids": [
+        "P03",
+        "P06"
+      ]
+    },
+    {
+      "id": "P06",
+      "slug": "analisis-kekompakan-kota-malang",
+      "title": "Evaluasi Kekompakan Perkotaan di Lima Kecamatan Malang",
+      "categories": [
+        "perencanaan-kota"
+      ],
+      "tags": [
+        "analisis-perkotaan",
+        "gis"
+      ],
+      "project_type": "Proyek Riset Morfologi Perkotaan",
+      "location": "Kota Malang, Jawa Timur",
+      "year": "",
+      "featured": false,
+      "sort_order": 6,
+      "status": "published",
+      "cover_image": "/static/assets/slides/slide_3_thumb.webp",
+      "source_pages": [
+        3,
+        4,
+        5
+      ],
+      "role_summary": "Analis spasial dan data; pengolahan 9 indikator, pemetaan tematik, dan sintesis IFAS–EFAS",
+      "role_short": "Analis spasial dan data",
+      "output_status": "Hasil kajian komparatif berbasis persepsi",
+      "my_contributions": [
+        "Menabulasi kuesioner persepsi dan data sekunder untuk membandingkan kondisi lima kecamatan di Kota Malang.",
+        "Mengolah 9 indikator kekompakan yang mencakup kepadatan, pemanfaatan lahan, akses fasilitas, kapasitas infrastruktur, dan layanan transportasi.",
+        "Menyusun bobot dan skor faktor internal–eksternal melalui IFAS–EFAS untuk merumuskan arah pengembangan kota kompak.",
+        "Memvisualisasikan perbedaan karakter kekompakan antarkecamatan melalui peta tematik GIS."
+      ],
+      "team_deliverables": [
+        "Peta tematik perbandingan kekompakan pada lima kecamatan di Kota Malang.",
+        "Tabulasi dan perbandingan 9 indikator berdasarkan penilaian responden serta data pendukung.",
+        "Matriks IFAS–EFAS dan arahan strategi pengembangan kota kompak."
+      ],
+      "tools": [
+        "ArcGIS",
+        "SPSS",
+        "Microsoft Excel",
+        "QGIS"
+      ],
+      "summary": "Membandingkan kekompakan lima kecamatan di Malang melalui 9 indikator berbasis persepsi, pemetaan GIS, dan IFAS–EFAS. Mengidentifikasi Kedungkandang sebagai wilayah dengan skor terendah untuk mengarahkan perhatian pada akses layanan, keterpaduan ruang, dan pengendalian pertumbuhan.",
+      "problem_statement": "Perluasan kawasan terbangun menuju pinggiran Malang menghadirkan kebutuhan akan infrastruktur dan layanan yang lebih merata. Perbedaan kepadatan, fungsi lahan, serta akses fasilitas dan transportasi memerlukan arahan pengembangan yang sesuai dengan karakter tiap kecamatan.",
+      "methodology": "Mengolah kuesioner skala Likert atas 9 indikator dengan statistik deskriptif, skoring, dan perbandingan antarkecamatan. Menelaah regresi berganda sebagai analisis eksploratif, lalu menyusun strategi melalui SWOT dan IFAS–EFAS. Uji regresi dalam laporan tidak menunjukkan pengaruh signifikan secara statistik.",
+      "scenarios": [
+        {
+          "id": "cover-studi",
+          "label": "Judul & Konsep",
+          "title": "Analisis Kekompakan Kota Malang Berdasarkan Variabel Urban Compactness",
+          "image": "/static/assets/slides/slide_3.webp",
+          "large_image": "/static/assets/slides/slide_3_large.webp",
+          "description": "Studi evaluasi morfologi perkotaan Kota Malang untuk mengukur tingkat kekompakan wilayah di lima kecamatan berbasis variabel kepadatan, guna lahan campuran, intensifikasi, dan aksesibilitas."
+        },
+        {
+          "id": "gambaran-kegiatan",
+          "label": "Gambaran & Peta Skor",
+          "title": "Gambaran Kegiatan & Peta Tingkat Kekompakan 5 Kecamatan",
+          "image": "/static/assets/slides/slide_4.webp",
+          "large_image": "/static/assets/slides/slide_4_large.webp",
+          "description": "Pemetaan komparatif tingkat kekompakan lima kecamatan Kota Malang dengan hasil skor: Lowokwaru (33.2), Sukun (32.8), Klojen (31.9), Blimbing (29.7), dan Kedungkandang (27.4), menyoroti disparitas antara kawasan inti dan pinggiran."
+        },
+        {
+          "id": "kontribusi-analisis",
+          "label": "Analisis & Tipologi",
+          "title": "Kontribusi Saya: Analisis Spasial, Skoring Sturges, Matriks SWOT & Peta Tipologi",
+          "image": "/static/assets/slides/slide_5.webp",
+          "large_image": "/static/assets/slides/slide_5_large.webp",
+          "description": "Pengolahan data kuesioner sembilan indikator menggunakan rumus Sturges, kuantifikasi matriks IFAS-EFAS SWOT, serta transformasi hasil numerik ke dalam peta delineasi dan tipologi kekompakan spasial di ArcGIS."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Cakupan Perbandingan",
+          "value": "5 Kecamatan",
+          "context": "9 indikator kekompakan perkotaan"
+        },
+        {
+          "label": "Fokus Kajian",
+          "value": "Kekompakan Kota",
+          "context": "Keterpaduan ruang dan akses layanan warga"
+        }
+      ],
+      "recommendations": "Memperkuat fungsi lahan campuran, mengoptimalkan lahan yang belum termanfaatkan, dan meningkatkan konektivitas transportasi publik. Mengarahkan pengendalian perluasan kawasan di Kedungkandang serta melibatkan warga dalam penilaian kebutuhan layanan dan pemetaan partisipatif.",
+      "related_project_ids": [
+        "P03",
+        "P05"
+      ]
+    },
+    {
+      "id": "P07",
+      "slug": "studi-kasus-pelatihan-lokasolution",
+      "title": "Analisis Strategis dalam Pelatihan Konsultasi LokaSolution",
+      "categories": [
+        "konsultasi"
+      ],
+      "tags": [
+        "analisis",
+        "konsultasi"
+      ],
+      "project_type": "Studi Kasus Pelatihan Konsultasi",
+      "location": "Surabaya dan simulasi studi kasus",
+      "year": "",
+      "featured": false,
+      "sort_order": 7,
+      "status": "published",
+      "cover_image": "/static/assets/slides/slide_23_thumb.webp",
+      "source_pages": [
+        23,
+        24
+      ],
+      "role_summary": "Peserta pelatihan; analisis 6 studi kasus dan presentasi rekomendasi kepada mentor",
+      "role_short": "Peserta pelatihan",
+      "output_status": "Hasil simulasi pelatihan konsultasi",
+      "my_contributions": [
+        "Menyelesaikan 6 studi kasus simulasi untuk melatih diagnosis masalah dan penyusunan rekomendasi konsultasi.",
+        "Menyusun issue tree dengan prinsip Mutually Exclusive, Collectively Exhaustive (MECE) untuk memetakan isu dan kebutuhan analisis.",
+        "Mengkaji kelayakan lokasi, potensi pasar, dan konteks spasial dalam simulasi kasus Jasa Marga dan Nusantara Living.",
+        "Menyintesis temuan menjadi rekomendasi eksekutif dan mempresentasikannya kepada mentor profesional."
+      ],
+      "team_deliverables": [
+        "Presentasi analisis kasus simulasi infrastruktur jalan tol dan properti hunian.",
+        "Issue tree dan hipotesis kerja yang menghubungkan masalah dengan kebutuhan data.",
+        "Usulan tahapan implementasi dan mitigasi risiko dalam konteks simulasi."
+      ],
+      "tools": [
+        "MECE Framework",
+        "Issue Tree Analysis",
+        "Riset pasar",
+        "Figma / Slides"
+      ],
+      "summary": "Menyelesaikan 6 studi kasus simulasi dengan kerangka MECE dan issue tree. Menghubungkan analisis pasar, kelayakan lokasi, dan aspek finansial menjadi rekomendasi yang terstruktur, lalu mempresentasikannya kepada mentor profesional.",
+      "problem_statement": "Kasus investasi infrastruktur dan properti menuntut penilaian yang menghubungkan kebutuhan pasar, karakter lokasi, dan kelayakan finansial. Pelatihan berfokus pada penyusunan alur analisis yang dapat menjelaskan alasan di balik setiap rekomendasi.",
+      "methodology": "Menguraikan masalah dengan MECE dan issue tree, merumuskan hipotesis, menelaah data pasar, spasial, serta finansial, kemudian menyusun rekomendasi dan tahapan pelaksanaan dalam simulasi konsultasi.",
+      "scenarios": [
+        {
+          "id": "cover-studi",
+          "label": "Judul & Identitas",
+          "title": "Student Analyst LokaSolution - ITB",
+          "image": "/static/assets/slides/slide_23.webp",
+          "large_image": "/static/assets/slides/slide_23_large.webp",
+          "description": "Program intensif pelatihan analisis konsultasi manajemen dan perencanaan strategis untuk pemecahan masalah bisnis serta tata ruang."
+        },
+        {
+          "id": "studi-kasus",
+          "label": "Kasus & Rekomendasi",
+          "title": "Studi Kasus Nyata: PT Jasa Marga & Nusantara Living (MECE & Issue Tree)",
+          "image": "/static/assets/slides/slide_24.webp",
+          "large_image": "/static/assets/slides/slide_24_large.webp",
+          "description": "Penyelesaian 6 studi kasus menggunakan kerangka kerja MECE, dekomposisi Issue Tree, analisis kelayakan investasi (NPV, ROI, TAM-SAM-SOM), serta perumusan rekomendasi konsultasi berstandar industri."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Kasus Diselesaikan",
+          "value": "6 Studi Kasus",
+          "context": "Simulasi dalam pelatihan konsultasi"
+        },
+        {
+          "label": "Pendekatan Kerja",
+          "value": "MECE + Issue Tree",
+          "context": "Struktur masalah dan hipotesis kerja"
+        }
+      ],
+      "recommendations": "Menggunakan kerangka masalah, pengujian hipotesis, dan sintesis bukti untuk menilai kelayakan pengembangan kawasan serta investasi infrastruktur.",
+      "related_project_ids": [
+        "P01",
+        "P03"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "id": "exp_dishub_sidoarjo",
+      "org": "Dinas Perhubungan Sidoarjo",
+      "location": "Sidoarjo",
+      "role": "Surveyor",
+      "period": "Nov 2025 - Dec 2025",
+      "section": "profesional",
+      "group": "Pengalaman Profesional",
+      "tags": [
+        "transportasi",
+        "survei",
+        "kebijakan"
+      ],
+      "anchor": {
+        "value": "77+",
+        "label": "armada & trayek angkutan pedesaan disurvei"
+      },
+      "featured": true,
+      "summary": "Conducted field surveys assessing operational status of rural public transportation and interviewed passengers to gather ridership data.",
+      "contributions": [
+        "Conducted field surveys assessing operational status of rural public transportation in Sidoarjo, producing data covering vehicle conditions, route coverage, and service indicators.",
+        "Interviewed public transportation and Transjatim passengers to gather firsthand ridership data, contributing to a comprehensive mobility assessment report for the local transportation authority."
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_its_eco_campus",
+      "org": "ITS ECO CAMPUS",
+      "location": "Surabaya",
+      "role": "Surveyor",
+      "period": "Apr 2026 - May 2026",
+      "section": "profesional",
+      "group": "Pengalaman Profesional",
+      "tags": [
+        "transportasi",
+        "survei",
+        "analisis"
+      ],
+      "anchor": {
+        "value": "3",
+        "label": "lokasi strategis traffic count ITS"
+      },
+      "featured": true,
+      "summary": "Executed manual traffic counts across 3 strategic locations within ITS campus for trip generation analysis.",
+      "contributions": [
+        "Executed manual traffic counts across 3 strategic locations within ITS campus, collecting structured volume data as the primary input for trip generation analysis."
+      ],
+      "status": "published",
+      "confirmed_project_id": "P01"
+    },
+    {
+      "id": "exp_asdos_sip",
+      "org": "Institut Teknologi Sepuluh Nopember",
+      "location": "Surabaya, Indonesia",
+      "role": "Assistant Lecture System Information Planning",
+      "period": "Mar 2026 - Jul 2026",
+      "section": "profesional",
+      "group": "Pengalaman Profesional",
+      "tags": [
+        "gis",
+        "analisis",
+        "pengajaran"
+      ],
+      "anchor": {
+        "value": "45",
+        "label": "mahasiswa praktikum GIS didampingi"
+      },
+      "featured": true,
+      "summary": "Delivered hands-on teaching assistance for Planning Information Systems course covering GIS, Raster Analysis, and Web GIS to 45 students.",
+      "contributions": [
+        "Delivered hands-on teaching assistance for Planning Information Systems course covering GIS, Raster Analysis, and Web GIS to 45 students, improving student comprehension of spatial analysis tools."
+      ],
+      "status": "published",
+      "confirmed_project_id": "P02"
+    },
+    {
+      "id": "exp_asdos_map",
+      "org": "Institut Teknologi Sepuluh Nopember",
+      "location": "Surabaya, Indonesia",
+      "role": "Assistant Lecturer Planning Analysis Methods",
+      "period": "Aug 2026 - Sekarang",
+      "section": "profesional",
+      "group": "Pengalaman Profesional",
+      "tags": [
+        "analisis",
+        "kebijakan",
+        "pengajaran"
+      ],
+      "anchor": {
+        "value": "43",
+        "label": "mahasiswa didampingi melalui 15 modul"
+      },
+      "featured": true,
+      "summary": "Delivered 15 course modules to a cohort of 43 students, guiding practical applications of Excel, SPSS, and Super Decisions.",
+      "contributions": [
+        "Delivered 15 course modules to a cohort of 43 students, guiding practical applications of Excel, SPSS, and Super Decisions to solve complex analytical problems"
+      ],
+      "status": "published",
+      "confirmed_project_id": "P05"
+    },
+    {
+      "id": "exp_ilits_2025",
+      "org": "INI LHO ITS 2025!",
+      "location": "Surabaya, Indonesia",
+      "role": "Staff Media Production",
+      "period": "Oct 2024 - Mar 2025",
+      "section": "organisasi",
+      "group": "Other Experience",
+      "tags": [
+        "media",
+        "kepanitiaan"
+      ],
+      "anchor": {
+        "value": "3",
+        "label": "peran produksi utama (DoP, Asisten DoP, Kamera)"
+      },
+      "featured": false,
+      "summary": "Served in triple production roles in ILITS 2025 and coordinated all media production deliverables for the farewell event as PIC.",
+      "contributions": [
+        "Served in triple production roles (Director of Photography, Assistant DoP, and Assistant Camera) in ILITS 2025, contributing to cohesive visual storytelling across the entire production.",
+        "Coordinated all media production deliverables for the INI LHO ITS 2025 farewell event as PIC, ensuring on-time completion of visual content for the closing ceremony."
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_imagits",
+      "org": "IMAGITS",
+      "location": "Magetan, Indonesia",
+      "role": "Chairman",
+      "period": "Jan 2025 - Feb 2026",
+      "section": "kepemimpinan",
+      "group": "Other Experience",
+      "tags": [
+        "kepemimpinan",
+        "organisasi"
+      ],
+      "anchor": {
+        "value": "30",
+        "label": "anggota organisasi dipimpin"
+      },
+      "featured": true,
+      "summary": "Established organizational vision, mission, and annual work program, and led an organization of 30 members.",
+      "contributions": [
+        "Established the organizational vision, mission, and annual work program for IMAGITS, providing strategic direction that aligned the team's efforts throughout the period.",
+        "Led an organization of 30 members, overseeing recruitment, coordination, and program execution to strengthen the regional network of ITS students from Magetan."
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_gerigi_2025",
+      "org": "Gerigi x UKM EXPO ITS 2025",
+      "location": "Surabaya, Indonesia",
+      "role": "Staff Media Production",
+      "period": "Jul 2025 - Feb 2026",
+      "section": "organisasi",
+      "group": "Other Experience",
+      "tags": [
+        "media",
+        "kepanitiaan"
+      ],
+      "anchor": null,
+      "featured": false,
+      "summary": "Conceptualized the narrative and visual direction for GEREX 2025 video production and operated live camera on event day.",
+      "contributions": [
+        "Conceptualized the narrative and visual direction for GEREX 2025 video production, establishing the creative foundation that guided the entire production team.",
+        "Operated live camera and managed full event documentation on event day."
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_plan_a",
+      "org": "Plan - A",
+      "location": "Surabaya, Indonesia",
+      "role": "Head of Branding and Marketing Division",
+      "period": "Aug 2025 - Oct 2025",
+      "section": "kepemimpinan",
+      "group": "Other Experience",
+      "tags": [
+        "kepemimpinan",
+        "media"
+      ],
+      "anchor": {
+        "value": "23",
+        "label": "staf lintas 3 subdivisi disupervisi"
+      },
+      "featured": true,
+      "summary": "Built comprehensive Work Breakdown Structure (WBS) and supervised 3 subdivisions with 23 staff members.",
+      "contributions": [
+        "Built a comprehensive Work Breakdown Structure (WBS) for the Branding & Marketing division, translating strategic goals into actionable task plans for each subdivision.",
+        "Supervised 3 subdivisions with 23 staff members, ensuring quality control to meet all division targets on schedule"
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_planopolis_2025",
+      "org": "Planopolis 2025",
+      "location": "Surabaya, Indonesia",
+      "role": "Expert Staff of Media Production",
+      "period": "Aug 2025 - Feb 2026",
+      "section": "organisasi",
+      "group": "Other Experience",
+      "tags": [
+        "media",
+        "kepanitiaan"
+      ],
+      "anchor": null,
+      "featured": false,
+      "summary": "Formulated detailed job descriptions, standardized workflows, and mentored media production staff performance.",
+      "contributions": [
+        "Formulated detailed job descriptions and task frameworks for media production staff to standardize workflow and ensure consistent output quality",
+        "Mentored and monitored staff performance against established production standards, providing real-time feedback that maintained output quality across all assigned projects."
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_ilits_2026",
+      "org": "INI LHO ITS 2026!",
+      "location": "Surabaya, Indonesia",
+      "role": "Head of Media Production Subdivision",
+      "period": "Sep 2025 - Mar 2026",
+      "section": "kepemimpinan",
+      "group": "Other Experience",
+      "tags": [
+        "kepemimpinan",
+        "media",
+        "kepanitiaan"
+      ],
+      "anchor": {
+        "value": "110",
+        "label": "karya visual & video terpopuler diproduksi"
+      },
+      "featured": true,
+      "summary": "Designed detailed WBS and successfully led the production of 110 visual works in a single period, producing the most-viewed video.",
+      "contributions": [
+        "Designed a detailed Work Breakdown Structure (WBS) that distributed tasks across the team, ensuring all production timelines were met within a single event period.",
+        "Successfully led the production of 84 motion graphics, 18 visual editing projects, and 8 production projects—a total of 110 works in a single period—and produced the video with the most views on INI LHO ITS!"
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_hmpl_its",
+      "org": "HMPL ITS",
+      "location": "Surabaya, Indonesia",
+      "role": "Staff of Human Resource Development",
+      "period": "Apr 2026 - Sekarang",
+      "section": "organisasi",
+      "group": "Other Experience",
+      "tags": [
+        "organisasi",
+        "kepemimpinan"
+      ],
+      "anchor": {
+        "value": "2",
+        "label": "proyek divisi kreatif diarahkan"
+      },
+      "featured": false,
+      "summary": "Managing pre-event coordination for HMPL Future Leaders and led the Creative Division across 2 projects.",
+      "contributions": [
+        "Managing pre-event coordination for the HMPL Future Leaders training program, currently in preparation phase",
+        "Led the Creative Division across 2 projects, directing concept development and visual output"
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_planopolis_2026",
+      "org": "Planopolis 2026",
+      "location": "Surabaya, Indonesia",
+      "role": "Project Officer",
+      "period": "May 2026 - Sekarang",
+      "section": "kepemimpinan",
+      "group": "Other Experience",
+      "tags": [
+        "kepemimpinan",
+        "kepanitiaan"
+      ],
+      "anchor": {
+        "value": "100+",
+        "label": "panitia lintas 8 divisi & 10 subdivisi dipimpin"
+      },
+      "featured": true,
+      "summary": "Developed Grand Design document and structured the organizational framework of 8 divisions and 10 subdivisions.",
+      "contributions": [
+        "Developed the Grand Design document as the primary operational blueprint for the event, aligning objectives, timelines, and deliverables across all divisions.",
+        "Structured the organizational framework of 8 divisions and 10 subdivisions, establishing clear roles and workflows to support cohesive event execution."
+      ],
+      "status": "published",
+      "confirmed_project_id": null
+    },
+    {
+      "id": "exp_lokasolution",
+      "org": "Lokasolution",
+      "location": "Surabaya, Indonesia",
+      "role": "Member",
+      "period": "Jun 2026 - Sekarang",
+      "section": "konsultasi",
+      "group": "Other Experience",
+      "tags": [
+        "konsultasi",
+        "kepemimpinan",
+        "analisis"
+      ],
+      "anchor": {
+        "value": "Vice Project Leader",
+        "label": "PT Mitra Pengembang Kawasan (Jababeka)"
+      },
+      "featured": true,
+      "summary": "Vice Project Leader for PT Mitra Pengembang Kawasan (under Jababeka Group), delivering data-driven development strategies.",
+      "contributions": [
+        "Appointed as Vice Project Leader for PT Mitra Pengembang Kawasan (under Jababeka Group), overseeing team execution and delivering data-driven development strategies.",
+        "Conduct structured problem-solving and rigorous market intelligence for diverse development projects, synthesizing macroeconomic trends, target market segmentation, and financial feasibility into executive-level consulting presentations."
+      ],
+      "status": "published",
+      "confirmed_project_id": "P07"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Institut Teknologi Sepuluh Nopember - Surabaya, Indonesia",
+      "program": "Bachelor of Urban and Regional Planning",
+      "degree": "S1 PWK",
+      "period": "Aug 2024 - Sep 2028 (Perkiraan)",
+      "gpa": "3.58",
+      "gpa_scale": "4.00",
+      "location": "Surabaya, Indonesia",
+      "highlights": [
+        "Bachelor of Urban and Regional Planning, 3.58/4.00",
+        "Appointed as Vice Year Class President"
+      ]
+    },
+    {
+      "institution": "SMA Negeri 1 Magetan - Magetan, Indonesia",
+      "program": "High School Diploma in Mathematics and Science",
+      "degree": "MIPA",
+      "period": "Jul 2021 - May 2024",
+      "gpa": "93.48",
+      "gpa_scale": "100.00",
+      "location": "Magetan, Indonesia",
+      "highlights": [
+        "High School Diploma in Mathematics and Science, 93.48/100.00",
+        "Appointed as a class president"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "Hard Skills: GIS Analysis & Spasial",
+      "basis_label": "Inti Keilmuan",
+      "items": [
+        "QGIS",
+        "ArcGIS / ArcMap",
+        "Google Earth Engine"
+      ]
+    },
+    {
+      "group": "Hard Skills: Google Workspace & Produktivitas",
+      "basis_label": "Produktivitas",
+      "items": [
+        "Google Docs",
+        "Google Sheets",
+        "Google Slides",
+        "Google Drive"
+      ]
+    },
+    {
+      "group": "Pemodelan Transportasi & Analisis Lanjutan",
+      "basis_label": "Keahlian Riset",
+      "items": [
+        "PTV Visum",
+        "Four-Step Transportation Modeling",
+        "Urban Network Analysis (UNA)",
+        "OD Cost Matrix",
+        "Dasymetric Mapping",
+        "Trip Generation Analysis"
+      ]
+    },
+    {
+      "group": "Metode Kuantitatif & Pemecahan Masalah",
+      "basis_label": "Metode Analisis",
+      "items": [
+        "SPSS",
+        "Super Decisions (AHP/Delphi)",
+        "Microsoft Excel",
+        "MECE Framework",
+        "Issue Tree"
+      ]
+    },
+    {
+      "group": "Produksi Media & Visual Storytelling",
+      "basis_label": "Media Kreatif",
+      "items": [
+        "Director of Photography (DoP)",
+        "Video Production",
+        "Motion Graphics",
+        "Adobe Premiere Pro",
+        "Adobe Photoshop",
+        "Adobe Lightroom",
+        "Adobe After Effects",
+        "CapCut"
+      ]
+    },
+    {
+      "group": "Soft Skills: Kepemimpinan & Manajemen Proyek",
+      "basis_label": "Interpersonal",
+      "items": [
+        "Cross-functional team leadership",
+        "Work under pressure & tight deadlines",
+        "Adaptability across diverse project environments",
+        "Work Breakdown Structure (WBS)",
+        "Grand Design Architecture"
+      ]
+    }
+  ],
+  "competencies": {
+    "hard": [
+      {
+        "id": "h_transportasi",
+        "title": "Pemodelan transportasi empat tahap",
+        "statement": "Mendelineasi 12 TAZ, membangun jaringan nodes–links–turns, dan menjalankan PrT/PuT Assignment di PTV Visum untuk membandingkan kondisi eksisting, proyeksi 2031, dan skenario rencana.",
+        "status_label": "Hasil skenario pemodelan",
+        "evidence": [
+          {
+            "type": "project",
+            "id": "P01"
+          }
+        ]
+      },
+      {
+        "id": "h_aksesibilitas",
+        "title": "Analisis aksesibilitas jaringan",
+        "statement": "Mengintegrasikan pemetaan dasimetrik, UNA Reach, OD Cost Matrix, dan Model Huff untuk mengevaluasi akses menuju 77 halte serta menyusun indeks kebutuhan layanan.",
+        "status_label": "Hasil analisis spasial",
+        "evidence": [
+          {
+            "type": "project",
+            "id": "P02"
+          }
+        ]
+      },
+      {
+        "id": "h_lingkungan",
+        "title": "Analisis spasial lingkungan dan kebencanaan",
+        "statement": "Memetakan NDVI, LST, dan UHI Surabaya pada empat tahun pengamatan menggunakan ArcGIS; mengkaji kondisi fisik dan kerawanan bencana pada cakupan 21 desa/kelurahan di Kebomas.",
+        "status_label": "Hasil analisis dan usulan perencanaan",
+        "evidence": [
+          {
+            "type": "project",
+            "id": "P04"
+          },
+          {
+            "type": "project",
+            "id": "P03"
+          }
+        ]
+      },
+      {
+        "id": "h_multikriteria",
+        "title": "Evaluasi multikriteria",
+        "statement": "Memeringkat 8 alternatif lokasi SMA menggunakan 11 kriteria melalui Delphi, AHP, dan TOPSIS; membimbing 43 mahasiswa dalam penerapan Excel, SPSS, dan Super Decisions.",
+        "status_label": "Rekomendasi hasil model",
+        "evidence": [
+          {
+            "type": "project",
+            "id": "P05"
+          },
+          {
+            "type": "experience",
+            "id": "exp_04"
+          }
+        ]
+      },
+      {
+        "id": "h_webgis",
+        "title": "Visualisasi dan Komunikasi WebGIS",
+        "statement": "Meraih Top 50 Finalis Mapid WebGIS Competition 2026 dan membimbing penerapan WebGIS pada praktikum Sistem Informasi Perencanaan.",
+        "status_label": "Prestasi tercantum di CV",
+        "evidence": [
+          {
+            "type": "achievement",
+            "id": "mapid"
+          },
+          {
+            "type": "experience",
+            "id": "exp_03"
+          }
+        ]
+      },
+      {
+        "id": "h_konsultasi",
+        "title": "Analisis pasar dan konsultasi",
+        "statement": "Menghubungkan intelijen pasar, segmentasi sasaran, dan kajian kelayakan finansial menjadi rekomendasi eksekutif serta mengoordinasikan pekerjaan tim sebagai Vice Project Leader.",
+        "status_label": "Pengalaman tercantum di CV",
+        "evidence": [
+          {
+            "type": "experience",
+            "id": "exp_10"
+          },
+          {
+            "type": "project",
+            "id": "P07"
+          }
+        ]
+      }
+    ],
+    "soft": [
+      {
+        "id": "s_kepemimpinan",
+        "title": "Kepemimpinan lintas fungsi",
+        "statement": "Mengoordinasikan tim studio Kebomas beranggotakan 10 orang; memimpin 100+ panitia Planopolis 2026, 23 staf Plan-A, dan 30 anggota IMAGITS dengan pembagian peran serta sasaran kerja yang jelas.",
+        "evidence": [
+          {
+            "type": "project",
+            "id": "P03"
+          },
+          {
+            "type": "experience",
+            "id": "exp_05"
+          },
+          {
+            "type": "experience",
+            "id": "exp_09"
+          },
+          {
+            "type": "experience",
+            "id": "exp_06"
+          }
+        ]
+      },
+      {
+        "id": "s_tenggat",
+        "title": "Pengelolaan Produksi dan Tenggat",
+        "statement": "Mengoordinasikan produksi 110 karya media INI LHO ITS 2026 serta menuntaskan materi visual penutupan INI LHO ITS 2025 sesuai jadwal sebagai PIC.",
+        "evidence": [
+          {
+            "type": "experience",
+            "id": "exp_07"
+          },
+          {
+            "type": "experience",
+            "id": "exp_12"
+          }
+        ]
+      },
+      {
+        "id": "s_adaptasi",
+        "title": "Adaptabilitas lintas bidang",
+        "statement": "Menyesuaikan metode kerja dengan kebutuhan survei transportasi, analisis GIS, produksi media, dan konsultasi pengembangan kawasan, dari pengumpulan data hingga penyajian hasil.",
+        "evidence": [
+          {
+            "type": "experience",
+            "id": "exp_01"
+          },
+          {
+            "type": "experience",
+            "id": "exp_07"
+          },
+          {
+            "type": "experience",
+            "id": "exp_10"
+          }
+        ]
+      },
+      {
+        "id": "s_komunikasi",
+        "title": "Komunikasi dan pengajaran",
+        "statement": "Menjelaskan metode dan perangkat analisis kepada 45 mahasiswa Sistem Informasi Perencanaan serta 43 mahasiswa Metode Analisis Perencanaan; menjadi pembicara pada tiga kegiatan pada 2026.",
+        "evidence": [
+          {
+            "type": "experience",
+            "id": "exp_03"
+          },
+          {
+            "type": "experience",
+            "id": "exp_04"
+          },
+          {
+            "type": "speaking",
+            "id": "all"
+          }
+        ]
+      }
+    ]
+  },
+  "speaking": [
+    {
+      "title": "Speakers on Basic Media Schooling",
+      "year": "2026",
+      "organizer": "ITS",
+      "topic": "Creative Media Production & Visual Direction"
+    },
+    {
+      "title": "Speaker on Event Management",
+      "year": "2026",
+      "organizer": "ITS",
+      "topic": "Work Breakdown Structure (WBS) & Organizational Framework"
+    },
+    {
+      "title": "Speaker on Understanding Planning Analysis Methods",
+      "year": "2026",
+      "organizer": "PWK ITS",
+      "topic": "Practical Applications of Excel, SPSS, & Multi-Criteria Decision Making"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "180dc",
+      "title": "Semifinalist 180DC ITS BCC",
+      "year": "2026",
+      "organizer": "180 Degrees Consulting ITS",
+      "description": "Business Case Competition (BCC) pemecahan masalah strategis terstruktur berbasis kerangka MECE dan intelijen pasar."
+    },
+    {
+      "id": "mapid",
+      "title": "TOP 50 Finalist in Mapid Webgis Competiton",
+      "year": "2026",
+      "organizer": "MAPID",
+      "description": "Kompetisi inovasi sistem informasi geografis berbasis web (WebGIS) tingkat nasional."
+    }
+  ],
+  "site_settings": {
+    "theme": "urban-transit",
+    "default_motion": "standard",
+    "primary_color": "#315C37",
+    "hero_bg": "#14211C",
+    "content_bg": "#F6F7F2",
+    "accent_path": "#A7C66A",
+    "border_color": "#DCE2D7",
+    "version": "1.1.0",
+    "last_published": "2026-10-23 10:30:00"
+  }
+}
