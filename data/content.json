@@ -780,8 +780,8 @@
       "id": "exp_dishub_sidoarjo",
       "org": "Dinas Perhubungan Sidoarjo",
       "location": "Sidoarjo",
-      "role": "Surveyor",
-      "period": "Nov 2025 - Dec 2025",
+      "role": "Surveyor Lapangan Angkutan Pedesaan",
+      "period": "Nov 2025 - Des 2025",
       "section": "profesional",
       "group": "Pengalaman Profesional",
       "tags": [
@@ -794,10 +794,10 @@
         "label": "armada & trayek angkutan pedesaan disurvei"
       },
       "featured": true,
-      "summary": "Conducted field surveys assessing operational status of rural public transportation and interviewed passengers to gather ridership data.",
+      "summary": "Melakukan survei lapangan untuk mengevaluasi status operasional angkutan pedesaan serta mewawancarai penumpang guna menghimpun data tingkat keterisian (ridership).",
       "contributions": [
-        "Conducted field surveys assessing operational status of rural public transportation in Sidoarjo, producing data covering vehicle conditions, route coverage, and service indicators.",
-        "Interviewed public transportation and Transjatim passengers to gather firsthand ridership data, contributing to a comprehensive mobility assessment report for the local transportation authority."
+        "Melakukan survei lapangan untuk menilai kelayakan operasional angkutan pedesaan di Sidoarjo, menghasilkan basis data kondisi armada, cakupan trayek, dan indikator standar pelayanan minimal.",
+        "Mewawancarai penumpang angkutan umum dan Transjatim untuk menghimpun data preferensi serta volume perjalanan riil sebagai masukan laporan kajian mobilitas bagi Dinas Perhubungan."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -806,8 +806,8 @@
       "id": "exp_its_eco_campus",
       "org": "ITS ECO CAMPUS",
       "location": "Surabaya",
-      "role": "Surveyor",
-      "period": "Apr 2026 - May 2026",
+      "role": "Surveyor Pencacahan Lalu Lintas",
+      "period": "Apr 2026 - Mei 2026",
       "section": "profesional",
       "group": "Pengalaman Profesional",
       "tags": [
@@ -820,9 +820,9 @@
         "label": "lokasi strategis traffic count ITS"
       },
       "featured": true,
-      "summary": "Executed manual traffic counts across 3 strategic locations within ITS campus for trip generation analysis.",
+      "summary": "Melaksanakan pencacahan volume lalu lintas manual di 3 lokasi gerbang strategis kampus ITS untuk analisis bangkitan perjalanan.",
       "contributions": [
-        "Executed manual traffic counts across 3 strategic locations within ITS campus, collecting structured volume data as the primary input for trip generation analysis."
+        "Melaksanakan pencacahan volume lalu lintas terklasifikasi secara manual di 3 titik gerbang utama kampus ITS, mengumpulkan data arus kendaraan terstruktur sebagai basis data primer pemodelan bangkitan perjalanan kampus."
       ],
       "status": "published",
       "confirmed_project_id": "P01"
@@ -831,7 +831,7 @@
       "id": "exp_asdos_sip",
       "org": "Institut Teknologi Sepuluh Nopember",
       "location": "Surabaya, Indonesia",
-      "role": "Assistant Lecture System Information Planning",
+      "role": "Asisten Dosen Sistem Informasi Perencanaan",
       "period": "Mar 2026 - Jul 2026",
       "section": "profesional",
       "group": "Pengalaman Profesional",
@@ -845,9 +845,9 @@
         "label": "mahasiswa praktikum GIS didampingi"
       },
       "featured": true,
-      "summary": "Delivered hands-on teaching assistance for Planning Information Systems course covering GIS, Raster Analysis, and Web GIS to 45 students.",
+      "summary": "Memberikan pendampingan praktikum mata kuliah Sistem Informasi Perencanaan mencakup GIS, Analisis Raster, dan WebGIS kepada 45 mahasiswa.",
       "contributions": [
-        "Delivered hands-on teaching assistance for Planning Information Systems course covering GIS, Raster Analysis, and Web GIS to 45 students, improving student comprehension of spatial analysis tools."
+        "Memberikan bimbingan teknis praktikum Sistem Informasi Perencanaan yang mencakup geoprocessing GIS, analisis raster lingkungan, dan pengembangan WebGIS interaktif kepada 45 mahasiswa untuk meningkatkan penguasaan perangkat analisis spasial."
       ],
       "status": "published",
       "confirmed_project_id": "P02"
@@ -856,8 +856,8 @@
       "id": "exp_asdos_map",
       "org": "Institut Teknologi Sepuluh Nopember",
       "location": "Surabaya, Indonesia",
-      "role": "Assistant Lecturer Planning Analysis Methods",
-      "period": "Aug 2026 - Sekarang",
+      "role": "Asisten Dosen Metode Analisis Perencanaan",
+      "period": "Agu 2026 - Sekarang",
       "section": "profesional",
       "group": "Pengalaman Profesional",
       "tags": [
@@ -870,9 +870,9 @@
         "label": "mahasiswa didampingi melalui 15 modul"
       },
       "featured": true,
-      "summary": "Delivered 15 course modules to a cohort of 43 students, guiding practical applications of Excel, SPSS, and Super Decisions.",
+      "summary": "Mengampu 15 modul praktikum untuk 43 mahasiswa, mendampingi penerapan praktis analisis data menggunakan Excel, SPSS, dan Super Decisions (AHP).",
       "contributions": [
-        "Delivered 15 course modules to a cohort of 43 students, guiding practical applications of Excel, SPSS, and Super Decisions to solve complex analytical problems"
+        "Mengampu dan membimbing 15 modul praktikum kepada 43 mahasiswa PWK, mengarahkan pengolahan statistik regresi, analisis multivariat dengan SPSS, serta pembobotan keputusan multikriteria (AHP) menggunakan Super Decisions."
       ],
       "status": "published",
       "confirmed_project_id": "P05"
@@ -881,8 +881,8 @@
       "id": "exp_ilits_2025",
       "org": "INI LHO ITS 2025!",
       "location": "Surabaya, Indonesia",
-      "role": "Staff Media Production",
-      "period": "Oct 2024 - Mar 2025",
+      "role": "Staf Produksi Media & PIC Dokumentasi Penutupan",
+      "period": "Okt 2024 - Mar 2025",
       "section": "organisasi",
       "group": "Other Experience",
       "tags": [
@@ -894,10 +894,10 @@
         "label": "peran produksi utama (DoP, Asisten DoP, Kamera)"
       },
       "featured": false,
-      "summary": "Served in triple production roles in ILITS 2025 and coordinated all media production deliverables for the farewell event as PIC.",
+      "summary": "Menjalankan tiga peran produksi visual (DoP, Asisten DoP, dan Asisten Kamera) serta mengoordinasikan seluruh materi media acara penutupan sebagai PIC.",
       "contributions": [
-        "Served in triple production roles (Director of Photography, Assistant DoP, and Assistant Camera) in ILITS 2025, contributing to cohesive visual storytelling across the entire production.",
-        "Coordinated all media production deliverables for the INI LHO ITS 2025 farewell event as PIC, ensuring on-time completion of visual content for the closing ceremony."
+        "Menjalankan tiga peran produksi utama (Director of Photography, Asisten DoP, dan Asisten Kamera) dalam INI LHO ITS 2025, memastikan narasi visual dan sinematografi tayangan tersampaikan secara konsisten dan berkualitas tinggi.",
+        "Bertindak sebagai Penanggung Jawab (PIC) produksi media acara penutupan INI LHO ITS 2025, memimpin jadwal produksi dan penyelesaian konten visual tepat waktu untuk seremoni penutupan."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -906,7 +906,7 @@
       "id": "exp_imagits",
       "org": "IMAGITS",
       "location": "Magetan, Indonesia",
-      "role": "Chairman",
+      "role": "Ketua Umum",
       "period": "Jan 2025 - Feb 2026",
       "section": "kepemimpinan",
       "group": "Other Experience",
@@ -919,10 +919,10 @@
         "label": "anggota organisasi dipimpin"
       },
       "featured": true,
-      "summary": "Established organizational vision, mission, and annual work program, and led an organization of 30 members.",
+      "summary": "Menetapkan visi, misi, dan program kerja tahunan serta memimpin organisasi beranggotakan 30 mahasiswa daerah asal Magetan di ITS.",
       "contributions": [
-        "Established the organizational vision, mission, and annual work program for IMAGITS, providing strategic direction that aligned the team's efforts throughout the period.",
-        "Led an organization of 30 members, overseeing recruitment, coordination, and program execution to strengthen the regional network of ITS students from Magetan."
+        "Merumuskan arah haluan organisasi, visi, misi, dan program kerja tahunan IMAGITS, memberikan panduan strategis yang menyatukan kinerja antardivisi selama satu periode kepengurusan.",
+        "Memimpin 30 anggota aktif, mengawasi proses kaderisasi, koordinasi berkala, serta eksekusi kegiatan sosial-edukasi untuk memperkuat jejaring mahasiswa ITS asal Magetan."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -931,7 +931,7 @@
       "id": "exp_gerigi_2025",
       "org": "Gerigi x UKM EXPO ITS 2025",
       "location": "Surabaya, Indonesia",
-      "role": "Staff Media Production",
+      "role": "Staf Produksi Media & Operator Kamera",
       "period": "Jul 2025 - Feb 2026",
       "section": "organisasi",
       "group": "Other Experience",
@@ -941,10 +941,10 @@
       ],
       "anchor": null,
       "featured": false,
-      "summary": "Conceptualized the narrative and visual direction for GEREX 2025 video production and operated live camera on event day.",
+      "summary": "Menyusun konsep narasi serta arahan visual produksi video GEREX 2025 dan bertugas sebagai juru kamera utama pada hari pelaksanaan kegiatan.",
       "contributions": [
-        "Conceptualized the narrative and visual direction for GEREX 2025 video production, establishing the creative foundation that guided the entire production team.",
-        "Operated live camera and managed full event documentation on event day."
+        "Merancang konsep alur cerita (storyline) dan moodboard visual produksi video GEREX 2025 sebagai acuan kerja seluruh tim kreatif dan videografer.",
+        "Mengoperasikan kamera live liputan dan mengelola alur dokumentasi komprehensif selama pelaksanaan acara penyambutan mahasiswa baru terbesar di ITS."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -953,8 +953,8 @@
       "id": "exp_plan_a",
       "org": "Plan - A",
       "location": "Surabaya, Indonesia",
-      "role": "Head of Branding and Marketing Division",
-      "period": "Aug 2025 - Oct 2025",
+      "role": "Kepala Divisi Branding & Marketing",
+      "period": "Agu 2025 - Okt 2025",
       "section": "kepemimpinan",
       "group": "Other Experience",
       "tags": [
@@ -966,10 +966,10 @@
         "label": "staf lintas 3 subdivisi disupervisi"
       },
       "featured": true,
-      "summary": "Built comprehensive Work Breakdown Structure (WBS) and supervised 3 subdivisions with 23 staff members.",
+      "summary": "Menyusun struktur rincian kerja (WBS) komprehensif dan mengoordinasikan 3 subdivisi beranggotakan 23 staf untuk strategi pemasaran kegiatan.",
       "contributions": [
-        "Built a comprehensive Work Breakdown Structure (WBS) for the Branding & Marketing division, translating strategic goals into actionable task plans for each subdivision.",
-        "Supervised 3 subdivisions with 23 staff members, ensuring quality control to meet all division targets on schedule"
+        "Menyusun Work Breakdown Structure (WBS) terperinci untuk divisi Branding & Marketing, menerjemahkan sasaran promosi menjadi matriks penugasan teknis yang terukur bagi tiap subdivisi.",
+        "Mensupervisi 3 subdivisi dengan total 23 staf, menjaga standar mutu konten visual dan jadwal publikasi agar seluruh target ketercapaian divisi terpenuhi tepat waktu."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -978,8 +978,8 @@
       "id": "exp_planopolis_2025",
       "org": "Planopolis 2025",
       "location": "Surabaya, Indonesia",
-      "role": "Expert Staff of Media Production",
-      "period": "Aug 2025 - Feb 2026",
+      "role": "Staf Ahli Produksi Media",
+      "period": "Agu 2025 - Feb 2026",
       "section": "organisasi",
       "group": "Other Experience",
       "tags": [
@@ -988,10 +988,10 @@
       ],
       "anchor": null,
       "featured": false,
-      "summary": "Formulated detailed job descriptions, standardized workflows, and mentored media production staff performance.",
+      "summary": "Merumuskan deskripsi kerja teknis, standarisasi alur produksi video, serta membimbing performa staf produksi media.",
       "contributions": [
-        "Formulated detailed job descriptions and task frameworks for media production staff to standardize workflow and ensure consistent output quality",
-        "Mentored and monitored staff performance against established production standards, providing real-time feedback that maintained output quality across all assigned projects."
+        "Merumuskan Standard Operating Procedure (SOP) dan kerangka kerja penugasan staf produksi media guna memastikan konsistensi kualitas audio visual di setiap konten rilis.",
+        "Mendampingi serta mengevaluasi performa staf secara langsung terhadap standar produksi, memberikan feedback teknis sinematografi dan editing untuk menyempurnakan hasil akhir karya."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -1000,7 +1000,7 @@
       "id": "exp_ilits_2026",
       "org": "INI LHO ITS 2026!",
       "location": "Surabaya, Indonesia",
-      "role": "Head of Media Production Subdivision",
+      "role": "Kepala Subdivisi Produksi Media",
       "period": "Sep 2025 - Mar 2026",
       "section": "kepemimpinan",
       "group": "Other Experience",
@@ -1014,10 +1014,10 @@
         "label": "karya visual & video terpopuler diproduksi"
       },
       "featured": true,
-      "summary": "Designed detailed WBS and successfully led the production of 110 visual works in a single period, producing the most-viewed video.",
+      "summary": "Merancang WBS terstruktur dan sukses memimpin produksi 110 karya visual dalam satu periode kepengurusan, mencetak rekor video dengan penonton terbanyak.",
       "contributions": [
-        "Designed a detailed Work Breakdown Structure (WBS) that distributed tasks across the team, ensuring all production timelines were met within a single event period.",
-        "Successfully led the production of 84 motion graphics, 18 visual editing projects, and 8 production projects—a total of 110 works in a single period—and produced the video with the most views on INI LHO ITS!"
+        "Merancang sistem pembagian kerja WBS yang memetakan tanggung jawab tiap anggota secara efektif, menjamin ketepatan rilis ratusan konten visual tanpa hambatan jadwal.",
+        "Berhasil memimpin produksi 84 motion graphics, 18 proyek video editing, dan 8 proyek produksi lapangan (total 110 karya visual) serta menghasilkan video dengan jumlah tayangan (views) tertinggi dalam sejarah INI LHO ITS."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -1026,7 +1026,7 @@
       "id": "exp_hmpl_its",
       "org": "HMPL ITS",
       "location": "Surabaya, Indonesia",
-      "role": "Staff of Human Resource Development",
+      "role": "Staf Pengembangan Sumber Daya Manusia (PSDM)",
       "period": "Apr 2026 - Sekarang",
       "section": "organisasi",
       "group": "Other Experience",
@@ -1039,10 +1039,10 @@
         "label": "proyek divisi kreatif diarahkan"
       },
       "featured": false,
-      "summary": "Managing pre-event coordination for HMPL Future Leaders and led the Creative Division across 2 projects.",
+      "summary": "Mengelola koordinasi pra-acara HMPL Future Leaders serta memimpin Divisi Kreatif pada 2 program kerja kepengurusan.",
       "contributions": [
-        "Managing pre-event coordination for the HMPL Future Leaders training program, currently in preparation phase",
-        "Led the Creative Division across 2 projects, directing concept development and visual output"
+        "Mengelola persiapan kurikulum dan alur koordinasi kepanitiaan program pelatihan kepemimpinan HMPL Future Leaders untuk mahasiswa baru PWK ITS.",
+        "Memimpin Divisi Kreatif pada 2 proyek departemen, mengarahkan pengembangan identitas visual serta materi publikasi program kerja himpunan."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -1051,8 +1051,8 @@
       "id": "exp_planopolis_2026",
       "org": "Planopolis 2026",
       "location": "Surabaya, Indonesia",
-      "role": "Project Officer",
-      "period": "May 2026 - Sekarang",
+      "role": "Project Officer (Ketua Pelaksana)",
+      "period": "Mei 2026 - Sekarang",
       "section": "kepemimpinan",
       "group": "Other Experience",
       "tags": [
@@ -1064,10 +1064,10 @@
         "label": "panitia lintas 8 divisi & 10 subdivisi dipimpin"
       },
       "featured": true,
-      "summary": "Developed Grand Design document and structured the organizational framework of 8 divisions and 10 subdivisions.",
+      "summary": "Menyusun dokumen Grand Design resmi serta merancang arsitektur organisasi yang menaungi 8 divisi dan 10 subdivisi dengan 100+ fungsionaris.",
       "contributions": [
-        "Developed the Grand Design document as the primary operational blueprint for the event, aligning objectives, timelines, and deliverables across all divisions.",
-        "Structured the organizational framework of 8 divisions and 10 subdivisions, establishing clear roles and workflows to support cohesive event execution."
+        "Menyusun cetak biru operasional (Grand Design) Planopolis 2026, menyelaraskan target strategis, linimasa eksekusi, dan indikator keberhasilan antardivisi lintas fungsi.",
+        "Membangun struktur tata kelola 8 divisi dan 10 subdivisi, menetapkan pembagian wewenang yang jelas serta mekanisme alur kerja kolaboratif guna mewujudkan eksekusi acara berskala nasional."
       ],
       "status": "published",
       "confirmed_project_id": null
@@ -1076,7 +1076,7 @@
       "id": "exp_lokasolution",
       "org": "Lokasolution",
       "location": "Surabaya, Indonesia",
-      "role": "Member",
+      "role": "Anggota Tim Konsultan (Vice Project Leader)",
       "period": "Jun 2026 - Sekarang",
       "section": "konsultasi",
       "group": "Other Experience",
@@ -1090,10 +1090,10 @@
         "label": "PT Mitra Pengembang Kawasan (Jababeka)"
       },
       "featured": true,
-      "summary": "Vice Project Leader for PT Mitra Pengembang Kawasan (under Jababeka Group), delivering data-driven development strategies.",
+      "summary": "Dipercaya sebagai Vice Project Leader untuk proyek PT Mitra Pengembang Kawasan (Jababeka Group), menyusun strategi pengembangan kawasan terpadu berbasis data.",
       "contributions": [
-        "Appointed as Vice Project Leader for PT Mitra Pengembang Kawasan (under Jababeka Group), overseeing team execution and delivering data-driven development strategies.",
-        "Conduct structured problem-solving and rigorous market intelligence for diverse development projects, synthesizing macroeconomic trends, target market segmentation, and financial feasibility into executive-level consulting presentations."
+        "Dipercaya sebagai Vice Project Leader dalam penyusunan studi kelayakan kawasan PT Mitra Pengembang Kawasan (anak perusahaan Jababeka Group), mengoordinasikan analisis tim serta merumuskan strategi penataan berlandaskan data.",
+        "Menerapkan kerangka pemecahan masalah MECE dan analisis intelijen pasar mendalam, menyintesiskan tren makroekonomi, segmentasi profil konsumen, serta kelayakan finansial ke dalam dokumen presentasi konsultasi tingkat eksekutif."
       ],
       "status": "published",
       "confirmed_project_id": "P07"
@@ -1102,28 +1102,28 @@
   "education": [
     {
       "institution": "Institut Teknologi Sepuluh Nopember - Surabaya, Indonesia",
-      "program": "Bachelor of Urban and Regional Planning",
+      "program": "Sarjana Perencanaan Wilayah dan Kota (S1 PWK)",
       "degree": "S1 PWK",
-      "period": "Aug 2024 - Sep 2028 (Perkiraan)",
+      "period": "Agu 2024 - Sep 2028 (Perkiraan)",
       "gpa": "3.58",
       "gpa_scale": "4.00",
       "location": "Surabaya, Indonesia",
       "highlights": [
-        "Bachelor of Urban and Regional Planning, 3.58/4.00",
-        "Appointed as Vice Year Class President"
+        "Sarjana Perencanaan Wilayah dan Kota, IPK: 3.58 / 4.00",
+        "Dipercaya sebagai Wakil Komandan Tingkat (Wakil Komti) PWK Angkatan 2024"
       ]
     },
     {
       "institution": "SMA Negeri 1 Magetan - Magetan, Indonesia",
-      "program": "High School Diploma in Mathematics and Science",
+      "program": "Pendidikan Menengah Atas - Jurusan MIPA",
       "degree": "MIPA",
-      "period": "Jul 2021 - May 2024",
+      "period": "Jul 2021 - Mei 2024",
       "gpa": "93.48",
       "gpa_scale": "100.00",
       "location": "Magetan, Indonesia",
       "highlights": [
-        "High School Diploma in Mathematics and Science, 93.48/100.00",
-        "Appointed as a class president"
+        "Pendidikan Menengah Atas - Jurusan MIPA, Nilai Rata-rata Ijazah: 93.48 / 100.00",
+        "Dipercaya sebagai Ketua Kelas XII MIPA"
       ]
     }
   ],
@@ -1152,11 +1152,11 @@
       "basis_label": "Keahlian Riset",
       "items": [
         "PTV Visum",
-        "Four-Step Transportation Modeling",
+        "Pemodelan Transportasi 4 Tahap",
         "Urban Network Analysis (UNA)",
         "OD Cost Matrix",
-        "Dasymetric Mapping",
-        "Trip Generation Analysis"
+        "Pemetaan Dasimetrik (Dasymetric Mapping)",
+        "Analisis Bangkitan Perjalanan (Trip Generation)"
       ]
     },
     {
@@ -1188,11 +1188,11 @@
       "group": "Soft Skills: Kepemimpinan & Manajemen Proyek",
       "basis_label": "Interpersonal",
       "items": [
-        "Cross-functional team leadership",
-        "Work under pressure & tight deadlines",
-        "Adaptability across diverse project environments",
-        "Work Breakdown Structure (WBS)",
-        "Grand Design Architecture"
+        "Kepemimpinan Tim Lintas Fungsi",
+        "Bekerja Efektif di Bawah Tekanan & Tenggat Ketat",
+        "Kemampuan Adaptasi Lintas Lingkungan Proyek",
+        "Penyusunan Struktur Rincian Kerja (WBS)",
+        "Perancangan Grand Design & Kerangka Organisasi"
       ]
     }
   ],
@@ -1368,35 +1368,35 @@
   },
   "speaking": [
     {
-      "title": "Speakers on Basic Media Schooling",
+      "title": "Pemateri Basic Media Schooling (BMS)",
       "year": "2026",
       "organizer": "ITS",
-      "topic": "Creative Media Production & Visual Direction"
+      "topic": "Produksi Media Kreatif & Arahan Visual (Visual Direction)"
     },
     {
-      "title": "Speaker on Event Management",
+      "title": "Pemateri Manajemen Acara (Event Management)",
       "year": "2026",
       "organizer": "ITS",
-      "topic": "Work Breakdown Structure (WBS) & Organizational Framework"
+      "topic": "Penyusunan Work Breakdown Structure (WBS) & Tata Kelola Organisasi"
     },
     {
-      "title": "Speaker on Understanding Planning Analysis Methods",
+      "title": "Pemateri Pemahaman Metode Analisis Perencanaan",
       "year": "2026",
       "organizer": "PWK ITS",
-      "topic": "Practical Applications of Excel, SPSS, & Multi-Criteria Decision Making"
+      "topic": "Penerapan Praktis Excel, SPSS, & Pengambilan Keputusan Multikriteria (MCDM)"
     }
   ],
   "achievements": [
     {
       "id": "180dc",
-      "title": "Semifinalist 180DC ITS BCC",
+      "title": "Semifinalis 180DC ITS Business Case Competition (BCC)",
       "year": "2026",
       "organizer": "180 Degrees Consulting ITS",
       "description": "Business Case Competition (BCC) pemecahan masalah strategis terstruktur berbasis kerangka MECE dan intelijen pasar."
     },
     {
       "id": "mapid",
-      "title": "TOP 50 Finalist in Mapid Webgis Competiton",
+      "title": "Top 50 Finalis Mapid WebGIS Competition 2026",
       "year": "2026",
       "organizer": "MAPID",
       "description": "Kompetisi inovasi sistem informasi geografis berbasis web (WebGIS) tingkat nasional."
